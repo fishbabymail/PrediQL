@@ -40,6 +40,7 @@ def wordlist_gen(ep, file_save_path, filename):
     round = 0
 
     while word_num < 1000 or round < 10:
+        round += 1
         try:
             print("word_num = ", word_num)
             data = llm_model(ep)
@@ -55,7 +56,6 @@ def wordlist_gen(ep, file_save_path, filename):
                     word_num += 1
                     with open(fname, "a") as file:
                         file.write(w + "\n")
-            round += 1
         except:
             continue
 
