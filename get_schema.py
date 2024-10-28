@@ -5,7 +5,7 @@ from future.backports.urllib.parse import urldefrag
 
 
 # Introspection query to fetch the schema
-def get_official_schema(url):
+def get_official_schema(url, file_save_path, filename):
 
     # GraphQL query to get the schema
     query = """
@@ -58,7 +58,8 @@ def get_official_schema(url):
     print(len(keyword_list))
 
     # Optional: Save the keywords to a text file
-    with open("rick_keywords.txt", "w") as file:
+    fname = file_save_path + "/" + filename
+    with open(fname, "w") as file:
         for word in keyword_list:
             file.write(word + "\n")
 
@@ -69,4 +70,4 @@ def get_official_schema(url):
 
 if __name__ == "__main__":
     endpoint = "https://countries.trevorblades.com/"
-    keyword_list = get_official_schema(endpoint)
+    keyword_list = get_official_schema(endpoint, "graphql_schema", "rick_schema.txt")

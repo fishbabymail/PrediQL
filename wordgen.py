@@ -3,7 +3,6 @@ import copy
 import requests
 import json
 
-from numba.typed.listobject import new_list
 
 
 def llm_model(ep):
@@ -33,36 +32,14 @@ def llm_model(ep):
     data = response.json()["message"]["content"]
     return data
 
-def word_compare(list1, list2):
-    llama_wordlist = []
-    with open(list1, encoding='utf-8') as f:
-        for line in f:
-            w = line.strip('\n').split(',')[0]
-            w.replace('_', '').replace('-', '')
-            llama_wordlist.append(w.lower())
-    print("base word list :\n", len(llama_wordlist))
-
-    test_wordlist = []
-    with open(list2, encoding='utf-8') as f:
-        for line in f:
-            w = line.strip('\n').split(',')[0]
-            w.replace('_', '').replace('-', '')
-            test_wordlist.append(w.lower())
-    print("official word list :\n", len(test_wordlist))
-
-    llama_set = set(llama_wordlist)
-    test_set = set(test_wordlist)
-    print("base set number:\n", len(llama_set))
-    print("official set number:\n", len(test_set))
-    same_word = test_set.intersection(llama_set)
-    print("the number of same words = {}, percentage = {}".format(len(same_word), len(same_word)/len(test_set)))
 
 
-def wordlist_gen(ep):
+def wordlist_gen(ep, file_save_path, filename):
     exist_words = []
     word_num = 0
+    round = 0
 
-    while word_num < 1000:
+    while word_num < 1000 or round < 10:
         try:
             print("word_num = ", word_num)
             data = llm_model(ep)
@@ -71,12 +48,14 @@ def wordlist_gen(ep):
             idx_r = data.index("]")
             lpart = data[idx_l : idx_r+1]
             round_words = eval(lpart)
+            fname = file_save_path + "/" + filename
             for w in round_words:
                 if w not in exist_words:
                     exist_words.append(w)
                     word_num += 1
-                    with open("llama_country.txt", "a") as file:
+                    with open(fname, "a") as file:
                         file.write(w + "\n")
+            round += 1
         except:
             continue
 
@@ -86,6 +65,5 @@ def wordlist_gen(ep):
 
 
 if __name__ == "__main__":
-    # endpoint = "https://countries.trevorblades.com/"
-    # llama_words = wordlist_gen(endpoint)
-    word_compare("llama_country.txt", "country_keywords.txt")
+    endpoint = "https://countries.trevorblades.com/"
+    llama_words = wordlist_gen(endpoint, "wordlist", "llama_wordlist.txt")
