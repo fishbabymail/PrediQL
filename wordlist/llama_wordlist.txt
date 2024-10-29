@@ -1,0 +1,1263 @@
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia and Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina Faso
+Burundi
+Cambodia
+Cameroon
+Canada
+Central African Republic
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo (Brazzaville)
+Congo (Kinshasa)
+Cook Islands
+Costa Rica
+Cote dIvoire
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Israel
+Italy
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+North Korea
+South Korea
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia (FYROM)
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar (Burma)
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russia
+Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Sint Maarten (Dutch)
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Tajikistan
+Taiwan
+Tanzania
+Thailand
+Timor-Leste (East Timor)
+Togo
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City (Holy See)
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
+Greenland
+Macedonia
+Nigeria
+Burma
+Niue
+Sint Maarten (Dutch part)
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia and Herzegovina
+Botswana
+Brazil
+Brunei Darussalam
+Bulgaria
+Burkina Faso
+Burundi
+Cambodia
+Cameroon
+Canada
+Central African Republic
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Cook Islands
+Costa Rica
+Côte d'Ivoire
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Democratic People's Republic of Korea
+Democratic Republic of the Congo
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran (Islamic Republic of)
+Iraq
+Ireland
+Israel
+Italy
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea (Republic of)
+Kuwait
+Kyrgyzstan
+Lao People's Democratic Republic
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libyan Arab Jamahiriya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia (Republic of)
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia (Federated States of)
+Moldova (Republic of)
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syrian Arab Republic
+Tajikistan
+Thailand
+Timor-Leste
+Togo
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States of America
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City (Holy See)
+Venezuela (Bolivarian Republic of)
+Viet Nam
+Brunei
+Burma
+Congo (Brazzaville)
+Congo (Kinshasa)
+Cote dIvoire
+Iran
+North Korea
+South Korea
+Kosovo
+Laos
+Libya
+Macedonia
+Micronesia
+Moldova
+Russia
+Sint Maarten (Dutch)
+Syria
+Tanzania
+United States
+Venezuela
+Vietnam
+Yemen
+Antigua
+Bosnia
+Cape Verde
+Macedonia (FYROM)
+São Tomé and Principe
+Sint Maarten (Dutch part)
+Taiwan
+Vatican City
+Zambia
+Zimbabwe
+Myanmar (Burma)
+Timor-Leste (East Timor)
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia and Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina Faso
+Burma (Myanmar)
+Burundi
+Cambodia
+Cameroon
+Canada
+Central African Republic
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Costa Rica
+Côte d'Ivoire
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Democratic Republic of the Congo
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Israel
+Italy
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+North Korea
+South Korea
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russia
+Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+São Tomé and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Sint Maarten (Dutch part)
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Tajikistan
+Tanzania
+Thailand
+Timor-Leste
+Togo
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City (Holy See)
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
+Antigua
+Bosnia
+Burkina
+Cape Verde
+Cook Islands
+Greenland
+Holy See (Vatican City)
+Kosovo
+Liechtenstein
+Myanmar (Burma)
+North Macedonia
+Sao Tome and Principe
+Sint Maarten (Dutch)
+Timor-Leste (East Timor)
+Burma
+Congo (Brazzaville)
+Congo (Kinshasa)
+Myanmar
+Sint Maarten
+Taiwan
+Vatican City
+Congo (DRC)
+Congo (Republic of the)
+Eswatini (formerly Swaziland)
+Hong Kong (SAR of China)
+Macedonia (FYROM)
+Abkhazia
+Hong Kong
+Isle of Man
+Macau
+schema
+Covid19Graphql
+nowsh
+GraphQL
+Schema
+Data
+Model
+API
+Query
+Mutation
+Subscription
+Introspection
+Type
+String
+Boolean
+Integer
+Float
+ID
+Scalar
+Enum
+Union
+InputObject
+List
+BigInt
+BigDecimal
+Date
+Time
+Timestamp
+DateTime
+Null
+JSON
+Any
+Resource
+Field
+Argument
+Directive
+Definition
+TypeKind
+Name
+Location
+Line
+Column
+Position
+Span
+StringValue
+IntValue
+FloatValue
+BooleanValue
+EnumValue
+ArrayValue
+ObjectValue
+ObjectField
+InputFields
+InputField
+ResolveInfo
+Covid19GraphqlSchema
+Country
+Region
+City
+Confirmed
+Deaths
+Recovered
+Active
+DateAdded
+Code
+Covid19
+Fields
+Resolvers
+Meta
+Types
+Entities
+Definitions
+Schemas
+Sources
+Nodes
+Edges
+Cursor
+PageInfo
+Connection
+QueryType
+MutationType
+SubscriptionType
+Input
+Value
+TypeRef
+MetaTypeRef
+Directives
+Rule
+Path
+Root
+Leaf
+Node
+Edge
+Page
+Info
+Error
+Exception
+Description
+query
+mutation
+SchemaDefinition
+schemaDefinition
+ObjectTypeDefinition
+objectTypeDefinition
+FieldDefinition
+fieldDefinition
+InterfaceDefinition
+interfaceDefinition
+UnionTypeDefinition
+unionTypeDefinition
+EnumValueDefinition
+enumValueDefinition
+InputObjectDefinition
+inputObjectDefinition
+ScalarTypeDefinition
+scalarTypeDefinition
+argument
+DirectiveDefinition
+directiveDefinition
+NamedType
+namedType
+ListType
+listType
+NonNullableType
+nonNullableType
+NullableType
+nullableType
+booleanValue
+floatValue
+intValue
+stringValue
+BigIntValue
+bigIntValue
+StringValueDefinition
+stringValueDefinition
+EnumMemberValueDefinition
+enumMemberValueDefinition
+InputValueDefinition
+inputValueDefinition
+FixedScalarType
+fixedScalarType
+FloatScalarType
+floatScalarType
+IntScalarType
+intScalarType
+BooleanScalarType
+booleanScalarType
+StringScalarType
+stringScalarType
+IDScalarType
+idScalarType
+subscription
+Covid19Data
+date
+total_cases
+new_cases
+total_deaths
+new_deaths
+cases_per_million
+deaths_per_million
+tests
+tests_per_thousand
+vaccinations
+vaccinations_per_hundred
+country
+population
+serious_critical
+recovered
+active_cases
+tests_per_case
+positive_rate
+tests_per_people
+total_tests
+tests_1m_per_case
+day
+country_code
+covid
+cases
+hospitalization
+vaccination
+deaths
+total
+new
+active
+confirmed
+deathRate
+recoveryRate
+vaccine
+variant
+strain
+symptom
+virus
+outbreak
+epidemic
+pandemic
+infection
+transmission
+prevalence
+incidence
+demographics
+ageGroup
+sex
+location
+geographicArea
+region
+city
+state
+county
+neighborhood
+latitude
+longitude
+timezone
+month
+year
+hour
+minute
+second
+statistics
+metric
+dataPoint
+value
+category
+dimension
+unit
+type
+measure
+indicator
+rate
+ratio
+percentage
+proportion
+fraction
+number
+count
+amount
+quantity
+sum
+average
+mean
+median
+mode
+range
+minimum
+maximum
+aggregation
+analysis
+trend
+pattern
+prediction
+projection
+forecast
+COVID-19
+Covid-19
+Worldometer
+WHO
+Coronavirus
+Virus
+Pandemic
+Outbreak
+Cases
+Hospitalization
+Mortality
+Transmission
+Infection
+Incubation
+Symptoms
+Severity
+Vaccination
+Masking
+Social distancing
+Lockdowns
+Containment
+Surveillance
+Testing
+Contact tracing
+Quarantine
+Isolation
+Hospitals
+ICU
+Ventilators
+Medicines
+Treatment
+Prevention
+Public health
+Global response
+Travel restrictions
+Border control
+Economic impact
+Social unrest
+Protests
+Demonstrations
+Lockdown protests
+Stay-at-home orders
+Essential businesses
+Non-essential businesses
+Grocery stores
+Pharmacies
+Clinics
+Hotels
+Shelters
+Food banks
+Soup kitchens
+Charities
+Donations
+Fundraising
+Volunteers
+Healthcare workers
+Frontline staff
+Medical professionals
+Nurses
+Doctors
+Research scientists
+Laboratories
+Test kits
+ICU beds
+PPE
+Personal protective equipment
+Province
+PostalCode
+Latitude
+Longitude
+Population
+CasesPer100KResidents
+AverageDailyNewCasesPer100k
+TotalTests
+TotalTestedYesterday
+LastUpdate
+FirstCase
+TotalPeopleVaccinated
+TotalPeopleFullyVaccinated
+NewHospitalAdmissions
+total_hospitals
+new_hospital_admissions_last7days
+hospitilization_rate_last7days
+total_patients_in_ventilator
+total_patients_on_icu
+TotalDeathsInHospitals
+total_recoveries_last7days
+death_per_million_people_last7days
+new_deaths_last7days
+case_fatality_ratio
+death_rate_last7days
+reproduction_number
+last_update_attribution_date
+first_case_age
+average_age_first_cases
+average_age_first_death
+total_intensive_care_beds
+total_ventilators
+population_attribution_date
+vaccination_coverage
+information
+types
+queries
+mutations
+subscriptions
+scalars
+inputs
+enums
+interfaces
+unions
+objects
+fragments
+inline
+nonNull
+listOf
+scalarType
+objectType
+interfaceType
+unionType
+enumValue
+inputField
+directive
+schemaExtension
+queryRoot
+mutationRoot
+subscriptionRoot
+typeRef
+fieldRef
+directives
+possibleTypes
+possibleValues
+defaultArgument
+description
+name
+path
+attributes
+covaxin
+covid19
+delta
+fragment
+interface
+union
+enum
+input
+scalar
+Int
+graphQLSchema
+version
+api
+fields
+arguments
+ofType
+allowedDirectives
+isDeprecated
+deprecationReason
+args
+arg
+defaultValue
+isRepeatable
+repeatableArgName
+resolve
+on
+condition
+locations
+repeatable
+isConditionallyRequired
+onType
+ofKind
+kind
+https
+covid19-graphql
+now
+sh
+cases_total
+data_source
+updated_at
+death_new
+recovered_new
+confirmed_new
+death_total
+recovered_total
+confirmed_total
+death_per_million
+recovery_rate
+death_rate
+stringency_index
+new_tests
+test_positivity_ratio
+tests_per_confirmed
+icu_patients
+hospitalized_patients
+definition
+database
+language
+Graphql
+endpoint
+://
+covid19-graphql.now.sh
+data
+daily
+death
+positive
+test
+negative
+case
+fatality
+containment
+prevention
+efficacy
+safety
+side
+effect
+global
+worldwide
+health
+emergency
+Covid
+19
+Queries
+Mutations
+Subscriptions
+Introspections
+QueryRoot
+MutationRoot
+SubscriptionRoot
+Resolver
+Json
+Binary
+Uuid
+Object
+Interface
+updated
+pct_positive
+pct_negative
+pct_tests
+series
+first
+complete
+doses
+percent
+diff
+change
+cumulative
+today
+yesterday
+growth
+test_rate
+vaccinated
+status
+Active Cases
+Administered Vaccines
+Age Range
+Age Under 18
+Alpha Variant
+Beta Variant
+Boosters
+Case Fatality Rate
+Cases Per Million
+Certified Healthcare Workers
+Children Deaths
+Childhood Illnesses
+Cumulative Vaccinations
+Death Count
+Deaths Among Children
+Deaths Among Healthcare Workers
+Delta Variant
+Economic Losses
+Emergency Use Authorizations
+Fully Vaccinated
+Gamma Variant
+High Risk Populations
+Hospitalized Patients
+Hospitals Capacity
+Incidence Rate
+Infection Rates
+Isolation Centers
+Kappa Variant
+Laboratories Test Results
+Lowest Daily Cases
+Mean Infections Per Capita
+Mortality Rate
+New Confirmed Cases
+New Deaths
+Number of Tests Conducted
+Occupational Exposure
+Outbreaks
+Pandemic Duration
+Percentage Vaccinated
+Population Affected
+Psychological Trauma
+Risk Factors
+Self Isolation Centers
+Serious Cases
+Severity Case Fatality Rate
+Severe Outcomes
+Single Dose Vaccine
+Social Distancing Rules
+Staff Deaths
+Test Positivity Rates
+Total Confirmed Cases
+Transmission Rate
+Travel Restrictions
+Trusted Sources
+Unvaccinated Individuals
+Vaccine Effectiveness
+Vaccine Hesitancy
+Vaccine Manufacturers
+Vaccine Side Effects
+Viral Load
+Variant Types
+Virus Mutation Rates
+CountryName
+Reported
+Cumulative
+Deceased
+DailyChange
+CumulativeChange
+CasesPerMillion
+DeathsPerMillion
+countries
+tests_total
+tests_performed
+serious_cases
+critical_cases
+recovered_cases
+deaths_per_day
+tests_per_million
+__typename
+Tests
+Vaccinations
+Total_tests
+New_cases
+Active_cases
+Severe_cases
+Critical_cases
+Total_deaths
+New_deaths
+Serious_critical
+Hospitalized_cases
+Tot_hospitalized
+ICU_cases
+Tot_ICU
+On_Ventilator
+Total_on_ventilator
+New_cases_today
+Active_recovered
+Recovered_per_day
+New Recovered
+Mortality_rate
+Average_daily_deaths
+Deaths_per_capita
+Total_vaccinations
+People_vaccinated
+New_vaccinations
+Daily_change_in_total_vaccinations
+Fully_vaccinated
+New_fully_vaccinated
+Total_boosters
+New_boosters
+Total_doses_administered
+New_doses_administered
+Deaths_after_last_update
+Last_updated_at
