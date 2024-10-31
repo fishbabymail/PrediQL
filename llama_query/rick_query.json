@@ -1,42 +1,32 @@
 {
     "queries": [
         {
-            "name": "Get all episodes",
-            "query": "{ episodes { info results } }"
+            "name": "Get All Episodes",
+            "query": "query { Episodes { info, results } }"
         },
         {
-            "name": "Create episode",
-            "query": "mutation createEpisode($episode: EpisodeInput!) { createEpisode(episode: $episode) { result } }",
-            "variables": {
-                "episode": "{\"title\":\"New Episode\",\"description\":\"Description of the new episode\"}"
-            }
+            "name": "Get Episode by ID",
+            "query": "query ($id: Int!) { Episodes(info: null, results: [{ id: $id }]) { id, title } }"
         },
         {
-            "name": "Get episode by ID",
-            "query": "{ episodes { info results { id } } }"
+            "name": "Create New Episode",
+            "query": "mutation ($input: InfoInput! = {}) { createEpisode(input: $input) { info, results { id, title } } }"
         },
         {
-            "name": "Update episode",
-            "query": "mutation updateEpisode($episodeId: ID!, $updateEpisode: EpisodeInput!) { updateEpisode(episodeId: $episodeId, updateEpisode: $updateEpisode) { result } }",
-            "variables": {
-                "episodeId": "1",
-                "updateEpisode": "{\"title\":\"Updated Title\",\"description\":\"New Description\"}"
-            }
+            "name": "Update Existing Episode",
+            "query": "mutation ($id: Int!, $title: String!) { updateEpisode(id: $id, input: { title: $title }) { info, results { id, title } } }"
         },
         {
-            "name": "Delete episode",
-            "query": "mutation deleteEpisode($episodeId: ID!) { deleteEpisode(episodeId: $episodeId) { result } }",
-            "variables": {
-                "episodeId": "1"
-            }
+            "name": "Delete Episode by ID",
+            "query": "mutation ($id: Int!) { deleteEpisode(id: $id) { success } }"
         },
         {
-            "name": "Get episodes with nested fields",
-            "query": "{ episodes { info results { id title description author } } }"
+            "name": "Nested Query: Get All Episodes with Filtered Results",
+            "query": "query ($filter: String!) { Episodes(filter: $filter) { info, results { id, title } } }"
         },
         {
-            "name": "Get episodes with optional parameters",
-            "query": "{ episodes(page: 2, limit: 10) { info results { id title description author } } }"
+            "name": "Optional Parameter: Get Episode by ID (optional)",
+            "query": "query ($id: Int = 1) { Episodes(info: null, results: [{ id: $id }]) { id, title } }"
         }
     ]
 }

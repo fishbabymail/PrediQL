@@ -23,18 +23,35 @@ def get_queries(filedir, filename):
               "be in JSON format, include typical CRUD operations, and "
               "cover cases like nested queries, optional parameters. "
               "Structure the output in JSON, ready to be saved to a file.")
-    llama_res = get_llm_model(prompt)
-    # print(llama_res)
-    sidx = llama_res.find("json")
-    if sidx == -1:
-        raise Exception("Response from Llama is not formatted.")
-    j_start = llama_res[sidx+4:]
-    j_end = j_start.find("```")
-    if j_end == -1:
-        raise Exception("Response from Llama is not formatted.")
-    query_str = j_start[:j_end]
-    print(query_str)
-    query_json = json.loads(query_str)
+    SAVED = False
+    retry_n = 0
+    query_json = {}
+    while not SAVED and retry_n < 3:
+        logger.info("The {} 's attemp to parse the response".format(retry_n))
+        llama_res = get_llm_model(prompt)
+        # print(llama_res)
+        sidx = llama_res.find("json")
+        if sidx == -1:
+            logger.info("The {}'s Response from Llama is not formatted.".format(retry_n))
+            retry_n += 1
+            continue
+        j_start = llama_res[sidx+4:]
+        j_end = j_start.find("```")
+        if j_end == -1:
+            logger.info("The {}'s Response from Llama is not formatted.".format(retry_n))
+            retry_n += 1
+            continue
+        query_str = j_start[:j_end]
+        # print(query_str)
+        try:
+            query_json = json.loads(query_str)
+        except:
+            logger.info("Failed to decode to json file, RETRY.")
+            retry_n += 1
+            continue
+
+        SAVED = True
+        logger.info("Parsed the response successfully.")
     return query_json
 
 def save_json_to_file(filedir, filename, query_json):
@@ -46,11 +63,13 @@ def save_json_to_file(filedir, filename, query_json):
     logger.info("Saved query to {}".format(filepath))
     return True
 
-
-
 def main(rf_dir, rf_name, wf_dir, wf_name):
     query_json = get_queries(rf_dir, rf_name)
+    if query_json == {}:
+        raise Exception("There is no valid query file {} generated with 3 times prompts ".format(rf_name))
     saved = save_json_to_file(wf_dir, wf_name, query_json)
+    return saved
+
 
 if __name__ == '__main__':
     main("graphql_schema", "rick_schema.json", "llama_query", "rick_query.json")
