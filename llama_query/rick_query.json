@@ -1,0 +1,42 @@
+{
+    "queries": [
+        {
+            "name": "Get all episodes",
+            "query": "{ episodes { info results } }"
+        },
+        {
+            "name": "Create episode",
+            "query": "mutation createEpisode($episode: EpisodeInput!) { createEpisode(episode: $episode) { result } }",
+            "variables": {
+                "episode": "{\"title\":\"New Episode\",\"description\":\"Description of the new episode\"}"
+            }
+        },
+        {
+            "name": "Get episode by ID",
+            "query": "{ episodes { info results { id } } }"
+        },
+        {
+            "name": "Update episode",
+            "query": "mutation updateEpisode($episodeId: ID!, $updateEpisode: EpisodeInput!) { updateEpisode(episodeId: $episodeId, updateEpisode: $updateEpisode) { result } }",
+            "variables": {
+                "episodeId": "1",
+                "updateEpisode": "{\"title\":\"Updated Title\",\"description\":\"New Description\"}"
+            }
+        },
+        {
+            "name": "Delete episode",
+            "query": "mutation deleteEpisode($episodeId: ID!) { deleteEpisode(episodeId: $episodeId) { result } }",
+            "variables": {
+                "episodeId": "1"
+            }
+        },
+        {
+            "name": "Get episodes with nested fields",
+            "query": "{ episodes { info results { id title description author } } }"
+        },
+        {
+            "name": "Get episodes with optional parameters",
+            "query": "{ episodes(page: 2, limit: 10) { info results { id title description author } } }"
+        }
+    ]
+}
