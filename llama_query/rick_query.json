@@ -1,0 +1,32 @@
+{
+    "queries": [
+        {
+            "name": "Get All Episodes",
+            "query": "query { Episodes { info, results } }"
+        },
+        {
+            "name": "Get Episode by ID",
+            "query": "query ($id: Int!) { Episodes(info: null, results: [{ id: $id }]) { id, title } }"
+        },
+        {
+            "name": "Create New Episode",
+            "query": "mutation ($input: InfoInput! = {}) { createEpisode(input: $input) { info, results { id, title } } }"
+        },
+        {
+            "name": "Update Existing Episode",
+            "query": "mutation ($id: Int!, $title: String!) { updateEpisode(id: $id, input: { title: $title }) { info, results { id, title } } }"
+        },
+        {
+            "name": "Delete Episode by ID",
+            "query": "mutation ($id: Int!) { deleteEpisode(id: $id) { success } }"
+        },
+        {
+            "name": "Nested Query: Get All Episodes with Filtered Results",
+            "query": "query ($filter: String!) { Episodes(filter: $filter) { info, results { id, title } } }"
+        },
+        {
+            "name": "Optional Parameter: Get Episode by ID (optional)",
+            "query": "query ($id: Int = 1) { Episodes(info: null, results: [{ id: $id }]) { id, title } }"
+        }
+    ]
+}
