@@ -90,3 +90,27 @@ class GraphQLFuzzer:
             return {
                 "error": str(e)
             }
+
+
+    #TODO: run testing
+    #TODO: run result
+
+def main():
+    fuzzer = GraphQLFuzzer(
+        endpoint_url="https://rickandmortyapi.com/graphql",
+        rate_limit=1.0,
+        headers={
+            'Content-Type': 'application/json',
+        }
+    )
+    # Load and execute queries
+    queries = fuzzer.load_queries("llama_query/rick_query.json")
+    print(queries)
+
+    # run test
+    # results
+    # Save results
+
+
+if __name__ == "__main__":
+    main()
