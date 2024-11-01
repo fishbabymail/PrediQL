@@ -1,41 +1,43 @@
-[
-    {
-        "query": "Episode { info { title episodeNumber } results { name characters } }"
-    },
-    {
-        "query": "Query ($episodeId: ID!) { episode(id: $episodeId) { info { director writer } } }"
-    },
-    {
-        "query": "Mutation { createCharacter(name: \"New Character\", age: 25, species: HUMAN) { id name } }"
-    },
-    {
-        "query": "Query { characters(first: 10) { edges { node { id name } } } }"
-    },
-    {
-        "query": "Episode { info { title episodeNumber } results { name director } }",
-        "variables": {
-            "episodeId": "123"
+{
+    "queries": [
+        {
+            "query": "mutation CreateBook($title: String!, $author: String!) { createBook(input: { title: $title, author: $author }) { book { id title } } }",
+            "variables": {
+                "title": "The Great Gatsby",
+                "author": "F. Scott Fitzgerald"
+            }
+        },
+        {
+            "query": "query GetBooks($limit: Int!) { books(limit: $limit) { id title author } }",
+            "variables": {
+                "limit": 10
+            }
+        },
+        {
+            "query": "mutation UpdateBook($id: ID!, $title: String, $author: String) { updateBook(id: $id, input: { title: $title, author: $author }) { book { id title } } }",
+            "variables": {
+                "id": "1",
+                "title": "The Catcher in the Rye",
+                "author": null
+            }
+        },
+        {
+            "query": "query GetAuthors($name: String) { authors(name: $name) { name books { id title } } }",
+            "variables": {
+                "name": "F. Scott Fitzgerald"
+            }
+        },
+        {
+            "query": "mutation DeleteBook($id: ID!) { deleteBook(id: $id) { message } }",
+            "variables": {
+                "id": "1"
+            }
+        },
+        {
+            "query": "query GetBooksByAuthor($author: String!) { books(author: $author) { id title author } }",
+            "variables": {
+                "author": "Jane Austen"
+            }
         }
-    },
-    {
-        "query": "Query ($director: String!) { episodes(director: $director) { edges { node { id title } } } }"
-    },
-    {
-        "query": "Mutation { deleteCharacter(id: 1) { id name } }",
-        "variables": {
-            "episodeId": "123"
-        }
-    },
-    {
-        "query": "Query ($sort: SortEpisodeInput!) { episodes(sort: $sort) { edges { node { id title episodeNumber } } } }"
-    },
-    {
-        "query": "Mutation { updateCharacter(id: 1, input: { name: \"Updated Name\" }) { id name } }",
-        "variables": {
-            "episodeId": "123"
-        }
-    },
-    {
-        "query": "Query { episodeCount(episodeType: MOVIE) { count } }"
-    }
-]
+    ]
+}
