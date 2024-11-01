@@ -1,32 +1,41 @@
-{
-    "queries": [
-        {
-            "name": "Get All Episodes",
-            "query": "query { Episodes { info, results } }"
-        },
-        {
-            "name": "Get Episode by ID",
-            "query": "query ($id: Int!) { Episodes(info: null, results: [{ id: $id }]) { id, title } }"
-        },
-        {
-            "name": "Create New Episode",
-            "query": "mutation ($input: InfoInput! = {}) { createEpisode(input: $input) { info, results { id, title } } }"
-        },
-        {
-            "name": "Update Existing Episode",
-            "query": "mutation ($id: Int!, $title: String!) { updateEpisode(id: $id, input: { title: $title }) { info, results { id, title } } }"
-        },
-        {
-            "name": "Delete Episode by ID",
-            "query": "mutation ($id: Int!) { deleteEpisode(id: $id) { success } }"
-        },
-        {
-            "name": "Nested Query: Get All Episodes with Filtered Results",
-            "query": "query ($filter: String!) { Episodes(filter: $filter) { info, results { id, title } } }"
-        },
-        {
-            "name": "Optional Parameter: Get Episode by ID (optional)",
-            "query": "query ($id: Int = 1) { Episodes(info: null, results: [{ id: $id }]) { id, title } }"
+[
+    {
+        "query": "Episode { info { title episodeNumber } results { name characters } }"
+    },
+    {
+        "query": "Query ($episodeId: ID!) { episode(id: $episodeId) { info { director writer } } }"
+    },
+    {
+        "query": "Mutation { createCharacter(name: \"New Character\", age: 25, species: HUMAN) { id name } }"
+    },
+    {
+        "query": "Query { characters(first: 10) { edges { node { id name } } } }"
+    },
+    {
+        "query": "Episode { info { title episodeNumber } results { name director } }",
+        "variables": {
+            "episodeId": "123"
         }
-    ]
-}
+    },
+    {
+        "query": "Query ($director: String!) { episodes(director: $director) { edges { node { id title } } } }"
+    },
+    {
+        "query": "Mutation { deleteCharacter(id: 1) { id name } }",
+        "variables": {
+            "episodeId": "123"
+        }
+    },
+    {
+        "query": "Query ($sort: SortEpisodeInput!) { episodes(sort: $sort) { edges { node { id title episodeNumber } } } }"
+    },
+    {
+        "query": "Mutation { updateCharacter(id: 1, input: { name: \"Updated Name\" }) { id name } }",
+        "variables": {
+            "episodeId": "123"
+        }
+    },
+    {
+        "query": "Query { episodeCount(episodeType: MOVIE) { count } }"
+    }
+]

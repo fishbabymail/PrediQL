@@ -21,6 +21,9 @@ def get_llm_model(prompt):
             }
         ],
         "stream": False,
+        "temperature": 1.2,
+        "top_k": 50,
+        "top_p": 0.95,
     }
 
     try:
