@@ -10,28 +10,100 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
-# Introspection query to fetch the schema
-def get_official_schema(url, schema_dir, filename):
-
-    # GraphQL query to get the schema
-    query = """
-        {
-          __schema {
-            types {
-              name
+FullQuery = """
+    fragment FullType on __Type {
+    kind
+    name
+    fields(includeDeprecated: true) {
+      name
+      args {
+        ...InputValue
+        }
+      type {
+        ...TypeRef
+      }
+      isDeprecated
+      deprecationReason
+    }
+    inputFields {
+    ...InputValue
+    }
+    interfaces {
+    ...TypeRef
+    }
+    enumValues(includeDeprecated: true) {
+      name
+      isDeprecated
+      deprecationReason
+    }
+    possibleTypes {
+      ...TypeRef
+    }
+}
+fragment InputValue on __InputValue {
+  name
+  type {
+    ...TypeRef
+  }
+  defaultValue
+}
+fragment TypeRef on __Type {
+  kind
+  name
+  ofType {
+    kind
+    name
+    ofType {
+      kind
+      name
+      ofType {
+        kind
+        name
+        ofType {
+          kind
+          name
+          ofType {
+            kind
+            name
+            ofType {
               kind
-              fields {
+              name
+              ofType {
+                kind
                 name
-                type {
-                  name
-                  kind
-                }
               }
             }
           }
         }
-    """
+      }
+    }
+  }
+}
+query IntrospectionQuery {
+  __schema {
+    queryType {
+      name
+    }
+    mutationType {
+      name
+    }
+    types {
+      ...FullType
+    }
+    directives {
+      name
+      locations
+      args {
+        ...InputValue
+      }
+    }
+  }
+}
+"""
+
+
+# Introspection query to fetch the schema
+def get_official_schema(url, schema_dir, filename, query):
 
     # Set up the request headers
     headers = {
@@ -62,4 +134,4 @@ def get_official_schema(url, schema_dir, filename):
 
 if __name__ == "__main__":
     endpoint = "https://rickandmortyapi.com/graphql"
-    keyword_list = get_official_schema(endpoint, "graphql_schema", "rick_schema.json")
+    schema = get_official_schema(endpoint, "graphql_schema", "rick_schema.json", FullQuery)
