@@ -20,9 +20,10 @@ def get_queries(filedir, filename):
         schema = json.load(f)
     prompt = (f"Generate GraphQL queries for fuzzing an API endpoint, "
               f"the schema of this endpoint is {schema}. The queries should "
-              "be in JSON format, include typical CRUD operations, and "
-              "cover cases like nested queries, optional parameters. "
-              "Structure the output in JSON, ready to be saved to a file.")
+              f"explore various fields, include different types of input, "
+              f"and vary in structure to test the endpoint's robustness. "
+              f"In addition, the queries must can be sent to the endpoint directly."
+              f"Structure the output in JSON, ready to be saved to a file.")
     SAVED = False
     retry_n = 0
     query_json = {}
