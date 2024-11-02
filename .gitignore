@@ -2,3 +2,4 @@ __pycache__/
 .idea/
 wordlist/llama_wordlist.txt
 llama_query/
+test_results/
