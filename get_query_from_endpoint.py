@@ -3,8 +3,6 @@ import requests
 import json
 import logging
 
-from sympy.polys.polyconfig import query
-
 from llama_initator import get_llm_model
 
 
