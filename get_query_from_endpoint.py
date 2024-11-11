@@ -23,6 +23,7 @@ def get_queries(url, filedir, filename):
     retry_n = 0
     query_json = {"query": []}
     while len(query_json["query"]) < 10 and retry_n < 3:
+        retry_n += 1
         logger.info("The {} 's attempt to parse the response".format(retry_n))
         llama_res = get_llm_model(prompt)
         # print(llama_res)
