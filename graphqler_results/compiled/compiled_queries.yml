@@ -1,0 +1,216 @@
+character:
+  hardDependsOn:
+    id: Character
+  inputs:
+    id:
+      kind: NON_NULL
+      name: id
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: character
+  output:
+    kind: OBJECT
+    name: Character
+    ofType: null
+    type: Character
+  softDependsOn: {}
+characters:
+  hardDependsOn: {}
+  inputs:
+    filter:
+      kind: INPUT_OBJECT
+      name: filter
+      ofType: null
+      type: FilterCharacter
+    page:
+      kind: SCALAR
+      name: page
+      ofType: null
+      type: Int
+  name: characters
+  output:
+    kind: OBJECT
+    name: Characters
+    ofType: null
+    type: Characters
+  softDependsOn: {}
+charactersByIds:
+  hardDependsOn:
+    ids: Characters
+  inputs:
+    ids:
+      kind: NON_NULL
+      name: ids
+      ofType:
+        kind: LIST
+        name: null
+        ofType:
+          kind: NON_NULL
+          name: null
+          ofType:
+            kind: SCALAR
+            name: ID
+            ofType: null
+            type: ID
+          type: null
+        type: null
+      type: null
+  name: charactersByIds
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: Character
+      ofType: null
+      type: Character
+    type: null
+  softDependsOn: {}
+episode:
+  hardDependsOn:
+    id: Episode
+  inputs:
+    id:
+      kind: NON_NULL
+      name: id
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: episode
+  output:
+    kind: OBJECT
+    name: Episode
+    ofType: null
+    type: Episode
+  softDependsOn: {}
+episodes:
+  hardDependsOn: {}
+  inputs:
+    filter:
+      kind: INPUT_OBJECT
+      name: filter
+      ofType: null
+      type: FilterEpisode
+    page:
+      kind: SCALAR
+      name: page
+      ofType: null
+      type: Int
+  name: episodes
+  output:
+    kind: OBJECT
+    name: Episodes
+    ofType: null
+    type: Episodes
+  softDependsOn: {}
+episodesByIds:
+  hardDependsOn:
+    ids: Episodes
+  inputs:
+    ids:
+      kind: NON_NULL
+      name: ids
+      ofType:
+        kind: LIST
+        name: null
+        ofType:
+          kind: NON_NULL
+          name: null
+          ofType:
+            kind: SCALAR
+            name: ID
+            ofType: null
+            type: ID
+          type: null
+        type: null
+      type: null
+  name: episodesByIds
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: Episode
+      ofType: null
+      type: Episode
+    type: null
+  softDependsOn: {}
+location:
+  hardDependsOn:
+    id: Location
+  inputs:
+    id:
+      kind: NON_NULL
+      name: id
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: location
+  output:
+    kind: OBJECT
+    name: Location
+    ofType: null
+    type: Location
+  softDependsOn: {}
+locations:
+  hardDependsOn: {}
+  inputs:
+    filter:
+      kind: INPUT_OBJECT
+      name: filter
+      ofType: null
+      type: FilterLocation
+    page:
+      kind: SCALAR
+      name: page
+      ofType: null
+      type: Int
+  name: locations
+  output:
+    kind: OBJECT
+    name: Locations
+    ofType: null
+    type: Locations
+  softDependsOn: {}
+locationsByIds:
+  hardDependsOn:
+    ids: Locations
+  inputs:
+    ids:
+      kind: NON_NULL
+      name: ids
+      ofType:
+        kind: LIST
+        name: null
+        ofType:
+          kind: NON_NULL
+          name: null
+          ofType:
+            kind: SCALAR
+            name: ID
+            ofType: null
+            type: ID
+          type: null
+        type: null
+      type: null
+  name: locationsByIds
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: Location
+      ofType: null
+      type: Location
+    type: null
+  softDependsOn: {}

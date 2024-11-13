@@ -1,0 +1,192 @@
+character:
+  inputs:
+    id:
+      kind: NON_NULL
+      name: id
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: character
+  output:
+    kind: OBJECT
+    name: Character
+    ofType: null
+    type: Character
+characters:
+  inputs:
+    filter:
+      kind: INPUT_OBJECT
+      name: filter
+      ofType: null
+      type: FilterCharacter
+    page:
+      kind: SCALAR
+      name: page
+      ofType: null
+      type: Int
+  name: characters
+  output:
+    kind: OBJECT
+    name: Characters
+    ofType: null
+    type: Characters
+charactersByIds:
+  inputs:
+    ids:
+      kind: NON_NULL
+      name: ids
+      ofType:
+        kind: LIST
+        name: null
+        ofType:
+          kind: NON_NULL
+          name: null
+          ofType:
+            kind: SCALAR
+            name: ID
+            ofType: null
+            type: ID
+          type: null
+        type: null
+      type: null
+  name: charactersByIds
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: Character
+      ofType: null
+      type: Character
+    type: null
+episode:
+  inputs:
+    id:
+      kind: NON_NULL
+      name: id
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: episode
+  output:
+    kind: OBJECT
+    name: Episode
+    ofType: null
+    type: Episode
+episodes:
+  inputs:
+    filter:
+      kind: INPUT_OBJECT
+      name: filter
+      ofType: null
+      type: FilterEpisode
+    page:
+      kind: SCALAR
+      name: page
+      ofType: null
+      type: Int
+  name: episodes
+  output:
+    kind: OBJECT
+    name: Episodes
+    ofType: null
+    type: Episodes
+episodesByIds:
+  inputs:
+    ids:
+      kind: NON_NULL
+      name: ids
+      ofType:
+        kind: LIST
+        name: null
+        ofType:
+          kind: NON_NULL
+          name: null
+          ofType:
+            kind: SCALAR
+            name: ID
+            ofType: null
+            type: ID
+          type: null
+        type: null
+      type: null
+  name: episodesByIds
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: Episode
+      ofType: null
+      type: Episode
+    type: null
+location:
+  inputs:
+    id:
+      kind: NON_NULL
+      name: id
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: location
+  output:
+    kind: OBJECT
+    name: Location
+    ofType: null
+    type: Location
+locations:
+  inputs:
+    filter:
+      kind: INPUT_OBJECT
+      name: filter
+      ofType: null
+      type: FilterLocation
+    page:
+      kind: SCALAR
+      name: page
+      ofType: null
+      type: Int
+  name: locations
+  output:
+    kind: OBJECT
+    name: Locations
+    ofType: null
+    type: Locations
+locationsByIds:
+  inputs:
+    ids:
+      kind: NON_NULL
+      name: ids
+      ofType:
+        kind: LIST
+        name: null
+        ofType:
+          kind: NON_NULL
+          name: null
+          ofType:
+            kind: SCALAR
+            name: ID
+            ofType: null
+            type: ID
+          type: null
+        type: null
+      type: null
+  name: locationsByIds
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: Location
+      ofType: null
+      type: Location
+    type: null
