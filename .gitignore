@@ -3,3 +3,4 @@ __pycache__/
 wordlist/llama_wordlist.txt
 llama_query/
 test_results/
+.DS_Store

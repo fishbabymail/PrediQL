@@ -1,0 +1,479 @@
+Character:
+  associatedMutatations: []
+  associatedQueries:
+  - character
+  - charactersByIds
+  fields:
+  - inputs: {}
+    kind: SCALAR
+    name: id
+    ofType: null
+    type: ID
+  - inputs: {}
+    kind: SCALAR
+    name: name
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: status
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: species
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: type
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: gender
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: OBJECT
+    name: origin
+    ofType: null
+    type: Location
+  - inputs: {}
+    kind: OBJECT
+    name: location
+    ofType: null
+    type: Location
+  - inputs: {}
+    kind: SCALAR
+    name: image
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: NON_NULL
+    name: episode
+    ofType:
+      kind: LIST
+      name: null
+      ofType:
+        kind: OBJECT
+        name: Episode
+        ofType: null
+        type: Episode
+      type: null
+    type: null
+  - inputs: {}
+    kind: SCALAR
+    name: created
+    ofType: null
+    type: String
+  hardDependsOn:
+  - Episode
+  kind: OBJECT
+  name: Character
+  softDependsOn:
+  - Location
+Characters:
+  associatedMutatations: []
+  associatedQueries:
+  - characters
+  fields:
+  - inputs: {}
+    kind: OBJECT
+    name: info
+    ofType: null
+    type: Info
+  - inputs: {}
+    kind: LIST
+    name: results
+    ofType:
+      kind: OBJECT
+      name: Character
+      ofType: null
+      type: Character
+    type: null
+  hardDependsOn: []
+  kind: OBJECT
+  name: Characters
+  softDependsOn:
+  - Character
+  - Info
+Episode:
+  associatedMutatations: []
+  associatedQueries:
+  - episode
+  - episodesByIds
+  fields:
+  - inputs: {}
+    kind: SCALAR
+    name: id
+    ofType: null
+    type: ID
+  - inputs: {}
+    kind: SCALAR
+    name: name
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: air_date
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: episode
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: NON_NULL
+    name: characters
+    ofType:
+      kind: LIST
+      name: null
+      ofType:
+        kind: OBJECT
+        name: Character
+        ofType: null
+        type: Character
+      type: null
+    type: null
+  - inputs: {}
+    kind: SCALAR
+    name: created
+    ofType: null
+    type: String
+  hardDependsOn:
+  - Character
+  kind: OBJECT
+  name: Episode
+  softDependsOn: []
+Episodes:
+  associatedMutatations: []
+  associatedQueries:
+  - episodes
+  fields:
+  - inputs: {}
+    kind: OBJECT
+    name: info
+    ofType: null
+    type: Info
+  - inputs: {}
+    kind: LIST
+    name: results
+    ofType:
+      kind: OBJECT
+      name: Episode
+      ofType: null
+      type: Episode
+    type: null
+  hardDependsOn: []
+  kind: OBJECT
+  name: Episodes
+  softDependsOn:
+  - Info
+  - Episode
+Info:
+  associatedMutatations: []
+  associatedQueries: []
+  fields:
+  - inputs: {}
+    kind: SCALAR
+    name: count
+    ofType: null
+    type: Int
+  - inputs: {}
+    kind: SCALAR
+    name: pages
+    ofType: null
+    type: Int
+  - inputs: {}
+    kind: SCALAR
+    name: next
+    ofType: null
+    type: Int
+  - inputs: {}
+    kind: SCALAR
+    name: prev
+    ofType: null
+    type: Int
+  hardDependsOn: []
+  kind: OBJECT
+  name: Info
+  softDependsOn: []
+Location:
+  associatedMutatations: []
+  associatedQueries:
+  - location
+  - locationsByIds
+  fields:
+  - inputs: {}
+    kind: SCALAR
+    name: id
+    ofType: null
+    type: ID
+  - inputs: {}
+    kind: SCALAR
+    name: name
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: type
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: dimension
+    ofType: null
+    type: String
+  - inputs: {}
+    kind: NON_NULL
+    name: residents
+    ofType:
+      kind: LIST
+      name: null
+      ofType:
+        kind: OBJECT
+        name: Character
+        ofType: null
+        type: Character
+      type: null
+    type: null
+  - inputs: {}
+    kind: SCALAR
+    name: created
+    ofType: null
+    type: String
+  hardDependsOn:
+  - Character
+  kind: OBJECT
+  name: Location
+  softDependsOn: []
+Locations:
+  associatedMutatations: []
+  associatedQueries:
+  - locations
+  fields:
+  - inputs: {}
+    kind: OBJECT
+    name: info
+    ofType: null
+    type: Info
+  - inputs: {}
+    kind: LIST
+    name: results
+    ofType:
+      kind: OBJECT
+      name: Location
+      ofType: null
+      type: Location
+    type: null
+  hardDependsOn: []
+  kind: OBJECT
+  name: Locations
+  softDependsOn:
+  - Info
+  - Location
+Query:
+  associatedMutatations: []
+  associatedQueries: []
+  fields:
+  - inputs:
+      id:
+        defaultValue: null
+        description: ''
+        kind: NON_NULL
+        name: id
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: character
+    ofType: null
+    type: Character
+  - inputs:
+      filter:
+        defaultValue: null
+        description: ''
+        kind: INPUT_OBJECT
+        name: filter
+        ofType: null
+        type: FilterCharacter
+      page:
+        defaultValue: null
+        description: ''
+        kind: SCALAR
+        name: page
+        ofType: null
+        type: Int
+    kind: OBJECT
+    name: characters
+    ofType: null
+    type: Characters
+  - inputs:
+      ids:
+        defaultValue: null
+        description: ''
+        kind: NON_NULL
+        name: ids
+        ofType:
+          kind: LIST
+          name: null
+          ofType:
+            kind: NON_NULL
+            name: null
+            ofType:
+              kind: SCALAR
+              name: ID
+              ofType: null
+              type: ID
+            type: null
+          type: null
+        type: null
+    kind: LIST
+    name: charactersByIds
+    ofType:
+      kind: OBJECT
+      name: Character
+      ofType: null
+      type: Character
+    type: null
+  - inputs:
+      id:
+        defaultValue: null
+        description: ''
+        kind: NON_NULL
+        name: id
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: location
+    ofType: null
+    type: Location
+  - inputs:
+      filter:
+        defaultValue: null
+        description: ''
+        kind: INPUT_OBJECT
+        name: filter
+        ofType: null
+        type: FilterLocation
+      page:
+        defaultValue: null
+        description: ''
+        kind: SCALAR
+        name: page
+        ofType: null
+        type: Int
+    kind: OBJECT
+    name: locations
+    ofType: null
+    type: Locations
+  - inputs:
+      ids:
+        defaultValue: null
+        description: ''
+        kind: NON_NULL
+        name: ids
+        ofType:
+          kind: LIST
+          name: null
+          ofType:
+            kind: NON_NULL
+            name: null
+            ofType:
+              kind: SCALAR
+              name: ID
+              ofType: null
+              type: ID
+            type: null
+          type: null
+        type: null
+    kind: LIST
+    name: locationsByIds
+    ofType:
+      kind: OBJECT
+      name: Location
+      ofType: null
+      type: Location
+    type: null
+  - inputs:
+      id:
+        defaultValue: null
+        description: ''
+        kind: NON_NULL
+        name: id
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: episode
+    ofType: null
+    type: Episode
+  - inputs:
+      filter:
+        defaultValue: null
+        description: ''
+        kind: INPUT_OBJECT
+        name: filter
+        ofType: null
+        type: FilterEpisode
+      page:
+        defaultValue: null
+        description: ''
+        kind: SCALAR
+        name: page
+        ofType: null
+        type: Int
+    kind: OBJECT
+    name: episodes
+    ofType: null
+    type: Episodes
+  - inputs:
+      ids:
+        defaultValue: null
+        description: ''
+        kind: NON_NULL
+        name: ids
+        ofType:
+          kind: LIST
+          name: null
+          ofType:
+            kind: NON_NULL
+            name: null
+            ofType:
+              kind: SCALAR
+              name: ID
+              ofType: null
+              type: ID
+            type: null
+          type: null
+        type: null
+    kind: LIST
+    name: episodesByIds
+    ofType:
+      kind: OBJECT
+      name: Episode
+      ofType: null
+      type: Episode
+    type: null
+  hardDependsOn: []
+  kind: OBJECT
+  name: Query
+  softDependsOn:
+  - Character
+  - Locations
+  - Episodes
+  - Location
+  - Episode
+  - Characters
