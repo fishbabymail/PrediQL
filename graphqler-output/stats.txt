@@ -1,0 +1,228 @@
+
+===================HTTP Status Codes===================
+{
+    "200": {
+        "locations": 8,
+        "episodes": 8,
+        "characters": 8,
+        "character": 6,
+        "episode": 6,
+        "location": 6,
+        "https://rickandmortyapi.com/graphql": 1
+    },
+    "413": {
+        "locations": 5,
+        "episodes": 5,
+        "characters": 5,
+        "character": 3,
+        "episode": 3,
+        "location": 3
+    },
+    "400": {
+        "https://rickandmortyapi.com/graphql": 1
+    }
+}
+===================Successful Nodes===================
+{
+    "Query|locations": 3,
+    "Object|Locations": 3,
+    "Query|episodes": 3,
+    "Object|Episodes": 3,
+    "Query|characters": 3,
+    "Object|Characters": 3
+}
+===================Failed Nodes===================
+{
+    "Object|Query": 12,
+    "Object|Info": 12,
+    "Query|locationsByIds": 12,
+    "Query|episodesByIds": 12,
+    "Query|charactersByIds": 12,
+    "Query|character": 1,
+    "Query|episode": 1,
+    "Query|location": 1,
+    "Object|Character": 1,
+    "Object|Episode": 1,
+    "Object|Location": 1
+}
+===================General stats ===================
+
+Time taken: 19.84454917907715 seconds
+Number of unique query/mutation successes: 3/9
+Number of unique external query/mutation failures: 6/9
+Number of queries: 9
+Number of mutations: 0
+Number of objects: 8
+Number of successes: 18
+Number of failures: 66
+===================Detected Vulnerabilities===================
+{
+    "OS Command Injection": {
+        "locations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episodes": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "characters": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "character": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episode": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "location": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        }
+    },
+    "Cross-Site Scripting (XSS) Injection": {
+        "locations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episodes": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "characters": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "character": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episode": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "location": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        }
+    },
+    "SSRF Injection": {
+        "locations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episodes": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "characters": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "character": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episode": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "location": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        }
+    },
+    "SQL Injection (SQLi) Injection": {
+        "locations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episodes": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "characters": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "character": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episode": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "location": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        }
+    },
+    "Path Injection": {
+        "locations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episodes": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "characters": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "character": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episode": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "location": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        }
+    },
+    "Query deny bypass": {
+        "locations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episodes": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "characters": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "character": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "episode": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "location": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        }
+    },
+    "Introspection Enabled": {
+        "https://rickandmortyapi.com/graphql": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": true
+        }
+    },
+    "Field Suggestions Enabled": {
+        "https://rickandmortyapi.com/graphql": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": true
+        }
+    }
+}

@@ -1,0 +1,53 @@
+Number of objects: 9
+Number of scalars: 0
+
+------------------- OBJECTS BUCKET -------------------
+{'Characters': [{'info': {'count': None,
+                          'next': None,
+                          'pages': None,
+                          'prev': None},
+                 'results': []},
+                {'info': {'count': None,
+                          'next': None,
+                          'pages': None,
+                          'prev': None},
+                 'results': []},
+                {'info': {'count': None,
+                          'next': None,
+                          'pages': None,
+                          'prev': None},
+                 'results': []}],
+ 'Episodes': [{'info': {'count': None,
+                        'next': None,
+                        'pages': None,
+                        'prev': None},
+               'results': []},
+              {'info': {'count': None,
+                        'next': None,
+                        'pages': None,
+                        'prev': None},
+               'results': []},
+              {'info': {'count': None,
+                        'next': None,
+                        'pages': None,
+                        'prev': None},
+               'results': []}],
+ 'Locations': [{'info': {'count': None,
+                         'next': None,
+                         'pages': None,
+                         'prev': None},
+                'results': []},
+               {'info': {'count': None,
+                         'next': None,
+                         'pages': None,
+                         'prev': None},
+                'results': []},
+               {'info': {'count': None,
+                         'next': None,
+                         'pages': None,
+                         'prev': None},
+                'results': []}]}
+
+
+------------------- SCALARS BUCKET -------------------
+{}

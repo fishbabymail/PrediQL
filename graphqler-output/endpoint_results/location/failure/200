@@ -1,0 +1,72 @@
+------------------Payload:-------------------
+{
+  location(id: "C6RKQLYWOA") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'location': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/C6RKQLYWOA', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]}
+------------------Payload:-------------------
+{
+  location(id: "C6RKQLYWOA") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'location': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/C6RKQLYWOA', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]}
+------------------Payload:-------------------
+{
+  location(id: "C6RKQLYWOA") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'location': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/C6RKQLYWOA', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]}
+------------------Payload:-------------------
+{
+  location(id: "C6RKQLYWOA") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'location': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/C6RKQLYWOA', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]}
+------------------Payload:-------------------
+{
+  location(id: "C6RKQLYWOA") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'location': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/C6RKQLYWOA', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]}
+------------------Payload:-------------------
+{
+  location(id: "C6RKQLYWOA") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'location': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/C6RKQLYWOA', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]}
