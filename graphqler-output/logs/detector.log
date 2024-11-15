@@ -1,0 +1,3678 @@
+[INFO][2024-11-14 15:10:17][detector]:[Detector] Payload:
+{
+  locations(
+    filter: {dimension: "8OXV2FUY3A", name: "XVN610SQU3", type: "JOSNLKCY68"}
+    page: 65
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          residents {
+            id
+            name
+            status
+            species
+            type
+            gender
+            origin {
+              id
+              name
+              type
+              dimension
+              residents {
+                id
+                name
+                status
+                species
+                type
+                gender
+                origin {
+                  id
+                  name
+                  type
+                  dimension
+                  residents {
+                    id
+                    name
+                    status
+                    species
+                    type
+                    gender
+                    origin {
+                      id
+                      name
+                      type
+                      dimension
+                      residents {
+                        id
+                        name
+                        status
+                        species
+                        type
+                        gender
+                        image
+                        episode {
+                          id
+                          name
+                          air_date
+                          episode
+                          created
+                        }
+                        created
+                      }
+                      created
+                    }
+                    image
+                    episode {
+                      id
+                      name
+                      air_date
+                      episode
+                      created
+                    }
+                    created
+                  }
+                  created
+                }
+                image
+                episode {
+                  id
+                  name
+                  air_date
+                  episode
+                  created
+                }
+                created
+              }
+              created
+            }
+            image
+            episode {
+              id
+              name
+              air_date
+              episode
+              created
+            }
+            created
+          }
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:17][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:17][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:17][detector]:Detector OS Command Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:17][detector]:[Detector] Payload:
+{
+  locations(
+    filter: {dimension: "<script>alert(1)</script>", name: "<script>alert(1)</script>", type: "<script>alert(1)</script>"}
+    page: 15
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:18][detector]:[200]Response: {"data":{"locations":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:18][detector]:Detector Cross-Site Scripting (XSS) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:18][detector]:[Detector] Payload:
+{
+  locations(
+    filter: {dimension: "5X5K83XBIT", name: "Q9ZY3MM5E9", type: "FOD34TKUR5"}
+    page: 67
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:18][detector]:[200]Response: {"data":{"locations":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:18][detector]:Detector SSRF Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:18][detector]:[Detector] Payload:
+{
+  locations(
+    filter: {dimension: "FFUYP0S8PF", name: "aaa ' OR 1=1--", type: "61Q1KWVFWP"}
+    page: 20
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          residents {
+            id
+            name
+            status
+            species
+            type
+            gender
+            origin {
+              id
+              name
+              type
+              dimension
+              residents {
+                id
+                name
+                status
+                species
+                type
+                gender
+                origin {
+                  id
+                  name
+                  type
+                  dimension
+                  residents {
+                    id
+                    name
+                    status
+                    species
+                    type
+                    gender
+                    origin {
+                      id
+                      name
+                      type
+                      dimension
+                      residents {
+                        id
+                        name
+                        status
+                        species
+                        type
+                        gender
+                        image
+                        episode {
+                          id
+                          name
+                          air_date
+                          episode
+                          created
+                        }
+                        created
+                      }
+                      created
+                    }
+                    image
+                    episode {
+                      id
+                      name
+                      air_date
+                      episode
+                      created
+                    }
+                    created
+                  }
+                  created
+                }
+                image
+                episode {
+                  id
+                  name
+                  air_date
+                  episode
+                  created
+                }
+                created
+              }
+              created
+            }
+            image
+            episode {
+              id
+              name
+              air_date
+              episode
+              created
+            }
+            created
+          }
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:18][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:18][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:18][detector]:Detector SQL Injection (SQLi) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:18][detector]:[Detector] Payload:
+{
+  locations(
+    filter: {dimension: "../../../../etc/passwd", name: "../../../../etc/passwd", type: "../../../../etc/passwd"}
+    page: 65
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:19][detector]:[200]Response: {"data":{"locations":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:19][detector]:Detector Path Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:19][detector]:Non-aliased Payload:
+{
+  locations(
+    filter: {dimension: "C235VRIY0L", name: "CBO8834AHS", type: "6BSD4GF4W1"}
+    page: 7
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:19][detector]:[200]Non-aliased Response: {"data":{"locations":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:19][detector]:Aliased Payload:
+{
+  s: locations(
+    filter: {dimension: "2HMRCBOI4B", name: "IOJEA9ZVOS", type: "B6E4UQECXS"}
+    page: 100
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:19][detector]:[200]Aliased Response: {"data":{"s":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:19][detector]:Detector Query deny bypass finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[ERROR][2024-11-14 15:10:19][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:19][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:19][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:19][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:19][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:19][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[INFO][2024-11-14 15:10:20][detector]:[Detector] Payload:
+{
+  episodes(filter: {episode: "6S3QHNO0VI", name: "B3TROPNTKM"}, page: 91) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          residents {
+            id
+            name
+            status
+            species
+            type
+            gender
+            origin {
+              id
+              name
+              type
+              dimension
+              residents {
+                id
+                name
+                status
+                species
+                type
+                gender
+                origin {
+                  id
+                  name
+                  type
+                  dimension
+                  residents {
+                    id
+                    name
+                    status
+                    species
+                    type
+                    gender
+                    origin {
+                      id
+                      name
+                      type
+                      dimension
+                      residents {
+                        id
+                        name
+                        status
+                        species
+                        type
+                        gender
+                        origin {
+                          id
+                          name
+                          type
+                          dimension
+                          created
+                        }
+                        image
+                        episode {
+                          id
+                          name
+                          air_date
+                          episode
+                          created
+                        }
+                        created
+                      }
+                      created
+                    }
+                    image
+                    episode {
+                      id
+                      name
+                      air_date
+                      episode
+                      created
+                    }
+                    created
+                  }
+                  created
+                }
+                image
+                episode {
+                  id
+                  name
+                  air_date
+                  episode
+                  created
+                }
+                created
+              }
+              created
+            }
+            image
+            episode {
+              id
+              name
+              air_date
+              episode
+              created
+            }
+            created
+          }
+          created
+        }
+        image
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:20][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:20][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:20][detector]:Detector OS Command Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:20][detector]:[Detector] Payload:
+{
+  episodes(
+    filter: {episode: "<script>alert(1)</script>", name: "<script>alert(1)</script>"}
+    page: 96
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:20][detector]:[200]Response: {"data":{"episodes":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:20][detector]:Detector Cross-Site Scripting (XSS) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:20][detector]:[Detector] Payload:
+{
+  episodes(filter: {episode: "XL2T2AS9G3", name: "GGL58KLZP9"}, page: 2) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:21][detector]:[200]Response: {"data":{"episodes":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:21][detector]:Detector SSRF Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:21][detector]:[Detector] Payload:
+{
+  episodes(filter: {episode: "3M41CRCFVI", name: "aaa ' OR 1=1--"}, page: 68) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          residents {
+            id
+            name
+            status
+            species
+            type
+            gender
+            origin {
+              id
+              name
+              type
+              dimension
+              residents {
+                id
+                name
+                status
+                species
+                type
+                gender
+                origin {
+                  id
+                  name
+                  type
+                  dimension
+                  residents {
+                    id
+                    name
+                    status
+                    species
+                    type
+                    gender
+                    origin {
+                      id
+                      name
+                      type
+                      dimension
+                      residents {
+                        id
+                        name
+                        status
+                        species
+                        type
+                        gender
+                        origin {
+                          id
+                          name
+                          type
+                          dimension
+                          created
+                        }
+                        image
+                        episode {
+                          id
+                          name
+                          air_date
+                          episode
+                          created
+                        }
+                        created
+                      }
+                      created
+                    }
+                    image
+                    episode {
+                      id
+                      name
+                      air_date
+                      episode
+                      created
+                    }
+                    created
+                  }
+                  created
+                }
+                image
+                episode {
+                  id
+                  name
+                  air_date
+                  episode
+                  created
+                }
+                created
+              }
+              created
+            }
+            image
+            episode {
+              id
+              name
+              air_date
+              episode
+              created
+            }
+            created
+          }
+          created
+        }
+        image
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:21][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:21][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:21][detector]:Detector SQL Injection (SQLi) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:21][detector]:[Detector] Payload:
+{
+  episodes(
+    filter: {episode: "../../../../etc/passwd", name: "../../../../etc/passwd"}
+    page: 62
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:21][detector]:[200]Response: {"data":{"episodes":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:21][detector]:Detector Path Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:21][detector]:Non-aliased Payload:
+{
+  episodes(filter: {episode: "FNTU9XGT0J", name: "GLPSPJKXBC"}, page: 91) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:22][detector]:[200]Non-aliased Response: {"data":{"episodes":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:22][detector]:Aliased Payload:
+{
+  s: episodes(filter: {episode: "WM3U3DBOK1", name: "XCGUJNYDLR"}, page: 57) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:22][detector]:[200]Aliased Response: {"data":{"s":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:22][detector]:Detector Query deny bypass finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[ERROR][2024-11-14 15:10:22][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:22][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:22][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:22][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:22][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:22][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[INFO][2024-11-14 15:10:23][detector]:[Detector] Payload:
+{
+  characters(
+    filter: {gender: "UEK2PD63J7", name: "765F3MUBA0", species: "PSVQ5T4PTY", status: "HUAKB2JQJA", type: "3HRKTNV91K"}
+    page: 100
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          origin {
+            id
+            name
+            type
+            dimension
+            residents {
+              id
+              name
+              status
+              species
+              type
+              gender
+              origin {
+                id
+                name
+                type
+                dimension
+                residents {
+                  id
+                  name
+                  status
+                  species
+                  type
+                  gender
+                  origin {
+                    id
+                    name
+                    type
+                    dimension
+                    residents {
+                      id
+                      name
+                      status
+                      species
+                      type
+                      gender
+                      origin {
+                        id
+                        name
+                        type
+                        dimension
+                        created
+                      }
+                      image
+                      episode {
+                        id
+                        name
+                        air_date
+                        episode
+                        created
+                      }
+                      created
+                    }
+                    created
+                  }
+                  image
+                  episode {
+                    id
+                    name
+                    air_date
+                    episode
+                    created
+                  }
+                  created
+                }
+                created
+              }
+              image
+              episode {
+                id
+                name
+                air_date
+                episode
+                created
+              }
+              created
+            }
+            created
+          }
+          image
+          episode {
+            id
+            name
+            air_date
+            episode
+            created
+          }
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:23][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:23][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:23][detector]:Detector OS Command Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:23][detector]:[Detector] Payload:
+{
+  characters(
+    filter: {gender: "<script>alert(1)</script>", name: "<script>alert(1)</script>", species: "<script>alert(1)</script>", status: "<script>alert(1)</script>", type: "<script>alert(1)</script>"}
+    page: 41
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:23][detector]:[200]Response: {"data":{"characters":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:23][detector]:Detector Cross-Site Scripting (XSS) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:23][detector]:[Detector] Payload:
+{
+  characters(
+    filter: {gender: "J661KPP37W", name: "R3C09W4Q92", species: "41Y3HTGZ66", status: "5R95UJDEEU", type: "ELB8EEMYWQ"}
+    page: 14
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:23][detector]:[200]Response: {"data":{"characters":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:23][detector]:Detector SSRF Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:23][detector]:[Detector] Payload:
+{
+  characters(
+    filter: {gender: "0JQ60J2CJZ", name: "aaa ' OR 1=1--", species: "7XDLBA8B8A", status: "6CTLITGSCV", type: "TMS18JWA60"}
+    page: 54
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          origin {
+            id
+            name
+            type
+            dimension
+            residents {
+              id
+              name
+              status
+              species
+              type
+              gender
+              origin {
+                id
+                name
+                type
+                dimension
+                residents {
+                  id
+                  name
+                  status
+                  species
+                  type
+                  gender
+                  origin {
+                    id
+                    name
+                    type
+                    dimension
+                    residents {
+                      id
+                      name
+                      status
+                      species
+                      type
+                      gender
+                      origin {
+                        id
+                        name
+                        type
+                        dimension
+                        created
+                      }
+                      image
+                      episode {
+                        id
+                        name
+                        air_date
+                        episode
+                        created
+                      }
+                      created
+                    }
+                    created
+                  }
+                  image
+                  episode {
+                    id
+                    name
+                    air_date
+                    episode
+                    created
+                  }
+                  created
+                }
+                created
+              }
+              image
+              episode {
+                id
+                name
+                air_date
+                episode
+                created
+              }
+              created
+            }
+            created
+          }
+          image
+          episode {
+            id
+            name
+            air_date
+            episode
+            created
+          }
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:23][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:23][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:23][detector]:Detector SQL Injection (SQLi) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:23][detector]:[Detector] Payload:
+{
+  characters(
+    filter: {gender: "../../../../etc/passwd", name: "../../../../etc/passwd", species: "../../../../etc/passwd", status: "../../../../etc/passwd", type: "../../../../etc/passwd"}
+    page: 67
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:24][detector]:[200]Response: {"data":{"characters":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:24][detector]:Detector Path Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:24][detector]:Non-aliased Payload:
+{
+  characters(
+    filter: {gender: "ZO1C4DF1TK", name: "26JR36WMCF", species: "11SXCEW8V1", status: "L0TGIY364X", type: "B7KIB10F3J"}
+    page: 64
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:24][detector]:[200]Non-aliased Response: {"data":{"characters":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:24][detector]:Aliased Payload:
+{
+  s: characters(
+    filter: {gender: "86H308G8RH", name: "BI4XOOFJ4W", species: "6J9KEUSZA0", status: "4RCW32LW8J", type: "NZ5AZY2CC4"}
+    page: 29
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+  }
+}
+[INFO][2024-11-14 15:10:24][detector]:[200]Aliased Response: {"data":{"s":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+[INFO][2024-11-14 15:10:24][detector]:Detector Query deny bypass finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[ERROR][2024-11-14 15:10:24][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:24][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:24][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:24][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:24][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:24][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:24][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:24][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:24][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:24][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:24][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:24][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:25][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:25][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:26][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:26][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:27][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:27][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:27][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:27][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:27][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:27][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Locations
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Episodes
+[ERROR][2024-11-14 15:10:28][detector]:Detector OS Command Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Cross-Site Scripting (XSS) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector SSRF Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector SQL Injection (SQLi) Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Path Injection failed with error: Could not find a value for the input name: ids in the object: Characters
+[ERROR][2024-11-14 15:10:28][detector]:Detector Query deny bypass failed with error: Could not find a value for the input name: ids in the object: Characters
+[INFO][2024-11-14 15:10:28][detector]:[Detector] Payload:
+{
+  character(id: "BXU3JJ7VRI") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    origin {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          residents {
+            id
+            name
+            status
+            species
+            type
+            gender
+            origin {
+              id
+              name
+              type
+              dimension
+              residents {
+                id
+                name
+                status
+                species
+                type
+                gender
+                origin {
+                  id
+                  name
+                  type
+                  dimension
+                  residents {
+                    id
+                    name
+                    status
+                    species
+                    type
+                    gender
+                    origin {
+                      id
+                      name
+                      type
+                      dimension
+                      created
+                    }
+                    image
+                    episode {
+                      id
+                      name
+                      air_date
+                      episode
+                      created
+                    }
+                    created
+                  }
+                  created
+                }
+                image
+                episode {
+                  id
+                  name
+                  air_date
+                  episode
+                  created
+                }
+                created
+              }
+              created
+            }
+            image
+            episode {
+              id
+              name
+              air_date
+              episode
+              created
+            }
+            created
+          }
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    image
+    episode {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:28][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:28][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:28][detector]:Detector OS Command Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:28][detector]:[Detector] Payload:
+{
+  character(id: "N05X3V22V4") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    origin {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    location {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    image
+    episode {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:29][detector]:[200]Response: {"data":{"character":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["character"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/character/N05X3V22V4","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:29][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['character'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/character/N05X3V22V4', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]
+[INFO][2024-11-14 15:10:29][detector]:Detector Cross-Site Scripting (XSS) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:29][detector]:[Detector] Payload:
+{
+  character(id: "OTKL7D2YFJ") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    origin {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    location {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    image
+    episode {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:29][detector]:[200]Response: {"data":{"character":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["character"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/character/OTKL7D2YFJ","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:29][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['character'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/character/OTKL7D2YFJ', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]
+[INFO][2024-11-14 15:10:29][detector]:Detector SSRF Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:29][detector]:[Detector] Payload:
+{
+  character(id: "B32LXXZ686") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    origin {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          residents {
+            id
+            name
+            status
+            species
+            type
+            gender
+            origin {
+              id
+              name
+              type
+              dimension
+              residents {
+                id
+                name
+                status
+                species
+                type
+                gender
+                origin {
+                  id
+                  name
+                  type
+                  dimension
+                  residents {
+                    id
+                    name
+                    status
+                    species
+                    type
+                    gender
+                    origin {
+                      id
+                      name
+                      type
+                      dimension
+                      created
+                    }
+                    image
+                    episode {
+                      id
+                      name
+                      air_date
+                      episode
+                      created
+                    }
+                    created
+                  }
+                  created
+                }
+                image
+                episode {
+                  id
+                  name
+                  air_date
+                  episode
+                  created
+                }
+                created
+              }
+              created
+            }
+            image
+            episode {
+              id
+              name
+              air_date
+              episode
+              created
+            }
+            created
+          }
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    image
+    episode {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:29][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:29][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:29][detector]:Detector SQL Injection (SQLi) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:29][detector]:[Detector] Payload:
+{
+  character(id: "ZOC88DNTBV") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    origin {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    location {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    image
+    episode {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:30][detector]:[200]Response: {"data":{"character":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["character"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/character/ZOC88DNTBV","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:30][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['character'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/character/ZOC88DNTBV', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]
+[INFO][2024-11-14 15:10:30][detector]:Detector Path Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:30][detector]:Non-aliased Payload:
+{
+  character(id: "NC0L2GHK4X") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+[INFO][2024-11-14 15:10:30][detector]:[200]Non-aliased Response: {"data":{"character":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["character"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/character/NC0L2GHK4X","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:30][detector]:Aliased Payload:
+{
+  s: character(id: "VEKON74VV4") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    origin {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    location {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    image
+    episode {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:30][detector]:[200]Aliased Response: {"data":{"s":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["s"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/character/VEKON74VV4","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:30][detector]:Detector Query deny bypass finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:31][detector]:[Detector] Payload:
+{
+  episode(id: "E0IU4J7OQ3") {
+    id
+    name
+    air_date
+    episode
+    characters {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          origin {
+            id
+            name
+            type
+            dimension
+            residents {
+              id
+              name
+              status
+              species
+              type
+              gender
+              origin {
+                id
+                name
+                type
+                dimension
+                residents {
+                  id
+                  name
+                  status
+                  species
+                  type
+                  gender
+                  origin {
+                    id
+                    name
+                    type
+                    dimension
+                    residents {
+                      id
+                      name
+                      status
+                      species
+                      type
+                      gender
+                      origin {
+                        id
+                        name
+                        type
+                        dimension
+                        created
+                      }
+                      image
+                      episode {
+                        id
+                        name
+                        air_date
+                        episode
+                        created
+                      }
+                      created
+                    }
+                    created
+                  }
+                  image
+                  episode {
+                    id
+                    name
+                    air_date
+                    episode
+                    created
+                  }
+                  created
+                }
+                created
+              }
+              image
+              episode {
+                id
+                name
+                air_date
+                episode
+                created
+              }
+              created
+            }
+            created
+          }
+          image
+          episode {
+            id
+            name
+            air_date
+            episode
+            created
+          }
+          created
+        }
+        created
+      }
+      image
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:31][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:31][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:31][detector]:Detector OS Command Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:31][detector]:[Detector] Payload:
+{
+  episode(id: "MK6BY0QBEM") {
+    id
+    name
+    air_date
+    episode
+    characters {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:31][detector]:[200]Response: {"data":{"episode":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["episode"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/episode/MK6BY0QBEM","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:31][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/MK6BY0QBEM', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]
+[INFO][2024-11-14 15:10:31][detector]:Detector Cross-Site Scripting (XSS) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:31][detector]:[Detector] Payload:
+{
+  episode(id: "QCULCD7OFT") {
+    id
+    name
+    air_date
+    episode
+    characters {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:32][detector]:[200]Response: {"data":{"episode":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["episode"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/episode/QCULCD7OFT","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:32][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/QCULCD7OFT', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]
+[INFO][2024-11-14 15:10:32][detector]:Detector SSRF Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:32][detector]:[Detector] Payload:
+{
+  episode(id: "1PTFV5G24X") {
+    id
+    name
+    air_date
+    episode
+    characters {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          origin {
+            id
+            name
+            type
+            dimension
+            residents {
+              id
+              name
+              status
+              species
+              type
+              gender
+              origin {
+                id
+                name
+                type
+                dimension
+                residents {
+                  id
+                  name
+                  status
+                  species
+                  type
+                  gender
+                  origin {
+                    id
+                    name
+                    type
+                    dimension
+                    residents {
+                      id
+                      name
+                      status
+                      species
+                      type
+                      gender
+                      origin {
+                        id
+                        name
+                        type
+                        dimension
+                        created
+                      }
+                      image
+                      episode {
+                        id
+                        name
+                        air_date
+                        episode
+                        created
+                      }
+                      created
+                    }
+                    created
+                  }
+                  image
+                  episode {
+                    id
+                    name
+                    air_date
+                    episode
+                    created
+                  }
+                  created
+                }
+                created
+              }
+              image
+              episode {
+                id
+                name
+                air_date
+                episode
+                created
+              }
+              created
+            }
+            created
+          }
+          image
+          episode {
+            id
+            name
+            air_date
+            episode
+            created
+          }
+          created
+        }
+        created
+      }
+      image
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:32][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:32][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:32][detector]:Detector SQL Injection (SQLi) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:32][detector]:[Detector] Payload:
+{
+  episode(id: "KN44121SSU") {
+    id
+    name
+    air_date
+    episode
+    characters {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:32][detector]:[200]Response: {"data":{"episode":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["episode"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/episode/KN44121SSU","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:32][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/KN44121SSU', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]
+[INFO][2024-11-14 15:10:32][detector]:Detector Path Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:32][detector]:Non-aliased Payload:
+{
+  episode(id: "JH14FZS5YR") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+[INFO][2024-11-14 15:10:33][detector]:[200]Non-aliased Response: {"data":{"episode":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["episode"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/episode/JH14FZS5YR","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:33][detector]:Aliased Payload:
+{
+  s: episode(id: "DB8JETZH2B") {
+    id
+    name
+    air_date
+    episode
+    characters {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:33][detector]:[200]Aliased Response: {"data":{"s":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["s"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/episode/DB8JETZH2B","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:33][detector]:Detector Query deny bypass finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:34][detector]:[Detector] Payload:
+{
+  location(id: "PNQVVG63ZW") {
+    id
+    name
+    type
+    dimension
+    residents {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          origin {
+            id
+            name
+            type
+            dimension
+            residents {
+              id
+              name
+              status
+              species
+              type
+              gender
+              origin {
+                id
+                name
+                type
+                dimension
+                residents {
+                  id
+                  name
+                  status
+                  species
+                  type
+                  gender
+                  origin {
+                    id
+                    name
+                    type
+                    dimension
+                    residents {
+                      id
+                      name
+                      status
+                      species
+                      type
+                      gender
+                      image
+                      episode {
+                        id
+                        name
+                        air_date
+                        episode
+                        created
+                      }
+                      created
+                    }
+                    created
+                  }
+                  image
+                  episode {
+                    id
+                    name
+                    air_date
+                    episode
+                    created
+                  }
+                  created
+                }
+                created
+              }
+              image
+              episode {
+                id
+                name
+                air_date
+                episode
+                created
+              }
+              created
+            }
+            created
+          }
+          image
+          episode {
+            id
+            name
+            air_date
+            episode
+            created
+          }
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:34][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:34][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:34][detector]:Detector OS Command Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:34][detector]:[Detector] Payload:
+{
+  location(id: "MUA672IVKI") {
+    id
+    name
+    type
+    dimension
+    residents {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:34][detector]:[200]Response: {"data":{"location":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["location"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/location/MUA672IVKI","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:34][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/MUA672IVKI', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]
+[INFO][2024-11-14 15:10:34][detector]:Detector Cross-Site Scripting (XSS) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:34][detector]:[Detector] Payload:
+{
+  location(id: "EC1ZCGS7GO") {
+    id
+    name
+    type
+    dimension
+    residents {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:34][detector]:[200]Response: {"data":{"location":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["location"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/location/EC1ZCGS7GO","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:34][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/EC1ZCGS7GO', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Hey! you must provide an id'}}}}]
+[INFO][2024-11-14 15:10:34][detector]:Detector SSRF Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:34][detector]:[Detector] Payload:
+{
+  location(id: "25HTAW27P0") {
+    id
+    name
+    type
+    dimension
+    residents {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          origin {
+            id
+            name
+            type
+            dimension
+            residents {
+              id
+              name
+              status
+              species
+              type
+              gender
+              origin {
+                id
+                name
+                type
+                dimension
+                residents {
+                  id
+                  name
+                  status
+                  species
+                  type
+                  gender
+                  origin {
+                    id
+                    name
+                    type
+                    dimension
+                    residents {
+                      id
+                      name
+                      status
+                      species
+                      type
+                      gender
+                      image
+                      episode {
+                        id
+                        name
+                        air_date
+                        episode
+                        created
+                      }
+                      created
+                    }
+                    created
+                  }
+                  image
+                  episode {
+                    id
+                    name
+                    air_date
+                    episode
+                    created
+                  }
+                  created
+                }
+                created
+              }
+              image
+              episode {
+                id
+                name
+                air_date
+                episode
+                created
+              }
+              created
+            }
+            created
+          }
+          image
+          episode {
+            id
+            name
+            air_date
+            episode
+            created
+          }
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:34][detector]:[413]Response: {"errors":[{"message":"Query depth limit exceeded.","extensions":{"code":"GCDN_QUERY_DEPTH_LIMIT","httpStatusCode":413}}]}
+[INFO][2024-11-14 15:10:34][detector]:Got errors: [{'message': 'Query depth limit exceeded.', 'extensions': {'code': 'GCDN_QUERY_DEPTH_LIMIT', 'httpStatusCode': 413}}]
+[INFO][2024-11-14 15:10:34][detector]:Detector SQL Injection (SQLi) Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:35][detector]:[Detector] Payload:
+{
+  location(id: "5LTCOMU99O") {
+    id
+    name
+    type
+    dimension
+    residents {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:35][detector]:[200]Response: {"data":{"location":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["location"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/location/5LTCOMU99O","status":500,"statusText":"Internal Server Error","body":{"error":"Cast to Number failed for value \"5LTCOMU99O\" at path \"id\" for model \"Location\""}}}}]}
+[INFO][2024-11-14 15:10:35][detector]:Got errors: [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['location'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/location/5LTCOMU99O', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "5LTCOMU99O" at path "id" for model "Location"'}}}}]
+[INFO][2024-11-14 15:10:35][detector]:Detector Path Injection finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:35][detector]:Non-aliased Payload:
+{
+  location(id: "MDQ2R8M9DQ") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+[INFO][2024-11-14 15:10:35][detector]:[200]Non-aliased Response: {"data":{"location":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["location"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/location/MDQ2R8M9DQ","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:35][detector]:Aliased Payload:
+{
+  s: location(id: "JK01WKPAU9") {
+    id
+    name
+    type
+    dimension
+    residents {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      image
+      episode {
+        id
+        name
+        air_date
+        episode
+        characters {
+          id
+          name
+          status
+          species
+          type
+          gender
+          image
+          created
+        }
+        created
+      }
+      created
+    }
+    created
+  }
+}
+[INFO][2024-11-14 15:10:36][detector]:[200]Aliased Response: {"data":{"s":null},"errors":[{"message":"500: Internal Server Error","locations":[{"line":2,"column":3}],"path":["s"],"extensions":{"code":"INTERNAL_SERVER_ERROR","response":{"url":"http://localhost:8080/api/location/JK01WKPAU9","status":500,"statusText":"Internal Server Error","body":{"error":"Hey! you must provide an id"}}}}]}
+[INFO][2024-11-14 15:10:36][detector]:Detector Query deny bypass finished detecting - is_vulnerable: False - potentially_vulnerable: False
+[INFO][2024-11-14 15:10:36][detector]:[Detector] Payload:
+{
+  __schema {
+    queryType {
+      name
+    }
+    mutationType {
+      name
+    }
+    subscriptionType {
+      name
+    }
+  }
+}
+[INFO][2024-11-14 15:10:36][detector]:[200]Response: {"data":{"__schema":{"queryType":{"name":"Query"},"mutationType":null,"subscriptionType":null}}}
+[INFO][2024-11-14 15:10:36][detector]:Vulnerable to Introspection Enabled
+[INFO][2024-11-14 15:10:36][detector]:Potentially vulnerable to Introspection Enabled
+[INFO][2024-11-14 15:10:36][detector]:Detector Introspection Enabled finished detecting - is_vulnerable: True - potentially_vulnerable: True
+[INFO][2024-11-14 15:10:36][detector]:[Detector] Payload:
+{
+  episodeabc {
+    id
+  }
+}
+[INFO][2024-11-14 15:10:36][detector]:[400]Response: {"errors":[{"message":"Cannot query field \"episodeabc\" on type \"Query\". Did you mean \"episode\", \"episodes\", or \"episodesByIds\"?","locations":[{"line":2,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+[INFO][2024-11-14 15:10:36][detector]:Got errors: [{'message': 'Cannot query field "episodeabc" on type "Query". Did you mean "episode", "episodes", or "episodesByIds"?', 'locations': [{'line': 2, 'column': 3}], 'extensions': {'code': 'GRAPHQL_VALIDATION_FAILED'}}]
+[INFO][2024-11-14 15:10:36][detector]:Vulnerable to Field Suggestions Enabled
+[INFO][2024-11-14 15:10:36][detector]:Potentially vulnerable to Field Suggestions Enabled
+[INFO][2024-11-14 15:10:36][detector]:Detector Field Suggestions Enabled finished detecting - is_vulnerable: True - potentially_vulnerable: True
