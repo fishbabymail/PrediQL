@@ -1,0 +1,192 @@
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
+------------------Payload:-------------------
+{
+  episode(id: "4HRRZWBFQ3") {
+    id
+    name
+    air_date
+    episode
+    created
+  }
+}
+------------------Response:-------------------
+{'data': {'episode': None}, 'errors': [{'message': '500: Internal Server Error', 'locations': [{'line': 2, 'column': 3}], 'path': ['episode'], 'extensions': {'code': 'INTERNAL_SERVER_ERROR', 'response': {'url': 'http://localhost:8080/api/episode/4HRRZWBFQ3', 'status': 500, 'statusText': 'Internal Server Error', 'body': {'error': 'Cast to Number failed for value "4HRRZWBFQ3" at path "id" for model "Episode"'}}}}]}
