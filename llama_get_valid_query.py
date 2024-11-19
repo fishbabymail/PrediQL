@@ -2,7 +2,7 @@ import os
 import yaml
 import json
 import logging
-from parse_endpoint_results import ParseFailureResults
+from parse_endpoint_results import ParseEndpointResults
 
 from llama_initator import get_llm_model
 
@@ -35,8 +35,8 @@ class LlamaGetValidQuery:
 
     def get_valid_queries(self):
         # Get failure payloads and responses pairs
-        pfr = ParseFailureResults()
-        payload_resp_pair = pfr.parse_result_to_dict()
+        per = ParseEndpointResults()
+        payload_resp_pair = per.parse_result_to_dict()
         # print(payload_resp_pair)
 
         # Get compiled query schema

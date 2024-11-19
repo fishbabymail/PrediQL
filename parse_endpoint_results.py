@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 # Find graphqler-output/endpoint_results/xx/failure/200 files
-class ParseFailureResults():
+class ParseEndpointResults():
 
     def __init__(self, base_path=None):
         if not base_path:
@@ -65,7 +65,7 @@ class ParseFailureResults():
 
 
 if __name__ == "__main__":
-    pfr = ParseFailureResults()
+    pfr = ParseEndpointResults()
     payload_resp_pair = pfr.parse_result_to_dict()
     for payload, response in payload_resp_pair.items():
         print("payload: {}\n".format(payload))
