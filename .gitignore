@@ -4,3 +4,5 @@ wordlist/llama_wordlist.txt
 llama_query/
 test_results/
 .DS_Store
+graphqler_results/
+graphqler-output/
