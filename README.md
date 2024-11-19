@@ -1,5 +1,16 @@
 # PrediQL
 
+## Acknowledgements
+
+### This project leverages the following tool：
+#### - [GraphQLer](https://github.com/omar2535/GraphQLer): The only dependency-aware GraphQL API testing tool!
+
+We thank the developers of this tool for their contributions to the open-source community.
+
+--------------------------
+### Functions Explanation
+
+
 #### `llama_initiator.py`
 * description: initiate llama object, using llama 3.1
 
