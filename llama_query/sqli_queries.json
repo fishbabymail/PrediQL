@@ -1,0 +1,28 @@
+{
+    "query": [
+        "\n{\n  Episode(id: \"ZZCSIFXQK3\" OR 1=1) {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+        "\n{\n  Episode(id: \"ZZCSIFXQK3\" -- comment) {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+        "\n{\n  Episode(id: \"ZZCSIFXQK3\") {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n  Episode(id: \"ZZCSIFXQK4\") {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  } UNION SELECT * FROM episodes\n}\n",
+        "\n{\n  Episode(id: \"ZZCSIFXQK3\" OR (SELECT COUNT(*) FROM episodes WHERE id = 'ZZCSIFXQK4') > 0) {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+        "\n{\n  Episode(id: \"ZZCSIFXQK3\" OR SLEEP(5)) {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+        "\n{\n  Episode(id: \"ZZCSIFXQK3\" OR 1/0) {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+        "\n{\n  Episode(id: \"ZZCSIFXQK3\" OR (SELECT VERSION()) != '') {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+        "\n    {\n      episodesByIds(ids: [\"TRUE OR id = 'admin'\", \"ZZCSIFXQK1\"]) {\n        # ...\n      }\n    }\n    ",
+        "\n    {\n      episodesByIds(ids: [\"--\", \"ZZCSIFXQK1\"]) {\n        # ...\n      }\n    }\n    ",
+        "\n    {\n      episodesByIds(ids: [\"1 UNION SELECT * FROM users\", \"ZZCSIFXQK1\"]) {\n        # ...\n      }\n    }\n    ",
+        "\n    {\n      episodesByIds(ids: [\"1 OR 1=1\", \"ZZCSIFXQK1\"]) {\n        # ...\n      }\n    }\n    ",
+        "\n    {\n      episodesByIds(ids: [\"SLEEP(10)\", \"ZZCSIFXQK1\"]) {\n        # ...\n      }\n    }\n    ",
+        "\n    {\n      episodesByIds(ids: [\"1 / 0\", \"ZZCSIFXQK1\"]) {\n        # ...\n      }\n    }\n    ",
+        "\n    {\n      episodesByIds(ids: [\"SCHEMA()\", \"ZZCSIFXQK1\"]) {\n        # ...\n      }\n    }\n    ",
+        "\n{\n  episodesByIds(ids: [\"1\", \"ZZCSIFXQK1\"]) {\n    # ...\n  }\n}\n",
+        "\n{\n  locations(where: { OR: [{ type: \"Planet\" }, { type: { _eq: null } }] }) {\n    id\n  }\n}\n",
+        "\n{\n  locations(where: { id: { _eq: \"123\" }, OR: [{ dimension: { _eq: null } }] }) {\n    id\n  }\n}\n",
+        "\n{\n  locations(where: { AND: [{ created: { _eq: \"2022-01-01\" } }, { type: { _eq: null } }] }) {\n    id\n  }\n}\n",
+        "\n{\n  locations(where: { AND: [{ created: { _eq: \"2022-01-01\" } }, { dimension: { _eq: \"abc123\" } }] }) {\n    id\n  }\n}\n",
+        "\n    {\n        locations(filter: {dimension: \"1=1\", name: \"\", type: \"\"}) {\n            info\n            results {\n                id\n                name\n                type\n                dimension\n                created\n            }\n        }\n    }\n    ",
+        "\n    {\n        locations(filter: {dimension: \"\", name: \"DDNB2U7URT\", type: \"\"}) {\n            info\n            results {\n                id\n                name\n                type\n                dimension\n                created\n            }\n        }\n    }\n    ",
+        "\n        {\n            locations(filter: {dimension: \"YA8C73NGBP\", name: \"\", type: \"\"} AND OR 1=1) {\n                info\n                results {\n                    id\n                    name\n                    type\n                    dimension\n                    created\n                }\n            }\n        }\n        ",
+        "\n    {\n        locations(filter: {dimension: \"\", name: \"DDNB2U7URT\", type: 5XZWSZPI76}) {\n            info\n            results {\n                id\n                name\n                type\n                dimension\n                created\n            }\n        }\n    }\n    ",
+        "\n    {\n        __schema {\n            types {\n                name\n                kind\n                isDeprecated\n                fields(includeDeprecated: true) {\n                    name\n                    type {\n                        ... on ScalarType {\n                            description\n                        }\n                        ... on ObjectType {\n                            description\n                        }\n                    }\n                    isDeprecated\n                    deprecationReason\n                }\n            }\n        }\n    }\n    "
+    ]
+}
