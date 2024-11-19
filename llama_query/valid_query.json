@@ -1,0 +1,24 @@
+{
+  "query": [
+    "\n{\n  Character(id: \"ZZCSIFXQK3\") {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+    "\n{\n  Episode(id: \"ZZCSIFXQK3\") {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+    "\n{\n  episodesByIds(ids: [\"ZZCSIFXQK3\", \"ZZCSIFXQK1\"]) {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+    "\n{\n  Location(id: \"ZZCSIFXQK3\") {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+    "\n{\n  locationsByIds(ids: [\"ZZCSIFXQK3\", \"ZZCSIFXQK1\"]) {\n    id\n    name\n    status\n    species\n    type\n    gender\n    image\n    created\n  }\n}\n",
+    "\n{\n  locations {\n    id\n    name\n    type\n    dimension\n    created\n  }\n}\n",
+    "\n{\n  locations(filter: {dimension: \"Earth\"}) {\n    id\n    name\n    type\n    dimension\n    created\n  }\n}\n",
+    "\n{\n  episodes(filter: {season: 1}) {\n    id\n    name\n    episode\n    airdate\n  }\n}\n",
+    "\n{\n  episodes(filter: {id: \"YUN3QMXKVE\", name: \"0TD1P1U6UN\"}, page: 76) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      air_date\n      episode\n      created\n    }\n  }\n}\n",
+    "\n{\n  episodes(filter: {id: \"NTDVPYJKFA\"}) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      air_date\n      episode\n      created\n    }\n  }\n}\n",
+    "\n{\n  episodes(filter: {id: \"NTDVPYJKFA\"}, page: 53) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      air_date\n      episode\n      created\n    }\n  }\n}\n",
+    "\n{\n  episodes(filter: {id: \"ROA2V7WG0L\"}, page: 20) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      air_date\n      episode\n      created\n    }\n  }\n}\n",
+    "\n{\n  episodes(filter: {ids: [\"ROA2V7WG0L\"]}, page: 20) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      air_date\n      episode\n      created\n    }\n  }\n}\n",
+    "\n{\n  locations(\n    filter: { dimension: \"YA8C73NGBP\", name: \"DDNB2U7URT\", type: \"5XZWSZPI76\" }\n    page: 49\n  ) {\n    info\n    results {\n      id\n      name\n      type\n      dimension\n      created\n    }\n  }\n}\n",
+    "\n{\n  locations {\n    info\n    results {\n      id\n      name\n      type\n      dimension\n      created\n    }\n  }\n}\n",
+    "\n{\n  locations(\n    filter: { dimension: \"YA8C73NGBP\", name: \"DDNB2U7URT\", type: \"5XZWSZPI76\" }\n    page: 50\n  ) {\n    info\n    results {\n      id\n      name\n      type\n      dimension\n      created\n    }\n  }\n}\n",
+    "\n{\n  location(id: \"some_id\") {\n    id\n    name\n    type\n    dimension\n    created\n  }\n}\n\n{\n  locations(page: 14) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      type\n      dimension\n      created\n    }\n  }\n}\n",
+    "\n{\n  locations(page: 1) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      type\n      dimension\n      created\n    }\n  }\n}\n\n{\n  location(id: \"some_id\") {\n    id\n    name\n    type\n    dimension\n    created\n  }\n}\n",
+    "\n# Using FilterCharacter\n{\n  locations(\n    filter: {dimension: \"R0GWBQNEJ1\", name: \"YKL19KAG5M\", type: \"ZYXY3K0JQ8\"}\n    page: 72\n  ) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      type\n      dimension\n      created\n    }\n  }\n}\n\n# Using FilterEpisode (Note: This will probably not work, as it's not related to locations)\n{\n  locations(\n    filter: {dimension: \"R0GWBQNEJ1\", name: \"YKL19KAG5M\", type: \"ZYXY3K0JQ8\"}\n    page: 72\n  ) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      type\n      dimension\n      created\n    }\n  }\n}\n\n# Not using a filter at all (This is probably the best option)\n{\n  locations(page: 72) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      type\n      dimension\n      created\n    }\n  }\n}\n",
+    "\n{\n  characters(filter: { id: \"123\" }, page: 46) {\n    info {\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      id\n      name\n      status\n      species\n      type\n      gender\n      image\n      created\n    }\n  }\n}\n"
+  ]
+}
