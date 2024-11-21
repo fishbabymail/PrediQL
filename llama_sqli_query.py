@@ -50,8 +50,8 @@ class LlamaGetSQLIQuery:
                       f"Extracting Metadata, etc. Each returned query should follow the format: {tmp}. "
                       f"The query is like: {query}.")
             llama_res = get_llm_model(prompt)
-            print("=============\nLLAMA PROMPT: \n", prompt)
-            print("=============\nLLAMA RESPONSE: \n", llama_res)
+            # print("=============\nLLAMA PROMPT: \n", prompt)
+            # print("=============\nLLAMA RESPONSE: \n", llama_res)
             flag = "```graphql"
             parse_time = 0
             while flag in llama_res and parse_time < 10:
