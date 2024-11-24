@@ -2,7 +2,7 @@ import os
 import yaml
 import json
 import logging
-from parse_endpoint_results import ParseFailureResults
+from parse_endpoint_results import ParseEndpointResults
 
 from llama_initator import get_llm_model
 
