@@ -1,0 +1,1525 @@
+------------------Payload:-------------------
+
+{
+  Characters(ids: ["ZZCSIFXQK3", "B5YRBCA2WZ", "J4TXD7PT0M", "F7V9XG47CW", "HHH73T9CXM"]) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"Characters\" on type \"Query\". Did you mean \"character\", \"characters\", or \"charactersByIds\"?","locations":[{"line":2,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  Characters(ids: [ZZCSIFXQK3", "B5YRBCA2WZ", "J4TXD7PT0M", ..., "HHH73T9CXM"]) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Unterminated string.","locations":[{"line":3,"column":82}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  Episode(id: "ZZCSIFXQK3") {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"Episode\" on type \"Query\". Did you mean \"episode\", \"episodes\", or \"episodesByIds\"?","locations":[{"line":2,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(first: 10) {
+    edges {
+      node {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        created
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"episodes\" of type \"Query\".","locations":[{"line":2,"column":12}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"edges\" on type \"Episodes\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episode(id: "ZZCSIFXQK3") {
+    id
+  }
+
+  episodes(first: 10, after: "ZZCSIFXQK3") {
+    edges {
+      node {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        created
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"episodes\" of type \"Query\".","locations":[{"line":6,"column":12}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown argument \"after\" on field \"episodes\" of type \"Query\". Did you mean \"filter\"?","locations":[{"line":6,"column":23}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"edges\" on type \"Episodes\".","locations":[{"line":7,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  character(inTheShow: "Star Trek: The Next Generation") {
+    id
+    name
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"inTheShow\" on field \"character\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"character\" argument \"id\" of type \"ID!\" is required, but it was not provided.","locations":[{"line":2,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodesByIds(ids: ["ZZCSIFXQK3", "ZZCSIFXQK1", "ZZCSIFXQK2", "ZZCSIFXQK4", "ZZCSIFXQK5", "ZZCSIFXQK6", "ZZCSIFXQK7", "ZZCSIFXQK8"]) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"status\" on type \"Episode\".","locations":[{"line":5,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"species\" on type \"Episode\".","locations":[{"line":6,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"type\" on type \"Episode\".","locations":[{"line":7,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"gender\" on type \"Episode\".","locations":[{"line":8,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"image\" on type \"Episode\".","locations":[{"line":9,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(first: 1000) {
+    edges {
+      node {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        created
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"edges\" on type \"Locations\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(first: 10000) {
+    nodes {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"nodes\" on type \"Locations\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locationsByIds(ids: ["ZZCSIFXQK3", "ZZCSIFXQK1", ..., "ZZCSIFXQK1000"]) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Unexpected ...","locations":[{"line":3,"column":52}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  locationsByIds(ids: ["ZZCSIFXQK3", "ZZCSIFXQK1", ..., "ZZCSIFXQK1000"]) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    image
+    created
+    additionalInfo @skip(if: false)
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Unexpected ...","locations":[{"line":3,"column":52}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  locations(first:1000) {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Locations\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"name\" on type \"Locations\".","locations":[{"line":4,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"type\" on type \"Locations\".","locations":[{"line":5,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"dimension\" on type \"Locations\".","locations":[{"line":6,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"created\" on type \"Locations\".","locations":[{"line":7,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+query HighLoadLocations($skip: Int, $take: Int) {
+  locations(filter: {dimension: "Earth"}, skip: $skip, take: $take) {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"skip\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":43}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown argument \"take\" on field \"locations\" of type \"Query\". Did you mean \"page\"?","locations":[{"line":2,"column":56}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Locations\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"name\" on type \"Locations\".","locations":[{"line":4,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"type\" on type \"Locations\".","locations":[{"line":5,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"dimension\" on type \"Locations\".","locations":[{"line":6,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"created\" on type \"Locations\".","locations":[{"line":7,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+query HighLoadLocations($skip: 0, $take: 100) {
+  locations(filter: {dimension: "Earth"}, skip: $skip, take: $take) {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+
+query HighLoadLocations($skip: 100, $take: 200) {
+  locations(filter: {dimension: "Earth"}, skip: $skip, take: $take) {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected Name, found Int \"0\"","locations":[{"line":2,"column":32}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
+------------------Payload:-------------------
+
+{
+  episodes(filter: { season: 1 }) {
+    id
+    name
+    episode
+    airdate
+  }
+
+  characters {
+    id
+    name
+  }
+  
+  episodes(filter: { season: 2, rating: "TV-PG" }) {
+    id
+    name
+    episode
+    airdate
+  }
+
+  episodes(filter: { season: 3, airdate: { after: "2020-01-01" } }) {
+    id
+    name
+    episode
+    airdate
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":14,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":21,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":21,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"season\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Episodes\".","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"name\" on type \"Episodes\".","locations":[{"line":4,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"episode\" on type \"Episodes\".","locations":[{"line":5,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"airdate\" on type \"Episodes\".","locations":[{"line":6,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Characters\".","locations":[{"line":10,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"name\" on type \"Characters\".","locations":[{"line":11,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"season\" is not defined by type FilterEpisode.","locations":[{"line":14,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"rating\" is not defined by type FilterEpisode.","locations":[{"line":14,"column":32}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Episodes\".","locations":[{"line":15,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"name\" on type \"Episodes\".","locations":[{"line":16,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"episode\" on type \"Episodes\".","locations":[{"line":17,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"airdate\" on type \"Episodes\".","locations":[{"line":18,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"season\" is not defined by type FilterEpisode.","locations":[{"line":21,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"airdate\" is not defined by type FilterEpisode.","locations":[{"line":21,"column":32}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"id\" on type \"Episodes\".","locations":[{"line":22,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"name\" on type \"Episodes\".","locations":[{"line":23,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"episode\" on type \"Episodes\".","locations":[{"line":24,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"airdate\" on type \"Episodes\".","locations":[{"line":25,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+query HighLoadTestingQuery($id: String!, $name: String, $page: Int!) {
+  episodes(filter: { id: $id, name: $name }, page: $page) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(filter: {id: "NTDVPYJKFA"}) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(filter: {id: ["NTDVPYJKFA", "NTDVBX8KCA"]}) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(filter: {id: ["NTDVPYJKFA", "NTDVBX8KCA", "NTDVT3CZPA"]}) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(filter: {id: ["NTDVPYJKFA", "NTDVBX8KCA", "NTDVT3CZPA", "NTDVBQ7W9S", "NTDVZGQFJH"]}) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(filter: {id: ["NTDVPYJKFA", "NTDVBX8KCA", "NTDVT3CZPA", "NTDVBQ7W9S", "NTDVZGQFJH", "NTDVLB2RVA"]}) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(filter: {id: ["NTDVPYJKFA", "QSRJXZB4ME"]}, page: 1) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["D3N9CZ2B4U", "V6YXBXQ4MP"]}, page: 5) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["2J9KZ6WY4U", "P7XVZQH5ME"]}, page: 10) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["3B2T7VQH5ME", "Q6XWZ4UJ9K"]}, page: 15) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["V7XZQH5ME", "P2T7W4UJ9K"]}, page: 20) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["6XWZ4UJ9K", "3B2T7VQH5ME"]}, page: 25) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["P7XVZQH5ME", "2J9KZ6WY4U"]}, page: 30) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["Q6XWZ4UJ9K", "3B2T7VQH5ME"]}, page: 35) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["V7XZQH5ME", "P2T7W4UJ9K"]}, page: 40) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["6XWZ4UJ9K", "3B2T7VQH5ME"]}, page: 45) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["P7XVZQH5ME", "2J9KZ6WY4U"]}, page: 50) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["Q6XWZ4UJ9K", "3B2T7VQH5ME"]}, page: 51) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["V7XZQH5ME", "P2T7W4UJ9K"]}, page: 52) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+  episodes(filter: {id: ["6XWZ4UJ9K", "3B2T7VQH5ME"]}, page: 54) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":20,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":38,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":56,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":92,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":128,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":146,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":38,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":56,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":92,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":128,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":146,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":56,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":92,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":128,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":146,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":92,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":128,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":146,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":56,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":92,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":128,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":146,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":92,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":92,"column":3},{"line":128,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":92,"column":3},{"line":146,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":92,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":92,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":92,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":92,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":92,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":110,"column":3},{"line":128,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":110,"column":3},{"line":146,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":110,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":110,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":110,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":110,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":110,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":128,"column":3},{"line":146,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":128,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":128,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":128,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":128,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":128,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":146,"column":3},{"line":164,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":146,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":146,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":146,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":146,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":164,"column":3},{"line":182,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":164,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":164,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":164,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":182,"column":3},{"line":200,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":182,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":182,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":200,"column":3},{"line":218,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":200,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"episodes\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":218,"column":3},{"line":236,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":20,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":38,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":56,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":74,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":92,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":110,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":128,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":146,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":164,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":182,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":200,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":218,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":236,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(filter: {id: "ROA2V7WG0L"}, page: 10000) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+      series {
+        id
+        name
+        overview
+        poster_image
+        status
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"id\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Cannot query field \"series\" on type \"Episode\".","locations":[{"line":16,"column":7}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  episodes(filter: {ids: ["ROA2V7WG0L", "ROA2V7WG00", "ROA2V7WG001"]}, page: 100) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"ids\" is not defined by type FilterEpisode.","locations":[{"line":2,"column":21}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 5000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 5001
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  # Add more queries with increasing page numbers to simulate high load testing...
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":14,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":15,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(
+    filter: $filter
+    page: $page
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  # Add more queries with increasing page numbers...
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Variable \"$filter\" is not defined.","locations":[{"line":2,"column":21},{"line":1,"column":1}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Variable \"$page\" is not defined.","locations":[{"line":2,"column":36},{"line":1,"column":1}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+query HighLoadLocationsQuery($first: Int!) {
+  locations(first: $first) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+# Test with a large first value
+query LargeHighLoadLocationsQuery {
+  locations(first: 10000) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+# Test with multiple pages of data (e.g., 10 pages of 1000 records each)
+query MultiPageHighLoadLocationsQuery($first: Int!) {
+  locations(first: $first) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+# Test with multiple queries running concurrently (e.g., 10 concurrent queries each returning 1000 records)
+query ConcurrentHighLoadLocationsQuery($first: Int!, $numQueries: Int!) {
+  locations(first: $first) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"GraphQL Error: Document contains more than one operation, missing operation name"}]}
+------------------Payload:-------------------
+
+{
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 1000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 2000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 3000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 4000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 5000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 6000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 7000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 8000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 9000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(
+    filter: { dimension: "YA8C73NGBP", name: "DDNB2U7URT", type: "5XZWSZPI76" }
+    page: 10000
+  ) {
+    info
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":14,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":26,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":38,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":50,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":62,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":86,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":98,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":26,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":38,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":50,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":62,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":86,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":98,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":14,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":26,"column":3},{"line":38,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":26,"column":3},{"line":50,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":26,"column":3},{"line":62,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":26,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":26,"column":3},{"line":86,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":26,"column":3},{"line":98,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":26,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":50,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":62,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":86,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":98,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":38,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":50,"column":3},{"line":62,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":50,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":50,"column":3},{"line":86,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":50,"column":3},{"line":98,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":50,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":62,"column":3},{"line":74,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":62,"column":3},{"line":86,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":62,"column":3},{"line":98,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":62,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":86,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":98,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":74,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":86,"column":3},{"line":98,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":86,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":98,"column":3},{"line":110,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":3,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":15,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":27,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":39,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":51,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":63,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":75,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":87,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":99,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Field \"info\" of type \"Info\" must have a selection of subfields. Did you mean \"info { ... }\"?","locations":[{"line":111,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 2, count: 100) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"count\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":22}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 50, count: 10) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"count\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":23}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 100, count: 1) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"count\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":24}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 1, count: 1000, filter: { type: "some_type" }) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"count\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":22}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 1, count: 1000, sort: { field: "name", direction: "asc" }) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"count\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":22}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown argument \"sort\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":35}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 1, count: 1000, filter: { type: "some_type", dimension: "some_dimension" }, sort: { field: "name", direction: "desc" }) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"count\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":22}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown argument \"sort\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":93}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 100) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(page: 101) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(page: 102) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":20,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":38,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":20,"column":3},{"line":38,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(ids: ["location1_id", "location2_id", "location3_id"]) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(ids: ["location4_id", "location5_id", "location6_id"]) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":20,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown argument \"ids\" on field \"locations\" of type \"Query\".","locations":[{"line":2,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown argument \"ids\" on field \"locations\" of type \"Query\".","locations":[{"line":20,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  location(id: "some_id1") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+
+  location(id: "some_id2") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+
+  location(id: "some_id3") {
+    id
+    name
+    type
+    dimension
+    created
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"location\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":10,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"location\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":18,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Fields \"location\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":10,"column":3},{"line":18,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 1, pageSize: 100) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(page: 2, pageSize: 200) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":20,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown argument \"pageSize\" on field \"locations\" of type \"Query\". Did you mean \"page\"?","locations":[{"line":2,"column":22}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}},{"message":"Unknown argument \"pageSize\" on field \"locations\" of type \"Query\". Did you mean \"page\"?","locations":[{"line":20,"column":22}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(filter: {type: "planet"}) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+
+  locations(filter: {dimension: "galactic"}) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Fields \"locations\" conflict because they have differing arguments. Use different aliases on the fields to fetch both if this was intentional.","locations":[{"line":2,"column":3},{"line":20,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 1000) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"locations":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+------------------Payload:-------------------
+
+{
+  locations(
+    filter: {dimension: "R0GWBQNEJ1", name: "YKL19KAG5M", type: "ZYXY3K0JQ8"}
+    page: 72
+  ) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"locations":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+------------------Payload:-------------------
+
+{
+  locations(filter: {type: "ZYXY3K0JQ8"}) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"locations":{"info":{"count":null,"pages":null,"next":null,"prev":null},"results":[]}}}
+------------------Payload:-------------------
+
+{
+  locations(page: 1) {
+    results {
+      id
+      name
+      type
+      dimension
+      created
+      locations(page: 1) {
+        info {
+          count
+          pages
+          next
+          prev
+        }
+        results {
+          id
+          name
+          type
+          dimension
+          created
+        }
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"locations\" on type \"Location\".","locations":[{"line":9,"column":7}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  locations(page: 1) {
+    results {
+      id
+      name
+      type
+      dimension
+      created
+      details {
+        id
+        name
+        type
+        dimension
+        created
+        details {
+          id
+          name
+          type
+          dimension
+          created
+        }
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"details\" on type \"Location\".","locations":[{"line":9,"column":7}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  characters(filter: { id: "123" }, page: 1000) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"id\" is not defined by type FilterCharacter.","locations":[{"line":2,"column":23}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
+------------------Payload:-------------------
+
+{
+  characters(filter: { id: "123" }, page: 46) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+    }
+  }
+
+  characters(filter: { id: "456" }, page: 1000) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+    }
+  }
+
+  characters(filter: { id: "789" }, page: 1000) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+    }
+  }
+
+  ...
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Syntax Error: Expected {, found }","locations":[{"line":61,"column":1}],"extensions":{"code":"GRAPHQL_PARSE_FAILED"}}]}
+
