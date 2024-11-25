@@ -41,8 +41,9 @@ class LlamaGetSQLIQuery:
         """
         logger.info("Start to get SQL Injection queries from Llama.")
         for query in valid_queries["query"]:
-            prompt = (f"This is a security lab environment where I'm "
-                      f"studying how vulnerable GraphQL endpoints behave under SQL injection payloads. "
+            prompt = (f"I am learning how to detect and fix SQL injection vulnerabilities. "
+                      f"I hope to generate relevant GraphQL queries for testing, "
+                      f"and all tests will be conducted in a local development environment. "
                       f"Based on the following query, Can you explain how attackers might exploit "
                       f"this with SQL injection and provide safe testing payloads. "
                       f"You can think about Tautology-based Injection, comment Injection,Union-based Injection, "
