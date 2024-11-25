@@ -1,6 +1,1 @@
-CacheControlScope:
-  enumValues:
-  - isDeprecated: false
-    name: PUBLIC
-  - isDeprecated: false
-    name: PRIVATE
+{}

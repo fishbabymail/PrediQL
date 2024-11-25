@@ -4,21 +4,23 @@
             "queryType": {
                 "name": "Query"
             },
-            "mutationType": null,
+            "mutationType": {
+                "name": "Mutation"
+            },
             "subscriptionType": null,
             "types": [
                 {
                     "kind": "OBJECT",
                     "name": "Query",
-                    "description": "",
+                    "description": "Root Query type.",
                     "fields": [
                         {
-                            "name": "character",
-                            "description": "Get a specific character by ID",
+                            "name": "getUser",
+                            "description": "Retrieves a user by their ID.",
                             "args": [
                                 {
-                                    "name": "id",
-                                    "description": "",
+                                    "name": "userID",
+                                    "description": null,
                                     "type": {
                                         "kind": "NON_NULL",
                                         "name": null,
@@ -33,91 +35,46 @@
                             ],
                             "type": {
                                 "kind": "OBJECT",
-                                "name": "Character",
+                                "name": "User",
                                 "ofType": null
                             },
                             "isDeprecated": false,
                             "deprecationReason": null
                         },
                         {
-                            "name": "characters",
-                            "description": "Get the list of all characters",
+                            "name": "getTransaction",
+                            "description": "Retrieves a transaction by its ID.",
                             "args": [
                                 {
-                                    "name": "page",
-                                    "description": "",
-                                    "type": {
-                                        "kind": "SCALAR",
-                                        "name": "Int",
-                                        "ofType": null
-                                    },
-                                    "defaultValue": null
-                                },
-                                {
-                                    "name": "filter",
-                                    "description": "",
-                                    "type": {
-                                        "kind": "INPUT_OBJECT",
-                                        "name": "FilterCharacter",
-                                        "ofType": null
-                                    },
-                                    "defaultValue": null
-                                }
-                            ],
-                            "type": {
-                                "kind": "OBJECT",
-                                "name": "Characters",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "charactersByIds",
-                            "description": "Get a list of characters selected by ids",
-                            "args": [
-                                {
-                                    "name": "ids",
-                                    "description": "",
+                                    "name": "transactionID",
+                                    "description": null,
                                     "type": {
                                         "kind": "NON_NULL",
                                         "name": null,
                                         "ofType": {
-                                            "kind": "LIST",
-                                            "name": null,
-                                            "ofType": {
-                                                "kind": "NON_NULL",
-                                                "name": null,
-                                                "ofType": {
-                                                    "kind": "SCALAR",
-                                                    "name": "ID",
-                                                    "ofType": null
-                                                }
-                                            }
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
                                         }
                                     },
                                     "defaultValue": null
                                 }
                             ],
                             "type": {
-                                "kind": "LIST",
-                                "name": null,
-                                "ofType": {
-                                    "kind": "OBJECT",
-                                    "name": "Character",
-                                    "ofType": null
-                                }
+                                "kind": "OBJECT",
+                                "name": "Transaction",
+                                "ofType": null
                             },
                             "isDeprecated": false,
                             "deprecationReason": null
                         },
                         {
-                            "name": "location",
-                            "description": "Get a specific locations by ID",
+                            "name": "getLocation",
+                            "description": "Retrieves a location by its ID.",
                             "args": [
                                 {
-                                    "name": "id",
-                                    "description": "",
+                                    "name": "locationID",
+                                    "description": null,
                                     "type": {
                                         "kind": "NON_NULL",
                                         "name": null,
@@ -139,84 +96,12 @@
                             "deprecationReason": null
                         },
                         {
-                            "name": "locations",
-                            "description": "Get the list of all locations",
+                            "name": "getCurrency",
+                            "description": "Retrieves a currency by its ID.",
                             "args": [
                                 {
-                                    "name": "page",
-                                    "description": "",
-                                    "type": {
-                                        "kind": "SCALAR",
-                                        "name": "Int",
-                                        "ofType": null
-                                    },
-                                    "defaultValue": null
-                                },
-                                {
-                                    "name": "filter",
-                                    "description": "",
-                                    "type": {
-                                        "kind": "INPUT_OBJECT",
-                                        "name": "FilterLocation",
-                                        "ofType": null
-                                    },
-                                    "defaultValue": null
-                                }
-                            ],
-                            "type": {
-                                "kind": "OBJECT",
-                                "name": "Locations",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "locationsByIds",
-                            "description": "Get a list of locations selected by ids",
-                            "args": [
-                                {
-                                    "name": "ids",
-                                    "description": "",
-                                    "type": {
-                                        "kind": "NON_NULL",
-                                        "name": null,
-                                        "ofType": {
-                                            "kind": "LIST",
-                                            "name": null,
-                                            "ofType": {
-                                                "kind": "NON_NULL",
-                                                "name": null,
-                                                "ofType": {
-                                                    "kind": "SCALAR",
-                                                    "name": "ID",
-                                                    "ofType": null
-                                                }
-                                            }
-                                        }
-                                    },
-                                    "defaultValue": null
-                                }
-                            ],
-                            "type": {
-                                "kind": "LIST",
-                                "name": null,
-                                "ofType": {
-                                    "kind": "OBJECT",
-                                    "name": "Location",
-                                    "ofType": null
-                                }
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "episode",
-                            "description": "Get a specific episode by ID",
-                            "args": [
-                                {
-                                    "name": "id",
-                                    "description": "",
+                                    "name": "currencyID",
+                                    "description": null,
                                     "type": {
                                         "kind": "NON_NULL",
                                         "name": null,
@@ -231,80 +116,152 @@
                             ],
                             "type": {
                                 "kind": "OBJECT",
-                                "name": "Episode",
+                                "name": "Currency",
                                 "ofType": null
                             },
                             "isDeprecated": false,
                             "deprecationReason": null
                         },
                         {
-                            "name": "episodes",
-                            "description": "Get the list of all episodes",
+                            "name": "getWallet",
+                            "description": "Retrieves a wallet by its ID.",
                             "args": [
                                 {
-                                    "name": "page",
-                                    "description": "",
-                                    "type": {
-                                        "kind": "SCALAR",
-                                        "name": "Int",
-                                        "ofType": null
-                                    },
-                                    "defaultValue": null
-                                },
-                                {
-                                    "name": "filter",
-                                    "description": "",
-                                    "type": {
-                                        "kind": "INPUT_OBJECT",
-                                        "name": "FilterEpisode",
-                                        "ofType": null
-                                    },
-                                    "defaultValue": null
-                                }
-                            ],
-                            "type": {
-                                "kind": "OBJECT",
-                                "name": "Episodes",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "episodesByIds",
-                            "description": "Get a list of episodes selected by ids",
-                            "args": [
-                                {
-                                    "name": "ids",
-                                    "description": "",
+                                    "name": "walletID",
+                                    "description": null,
                                     "type": {
                                         "kind": "NON_NULL",
                                         "name": null,
                                         "ofType": {
-                                            "kind": "LIST",
-                                            "name": null,
-                                            "ofType": {
-                                                "kind": "NON_NULL",
-                                                "name": null,
-                                                "ofType": {
-                                                    "kind": "SCALAR",
-                                                    "name": "ID",
-                                                    "ofType": null
-                                                }
-                                            }
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
                                         }
                                     },
                                     "defaultValue": null
                                 }
                             ],
                             "type": {
+                                "kind": "OBJECT",
+                                "name": "Wallet",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "getUsers",
+                            "description": "Retrieves all users.",
+                            "args": [],
+                            "type": {
                                 "kind": "LIST",
                                 "name": null,
                                 "ofType": {
                                     "kind": "OBJECT",
-                                    "name": "Episode",
+                                    "name": "User",
                                     "ofType": null
                                 }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "getWallets",
+                            "description": "Retrieves all wallets.",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Wallet",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "getTransactions",
+                            "description": "Retrieves all transactions.",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Transaction",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "getLocations",
+                            "description": "Retrieves all locations.",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Location",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "getCurrencies",
+                            "description": "Retrieves all currencies.",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Currency",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "getCurrentRate",
+                            "description": "Retrieves the current exchange rate between two currencies.\nIf no foreign currency symbol is specified, USD is used by default.",
+                            "args": [
+                                {
+                                    "name": "mainCurrencySymbol",
+                                    "description": "The main currency symbol.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "String",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "foreignCurrencySymbol",
+                                    "description": "The foreign currency symbol. Defaults to 'USD' if not provided.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Float",
+                                "ofType": null
                             },
                             "isDeprecated": false,
                             "deprecationReason": null
@@ -326,153 +283,12 @@
                     "possibleTypes": null
                 },
                 {
-                    "kind": "OBJECT",
-                    "name": "Character",
-                    "description": "",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The id of the character.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "ID",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the character.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "status",
-                            "description": "The status of the character ('Alive', 'Dead' or 'unknown').",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "species",
-                            "description": "The species of the character.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "type",
-                            "description": "The type or subspecies of the character.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "gender",
-                            "description": "The gender of the character ('Female', 'Male', 'Genderless' or 'unknown').",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "origin",
-                            "description": "The character's origin location",
-                            "args": [],
-                            "type": {
-                                "kind": "OBJECT",
-                                "name": "Location",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "location",
-                            "description": "The character's last known location",
-                            "args": [],
-                            "type": {
-                                "kind": "OBJECT",
-                                "name": "Location",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "image",
-                            "description": "Link to the character's image.\nAll images are 300x300px and most are medium shots or portraits since they are intended to be used as avatars.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "episode",
-                            "description": "Episodes in which this character appeared.",
-                            "args": [],
-                            "type": {
-                                "kind": "NON_NULL",
-                                "name": null,
-                                "ofType": {
-                                    "kind": "LIST",
-                                    "name": null,
-                                    "ofType": {
-                                        "kind": "OBJECT",
-                                        "name": "Episode",
-                                        "ofType": null
-                                    }
-                                }
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "created",
-                            "description": "Time at which the character was created in the database.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        }
-                    ],
+                    "kind": "SCALAR",
+                    "name": "Float",
+                    "description": "The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).",
+                    "fields": null,
                     "inputFields": null,
-                    "interfaces": [],
+                    "interfaces": null,
                     "enumValues": null,
                     "possibleTypes": null
                 },
@@ -488,80 +304,994 @@
                 },
                 {
                     "kind": "OBJECT",
-                    "name": "Location",
-                    "description": "",
+                    "name": "Mutation",
+                    "description": "Root Mutation type.",
+                    "fields": [
+                        {
+                            "name": "createUser",
+                            "description": "Creates a new user.",
+                            "args": [
+                                {
+                                    "name": "firstName",
+                                    "description": "The first name of the user.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "String",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "lastName",
+                                    "description": "The last name of the user.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "description",
+                                    "description": "A description of the user.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "User",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "createTransaction",
+                            "description": "Creates a new transaction.",
+                            "args": [
+                                {
+                                    "name": "amount",
+                                    "description": "The amount of the transaction.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "Float",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "payerID",
+                                    "description": "The ID of the payer.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "walletID",
+                                    "description": "The ID of the wallet associated with the transaction.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "currencyID",
+                                    "description": "The ID of the currency used in the transaction.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Transaction",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "createLocation",
+                            "description": "Creates a new location.",
+                            "args": [
+                                {
+                                    "name": "lat",
+                                    "description": "The latitude of the location.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Float",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "lng",
+                                    "description": "The longitude of the location.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Float",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "name",
+                                    "description": "The name of the location.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Location",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "createCurrency",
+                            "description": "Creates a new currency.",
+                            "args": [
+                                {
+                                    "name": "abbreviation",
+                                    "description": "The abbreviation of the currency (e.g., 'USD').",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "String",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "symbol",
+                                    "description": "The symbol of the currency (e.g., '$').",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "String",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "country",
+                                    "description": "The country where the currency is used.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Currency",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "createWallet",
+                            "description": "Creates a new wallet.",
+                            "args": [
+                                {
+                                    "name": "name",
+                                    "description": "The name of the wallet.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "String",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "currencyID",
+                                    "description": "The ID of the currency for the wallet.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "userID",
+                                    "description": "The ID of the user who owns the wallet.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Wallet",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "deleteUser",
+                            "description": "Deletes a user by their ID.",
+                            "args": [
+                                {
+                                    "name": "userID",
+                                    "description": "The ID of the user to delete.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "User",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "deleteTransaction",
+                            "description": "Deletes a transaction by its ID.",
+                            "args": [
+                                {
+                                    "name": "transactionID",
+                                    "description": "The ID of the transaction to delete.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Transaction",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "deleteLocation",
+                            "description": "Deletes a location by its ID.",
+                            "args": [
+                                {
+                                    "name": "locationID",
+                                    "description": "The ID of the location to delete.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Location",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "deleteCurrency",
+                            "description": "Deletes a currency by its ID.",
+                            "args": [
+                                {
+                                    "name": "currencyID",
+                                    "description": "The ID of the currency to delete.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Currency",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "deleteWallet",
+                            "description": "Deletes a wallet by its ID.",
+                            "args": [
+                                {
+                                    "name": "walletID",
+                                    "description": "The ID of the wallet to delete.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Wallet",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "updateUser",
+                            "description": "Updates an existing user.",
+                            "args": [
+                                {
+                                    "name": "userID",
+                                    "description": "The ID of the user to update.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "firstName",
+                                    "description": "The new first name of the user.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "lastName",
+                                    "description": "The new last name of the user.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "description",
+                                    "description": "The new description of the user.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "User",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "updateTransaction",
+                            "description": "Updates an existing transaction.",
+                            "args": [
+                                {
+                                    "name": "transactionID",
+                                    "description": "The ID of the transaction to update.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "amount",
+                                    "description": "The new amount of the transaction.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Float",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "payer",
+                                    "description": "The new payer's ID.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "ID",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "description",
+                                    "description": "The new description of the transaction.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Transaction",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "updateLocation",
+                            "description": "Updates an existing location.",
+                            "args": [
+                                {
+                                    "name": "locationID",
+                                    "description": "The ID of the location to update.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "lat",
+                                    "description": "The new latitude of the location.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Float",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "lng",
+                                    "description": "The new longitude of the location.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Float",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "name",
+                                    "description": "The new name of the location.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Location",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "updateCurrency",
+                            "description": "Updates an existing currency.",
+                            "args": [
+                                {
+                                    "name": "currencyID",
+                                    "description": "The ID of the currency to update.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "abbreviation",
+                                    "description": "The new abbreviation of the currency.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "symbol",
+                                    "description": "The new symbol of the currency.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "country",
+                                    "description": "The new country of the currency.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Currency",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "updateWallet",
+                            "description": "Updates an existing wallet.",
+                            "args": [
+                                {
+                                    "name": "walletID",
+                                    "description": "The ID of the wallet to update.",
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "ID",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "name",
+                                    "description": "The new name of the wallet.",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Wallet",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        }
+                    ],
+                    "inputFields": null,
+                    "interfaces": [],
+                    "enumValues": null,
+                    "possibleTypes": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "User",
+                    "description": "Represents a user in the system.",
                     "fields": [
                         {
                             "name": "id",
-                            "description": "The id of the location.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "ID",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the location.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "type",
-                            "description": "The type of the location.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "dimension",
-                            "description": "The dimension in which the location is located.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "residents",
-                            "description": "List of characters who have been last seen in the location.",
+                            "description": "The unique ID of the user.",
                             "args": [],
                             "type": {
                                 "kind": "NON_NULL",
                                 "name": null,
                                 "ofType": {
-                                    "kind": "LIST",
-                                    "name": null,
-                                    "ofType": {
-                                        "kind": "OBJECT",
-                                        "name": "Character",
-                                        "ofType": null
-                                    }
+                                    "kind": "SCALAR",
+                                    "name": "ID",
+                                    "ofType": null
                                 }
                             },
                             "isDeprecated": false,
                             "deprecationReason": null
                         },
                         {
-                            "name": "created",
-                            "description": "Time at which the location was created in the database.",
+                            "name": "firstName",
+                            "description": "The first name of the user.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "lastName",
+                            "description": "The last name of the user.",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "description",
+                            "description": "A description of the user.",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "wallets",
+                            "description": "The list of wallets owned by the user.",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Wallet",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "friends",
+                            "description": "The list of the user's friends.",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "User",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        }
+                    ],
+                    "inputFields": null,
+                    "interfaces": [],
+                    "enumValues": null,
+                    "possibleTypes": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Wallet",
+                    "description": "Represents a wallet associated with a user.",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "description": "The unique ID of the wallet.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "ID",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "name",
+                            "description": "The name of the wallet.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "currency",
+                            "description": "The currency used in the wallet.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Currency",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "transactions",
+                            "description": "The list of transactions associated with the wallet.",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Transaction",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "user",
+                            "description": "The user who owns the wallet.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "User",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "balance",
+                            "description": "The current balance of the wallet.",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Float",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        }
+                    ],
+                    "inputFields": null,
+                    "interfaces": [],
+                    "enumValues": null,
+                    "possibleTypes": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Transaction",
+                    "description": "Represents a transaction in the system.",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "description": "The unique ID of the transaction.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "ID",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "amount",
+                            "description": "The amount of the transaction.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Float",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "rate",
+                            "description": "The exchange rate used in the transaction.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Float",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "payer",
+                            "description": "The user who made the transaction.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "User",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "wallet",
+                            "description": "The wallet associated with the transaction.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Wallet",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "description",
+                            "description": "A description of the transaction.",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "location",
+                            "description": "The location where the transaction occurred.",
+                            "args": [],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Location",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "timestamp",
+                            "description": "The timestamp of the transaction.",
                             "args": [],
                             "type": {
                                 "kind": "SCALAR",
@@ -579,16 +1309,135 @@
                 },
                 {
                     "kind": "OBJECT",
-                    "name": "Episode",
-                    "description": "",
+                    "name": "Currency",
+                    "description": "Represents a currency in the system.",
                     "fields": [
                         {
                             "name": "id",
-                            "description": "The id of the episode.",
+                            "description": "The unique ID of the currency.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "ID",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "abbreviation",
+                            "description": "The abbreviation of the currency (e.g., 'USD').",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "symbol",
+                            "description": "The symbol of the currency (e.g., '$').",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "rate",
+                            "description": "The current exchange rate of the currency.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Float",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "country",
+                            "description": "The country where the currency is used.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        }
+                    ],
+                    "inputFields": null,
+                    "interfaces": [],
+                    "enumValues": null,
+                    "possibleTypes": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Location",
+                    "description": "Represents a geographical location.",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "description": "The unique ID of the location.",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "ID",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "lat",
+                            "description": "The latitude coordinate.",
                             "args": [],
                             "type": {
                                 "kind": "SCALAR",
-                                "name": "ID",
+                                "name": "Float",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "lng",
+                            "description": "The longitude coordinate.",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Float",
                                 "ofType": null
                             },
                             "isDeprecated": false,
@@ -596,68 +1445,16 @@
                         },
                         {
                             "name": "name",
-                            "description": "The name of the episode.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "air_date",
-                            "description": "The air date of the episode.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "episode",
-                            "description": "The code of the episode.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "characters",
-                            "description": "List of characters who have been seen in the episode.",
+                            "description": "The name of the location.",
                             "args": [],
                             "type": {
                                 "kind": "NON_NULL",
                                 "name": null,
                                 "ofType": {
-                                    "kind": "LIST",
-                                    "name": null,
-                                    "ofType": {
-                                        "kind": "OBJECT",
-                                        "name": "Character",
-                                        "ofType": null
-                                    }
+                                    "kind": "SCALAR",
+                                    "name": "String",
+                                    "ofType": null
                                 }
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "created",
-                            "description": "Time at which the episode was created in the database.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
                             },
                             "isDeprecated": false,
                             "deprecationReason": null
@@ -670,320 +1467,11 @@
                 },
                 {
                     "kind": "SCALAR",
-                    "name": "Int",
-                    "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
+                    "name": "Boolean",
+                    "description": "The `Boolean` scalar type represents `true` or `false`.",
                     "fields": null,
                     "inputFields": null,
                     "interfaces": null,
-                    "enumValues": null,
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "INPUT_OBJECT",
-                    "name": "FilterCharacter",
-                    "description": "",
-                    "fields": null,
-                    "inputFields": [
-                        {
-                            "name": "name",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        },
-                        {
-                            "name": "status",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        },
-                        {
-                            "name": "species",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        },
-                        {
-                            "name": "type",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        },
-                        {
-                            "name": "gender",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        }
-                    ],
-                    "interfaces": null,
-                    "enumValues": null,
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "OBJECT",
-                    "name": "Characters",
-                    "description": "",
-                    "fields": [
-                        {
-                            "name": "info",
-                            "description": "",
-                            "args": [],
-                            "type": {
-                                "kind": "OBJECT",
-                                "name": "Info",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "results",
-                            "description": "",
-                            "args": [],
-                            "type": {
-                                "kind": "LIST",
-                                "name": null,
-                                "ofType": {
-                                    "kind": "OBJECT",
-                                    "name": "Character",
-                                    "ofType": null
-                                }
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        }
-                    ],
-                    "inputFields": null,
-                    "interfaces": [],
-                    "enumValues": null,
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "OBJECT",
-                    "name": "Info",
-                    "description": "",
-                    "fields": [
-                        {
-                            "name": "count",
-                            "description": "The length of the response.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "Int",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "pages",
-                            "description": "The amount of pages.",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "Int",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "next",
-                            "description": "Number of the next page (if it exists)",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "Int",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "prev",
-                            "description": "Number of the previous page (if it exists)",
-                            "args": [],
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "Int",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        }
-                    ],
-                    "inputFields": null,
-                    "interfaces": [],
-                    "enumValues": null,
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "INPUT_OBJECT",
-                    "name": "FilterLocation",
-                    "description": "",
-                    "fields": null,
-                    "inputFields": [
-                        {
-                            "name": "name",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        },
-                        {
-                            "name": "type",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        },
-                        {
-                            "name": "dimension",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        }
-                    ],
-                    "interfaces": null,
-                    "enumValues": null,
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "OBJECT",
-                    "name": "Locations",
-                    "description": "",
-                    "fields": [
-                        {
-                            "name": "info",
-                            "description": "",
-                            "args": [],
-                            "type": {
-                                "kind": "OBJECT",
-                                "name": "Info",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "results",
-                            "description": "",
-                            "args": [],
-                            "type": {
-                                "kind": "LIST",
-                                "name": null,
-                                "ofType": {
-                                    "kind": "OBJECT",
-                                    "name": "Location",
-                                    "ofType": null
-                                }
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        }
-                    ],
-                    "inputFields": null,
-                    "interfaces": [],
-                    "enumValues": null,
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "INPUT_OBJECT",
-                    "name": "FilterEpisode",
-                    "description": "",
-                    "fields": null,
-                    "inputFields": [
-                        {
-                            "name": "name",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        },
-                        {
-                            "name": "episode",
-                            "description": "",
-                            "type": {
-                                "kind": "SCALAR",
-                                "name": "String",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        }
-                    ],
-                    "interfaces": null,
-                    "enumValues": null,
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "OBJECT",
-                    "name": "Episodes",
-                    "description": "",
-                    "fields": [
-                        {
-                            "name": "info",
-                            "description": "",
-                            "args": [],
-                            "type": {
-                                "kind": "OBJECT",
-                                "name": "Info",
-                                "ofType": null
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "results",
-                            "description": "",
-                            "args": [],
-                            "type": {
-                                "kind": "LIST",
-                                "name": null,
-                                "ofType": {
-                                    "kind": "OBJECT",
-                                    "name": "Episode",
-                                    "ofType": null
-                                }
-                            },
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        }
-                    ],
-                    "inputFields": null,
-                    "interfaces": [],
                     "enumValues": null,
                     "possibleTypes": null
                 },
@@ -992,6 +1480,18 @@
                     "name": "__Schema",
                     "description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
                     "fields": [
+                        {
+                            "name": "description",
+                            "description": null,
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
                         {
                             "name": "types",
                             "description": "A list of all types supported by this server.",
@@ -1089,7 +1589,7 @@
                 {
                     "kind": "OBJECT",
                     "name": "__Type",
-                    "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+                    "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name, description and optional `specifiedByURL`, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
                     "fields": [
                         {
                             "name": "kind",
@@ -1121,6 +1621,18 @@
                         },
                         {
                             "name": "description",
+                            "description": null,
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "specifiedByURL",
                             "description": null,
                             "args": [],
                             "type": {
@@ -1236,7 +1748,18 @@
                         {
                             "name": "inputFields",
                             "description": null,
-                            "args": [],
+                            "args": [
+                                {
+                                    "name": "includeDeprecated",
+                                    "description": null,
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Boolean",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": "false"
+                                }
+                            ],
                             "type": {
                                 "kind": "LIST",
                                 "name": null,
@@ -1260,6 +1783,18 @@
                             "type": {
                                 "kind": "OBJECT",
                                 "name": "__Type",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "isOneOf",
+                            "description": null,
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean",
                                 "ofType": null
                             },
                             "isDeprecated": false,
@@ -1293,7 +1828,7 @@
                         },
                         {
                             "name": "INTERFACE",
-                            "description": "Indicates this type is an interface. `fields` and `possibleTypes` are valid fields.",
+                            "description": "Indicates this type is an interface. `fields`, `interfaces`, and `possibleTypes` are valid fields.",
                             "isDeprecated": false,
                             "deprecationReason": null
                         },
@@ -1328,16 +1863,6 @@
                             "deprecationReason": null
                         }
                     ],
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "SCALAR",
-                    "name": "Boolean",
-                    "description": "The `Boolean` scalar type represents `true` or `false`.",
-                    "fields": null,
-                    "inputFields": null,
-                    "interfaces": null,
-                    "enumValues": null,
                     "possibleTypes": null
                 },
                 {
@@ -1376,7 +1901,18 @@
                         {
                             "name": "args",
                             "description": null,
-                            "args": [],
+                            "args": [
+                                {
+                                    "name": "includeDeprecated",
+                                    "description": null,
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Boolean",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": "false"
+                                }
+                            ],
                             "type": {
                                 "kind": "NON_NULL",
                                 "name": null,
@@ -1507,6 +2043,34 @@
                             },
                             "isDeprecated": false,
                             "deprecationReason": null
+                        },
+                        {
+                            "name": "isDeprecated",
+                            "description": null,
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Boolean",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
+                            "name": "deprecationReason",
+                            "description": null,
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
                         }
                     ],
                     "inputFields": null,
@@ -1615,6 +2179,22 @@
                             "deprecationReason": null
                         },
                         {
+                            "name": "isRepeatable",
+                            "description": null,
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Boolean",
+                                    "ofType": null
+                                }
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
+                        },
+                        {
                             "name": "locations",
                             "description": null,
                             "args": [],
@@ -1641,7 +2221,18 @@
                         {
                             "name": "args",
                             "description": null,
-                            "args": [],
+                            "args": [
+                                {
+                                    "name": "includeDeprecated",
+                                    "description": null,
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Boolean",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": "false"
+                                }
+                            ],
                             "type": {
                                 "kind": "NON_NULL",
                                 "name": null,
@@ -1792,68 +2383,29 @@
                         }
                     ],
                     "possibleTypes": null
-                },
-                {
-                    "kind": "ENUM",
-                    "name": "CacheControlScope",
-                    "description": "",
-                    "fields": null,
-                    "inputFields": null,
-                    "interfaces": null,
-                    "enumValues": [
-                        {
-                            "name": "PUBLIC",
-                            "description": "",
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        },
-                        {
-                            "name": "PRIVATE",
-                            "description": "",
-                            "isDeprecated": false,
-                            "deprecationReason": null
-                        }
-                    ],
-                    "possibleTypes": null
-                },
-                {
-                    "kind": "SCALAR",
-                    "name": "Upload",
-                    "description": "The `Upload` scalar type represents a file upload.",
-                    "fields": null,
-                    "inputFields": null,
-                    "interfaces": null,
-                    "enumValues": null,
-                    "possibleTypes": null
                 }
             ],
             "directives": [
                 {
-                    "name": "cacheControl",
-                    "description": "",
+                    "name": "include",
+                    "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
                     "locations": [
-                        "FIELD_DEFINITION",
-                        "OBJECT",
-                        "INTERFACE"
+                        "FIELD",
+                        "FRAGMENT_SPREAD",
+                        "INLINE_FRAGMENT"
                     ],
                     "args": [
                         {
-                            "name": "maxAge",
-                            "description": "",
+                            "name": "if",
+                            "description": "Included when true.",
                             "type": {
-                                "kind": "SCALAR",
-                                "name": "Int",
-                                "ofType": null
-                            },
-                            "defaultValue": null
-                        },
-                        {
-                            "name": "scope",
-                            "description": "",
-                            "type": {
-                                "kind": "ENUM",
-                                "name": "CacheControlScope",
-                                "ofType": null
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Boolean",
+                                    "ofType": null
+                                }
                             },
                             "defaultValue": null
                         }
@@ -1885,41 +2437,18 @@
                     ]
                 },
                 {
-                    "name": "include",
-                    "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
-                    "locations": [
-                        "FIELD",
-                        "FRAGMENT_SPREAD",
-                        "INLINE_FRAGMENT"
-                    ],
-                    "args": [
-                        {
-                            "name": "if",
-                            "description": "Included when true.",
-                            "type": {
-                                "kind": "NON_NULL",
-                                "name": null,
-                                "ofType": {
-                                    "kind": "SCALAR",
-                                    "name": "Boolean",
-                                    "ofType": null
-                                }
-                            },
-                            "defaultValue": null
-                        }
-                    ]
-                },
-                {
                     "name": "deprecated",
                     "description": "Marks an element of a GraphQL schema as no longer supported.",
                     "locations": [
                         "FIELD_DEFINITION",
+                        "ARGUMENT_DEFINITION",
+                        "INPUT_FIELD_DEFINITION",
                         "ENUM_VALUE"
                     ],
                     "args": [
                         {
                             "name": "reason",
-                            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax (as specified by [CommonMark](https://commonmark.org/).",
+                            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by [CommonMark](https://commonmark.org/).",
                             "type": {
                                 "kind": "SCALAR",
                                 "name": "String",
@@ -1928,6 +2457,37 @@
                             "defaultValue": "\"No longer supported\""
                         }
                     ]
+                },
+                {
+                    "name": "specifiedBy",
+                    "description": "Exposes a URL that specifies the behavior of this scalar.",
+                    "locations": [
+                        "SCALAR"
+                    ],
+                    "args": [
+                        {
+                            "name": "url",
+                            "description": "The URL that specifies the behavior of this scalar.",
+                            "type": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String",
+                                    "ofType": null
+                                }
+                            },
+                            "defaultValue": null
+                        }
+                    ]
+                },
+                {
+                    "name": "oneOf",
+                    "description": "Indicates exactly one field must be supplied and this field must not be `null`.",
+                    "locations": [
+                        "INPUT_OBJECT"
+                    ],
+                    "args": []
                 }
             ]
         }
