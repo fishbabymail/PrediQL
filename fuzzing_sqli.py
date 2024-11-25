@@ -56,7 +56,7 @@ class SqliFuzzing():
 
 
 if __name__ == '__main__':
-    url = "https://rickandmortyapi.com/graphql"
+    url = "http://localhost:4000/graphql"
     sqlifuzz = SqliFuzzing(url)
     savepath = sqlifuzz.run()
 
