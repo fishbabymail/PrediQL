@@ -75,28 +75,24 @@ class LlamaGetValidQuery:
         """
         logger.info("Start to get valid queries from Llama.")
         for payload, response in payload_resp_pair.items():
-            # Control running time
-            if len(query_json["query"]) > 100:
-                break
-            prompt = (f"Based on the following information, please try to fix this graphql query and "
-                      f"return me different possible valid queries, please use possible real values for "
-                      f"parameters instead of placeholders. The query is :{payload}. "
-                      f"The error response for this query is :{response}. The graphql query schema "
-                      f"is: {compiled_queries}, the graphql mutation schema is: {compiled_mutations}, "
-                      f"The graphql compiled objects schema is: {compiled_objects}."
-                      f"The object values are: {objects_str}, the scalar values are: {scalars_str}. "
-                      f"Please remember that your goal is to generate valid graphql queries according "
-                      f"to all the information I provided to you.Each of the returned query should "
-                      f"follow the format as: {tmp}.")
+            # # Control running time
+            # if len(query_json["query"]) > 50:
+            #     break
+            prompt = (f"Based on the following graphql query, the corresponding response, "
+                      f"and graphql schema information, please try to fix this query and "
+                      f"return me different valid queries, and separate each of the returned query "
+                      f"as: {tmp}, please use real values for fields instead of placeholders. The query is :{payload}, "
+                      f"the error response for this query is :{response}, the graphql schema "
+                      f"is: {compiled_queries}.")
             llama_res = get_llm_model(prompt)
             # print("=============\nLLAMA PROMPT: \n", prompt)
             # print("=============\nLLAMA RESPONSE: \n", llama_res)
             flag = "```graphql"
             parse_time = 0
             while flag in llama_res and parse_time < 10:
-                # Control running time
-                if len(query_json["query"]) > 100:
-                    break
+                # # Control running time
+                # if len(query_json["query"]) > 50:
+                #     break
                 parse_time += 1
                 try:
                     sidx = llama_res.find(flag)
