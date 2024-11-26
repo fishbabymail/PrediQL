@@ -1,422 +1,833 @@
-Character:
+Currency:
   fields:
-  - inputs: {}
-    kind: SCALAR
-    name: id
-    ofType: null
-    type: ID
-  - inputs: {}
-    kind: SCALAR
-    name: name
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: SCALAR
-    name: status
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: SCALAR
-    name: species
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: SCALAR
-    name: type
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: SCALAR
-    name: gender
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: OBJECT
-    name: origin
-    ofType: null
-    type: Location
-  - inputs: {}
-    kind: OBJECT
-    name: location
-    ofType: null
-    type: Location
-  - inputs: {}
-    kind: SCALAR
-    name: image
-    ofType: null
-    type: String
   - inputs: {}
     kind: NON_NULL
-    name: episode
-    ofType:
-      kind: LIST
-      name: null
-      ofType:
-        kind: OBJECT
-        name: Episode
-        ofType: null
-        type: Episode
-      type: null
-    type: null
-  - inputs: {}
-    kind: SCALAR
-    name: created
-    ofType: null
-    type: String
-  kind: OBJECT
-  name: Character
-Characters:
-  fields:
-  - inputs: {}
-    kind: OBJECT
-    name: info
-    ofType: null
-    type: Info
-  - inputs: {}
-    kind: LIST
-    name: results
-    ofType:
-      kind: OBJECT
-      name: Character
-      ofType: null
-      type: Character
-    type: null
-  kind: OBJECT
-  name: Characters
-Episode:
-  fields:
-  - inputs: {}
-    kind: SCALAR
     name: id
-    ofType: null
-    type: ID
-  - inputs: {}
-    kind: SCALAR
-    name: name
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: SCALAR
-    name: air_date
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: SCALAR
-    name: episode
-    ofType: null
-    type: String
+    ofType:
+      kind: SCALAR
+      name: ID
+      ofType: null
+      type: ID
+    type: null
   - inputs: {}
     kind: NON_NULL
-    name: characters
+    name: abbreviation
     ofType:
-      kind: LIST
-      name: null
-      ofType:
-        kind: OBJECT
-        name: Character
-        ofType: null
-        type: Character
-      type: null
-    type: null
-  - inputs: {}
-    kind: SCALAR
-    name: created
-    ofType: null
-    type: String
-  kind: OBJECT
-  name: Episode
-Episodes:
-  fields:
-  - inputs: {}
-    kind: OBJECT
-    name: info
-    ofType: null
-    type: Info
-  - inputs: {}
-    kind: LIST
-    name: results
-    ofType:
-      kind: OBJECT
-      name: Episode
+      kind: SCALAR
+      name: String
       ofType: null
-      type: Episode
+      type: String
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: symbol
+    ofType:
+      kind: SCALAR
+      name: String
+      ofType: null
+      type: String
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: rate
+    ofType:
+      kind: SCALAR
+      name: Float
+      ofType: null
+      type: Float
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: country
+    ofType:
+      kind: SCALAR
+      name: String
+      ofType: null
+      type: String
     type: null
   kind: OBJECT
-  name: Episodes
-Info:
-  fields:
-  - inputs: {}
-    kind: SCALAR
-    name: count
-    ofType: null
-    type: Int
-  - inputs: {}
-    kind: SCALAR
-    name: pages
-    ofType: null
-    type: Int
-  - inputs: {}
-    kind: SCALAR
-    name: next
-    ofType: null
-    type: Int
-  - inputs: {}
-    kind: SCALAR
-    name: prev
-    ofType: null
-    type: Int
-  kind: OBJECT
-  name: Info
+  name: Currency
 Location:
   fields:
   - inputs: {}
-    kind: SCALAR
-    name: id
-    ofType: null
-    type: ID
-  - inputs: {}
-    kind: SCALAR
-    name: name
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: SCALAR
-    name: type
-    ofType: null
-    type: String
-  - inputs: {}
-    kind: SCALAR
-    name: dimension
-    ofType: null
-    type: String
-  - inputs: {}
     kind: NON_NULL
-    name: residents
+    name: id
     ofType:
-      kind: LIST
-      name: null
-      ofType:
-        kind: OBJECT
-        name: Character
-        ofType: null
-        type: Character
-      type: null
+      kind: SCALAR
+      name: ID
+      ofType: null
+      type: ID
     type: null
   - inputs: {}
     kind: SCALAR
-    name: created
+    name: lat
     ofType: null
-    type: String
+    type: Float
+  - inputs: {}
+    kind: SCALAR
+    name: lng
+    ofType: null
+    type: Float
+  - inputs: {}
+    kind: NON_NULL
+    name: name
+    ofType:
+      kind: SCALAR
+      name: String
+      ofType: null
+      type: String
+    type: null
   kind: OBJECT
   name: Location
-Locations:
+Mutation:
   fields:
-  - inputs: {}
+  - inputs:
+      description:
+        defaultValue: null
+        description: A description of the user.
+        kind: SCALAR
+        name: description
+        ofType: null
+        type: String
+      firstName:
+        defaultValue: null
+        description: The first name of the user.
+        kind: NON_NULL
+        name: firstName
+        ofType:
+          kind: SCALAR
+          name: String
+          ofType: null
+          type: String
+        type: null
+      lastName:
+        defaultValue: null
+        description: The last name of the user.
+        kind: SCALAR
+        name: lastName
+        ofType: null
+        type: String
     kind: OBJECT
-    name: info
+    name: createUser
     ofType: null
-    type: Info
+    type: User
+  - inputs:
+      amount:
+        defaultValue: null
+        description: The amount of the transaction.
+        kind: NON_NULL
+        name: amount
+        ofType:
+          kind: SCALAR
+          name: Float
+          ofType: null
+          type: Float
+        type: null
+      currencyID:
+        defaultValue: null
+        description: The ID of the currency used in the transaction.
+        kind: NON_NULL
+        name: currencyID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+      payerID:
+        defaultValue: null
+        description: The ID of the payer.
+        kind: NON_NULL
+        name: payerID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+      walletID:
+        defaultValue: null
+        description: The ID of the wallet associated with the transaction.
+        kind: NON_NULL
+        name: walletID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: createTransaction
+    ofType: null
+    type: Transaction
+  - inputs:
+      lat:
+        defaultValue: null
+        description: The latitude of the location.
+        kind: SCALAR
+        name: lat
+        ofType: null
+        type: Float
+      lng:
+        defaultValue: null
+        description: The longitude of the location.
+        kind: SCALAR
+        name: lng
+        ofType: null
+        type: Float
+      name:
+        defaultValue: null
+        description: The name of the location.
+        kind: SCALAR
+        name: name
+        ofType: null
+        type: String
+    kind: OBJECT
+    name: createLocation
+    ofType: null
+    type: Location
+  - inputs:
+      abbreviation:
+        defaultValue: null
+        description: The abbreviation of the currency (e.g., 'USD').
+        kind: NON_NULL
+        name: abbreviation
+        ofType:
+          kind: SCALAR
+          name: String
+          ofType: null
+          type: String
+        type: null
+      country:
+        defaultValue: null
+        description: The country where the currency is used.
+        kind: SCALAR
+        name: country
+        ofType: null
+        type: String
+      symbol:
+        defaultValue: null
+        description: The symbol of the currency (e.g., '$').
+        kind: NON_NULL
+        name: symbol
+        ofType:
+          kind: SCALAR
+          name: String
+          ofType: null
+          type: String
+        type: null
+    kind: OBJECT
+    name: createCurrency
+    ofType: null
+    type: Currency
+  - inputs:
+      currencyID:
+        defaultValue: null
+        description: The ID of the currency for the wallet.
+        kind: NON_NULL
+        name: currencyID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+      name:
+        defaultValue: null
+        description: The name of the wallet.
+        kind: NON_NULL
+        name: name
+        ofType:
+          kind: SCALAR
+          name: String
+          ofType: null
+          type: String
+        type: null
+      userID:
+        defaultValue: null
+        description: The ID of the user who owns the wallet.
+        kind: NON_NULL
+        name: userID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: createWallet
+    ofType: null
+    type: Wallet
+  - inputs:
+      userID:
+        defaultValue: null
+        description: The ID of the user to delete.
+        kind: NON_NULL
+        name: userID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: deleteUser
+    ofType: null
+    type: User
+  - inputs:
+      transactionID:
+        defaultValue: null
+        description: The ID of the transaction to delete.
+        kind: NON_NULL
+        name: transactionID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: deleteTransaction
+    ofType: null
+    type: Transaction
+  - inputs:
+      locationID:
+        defaultValue: null
+        description: The ID of the location to delete.
+        kind: NON_NULL
+        name: locationID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: deleteLocation
+    ofType: null
+    type: Location
+  - inputs:
+      currencyID:
+        defaultValue: null
+        description: The ID of the currency to delete.
+        kind: NON_NULL
+        name: currencyID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: deleteCurrency
+    ofType: null
+    type: Currency
+  - inputs:
+      walletID:
+        defaultValue: null
+        description: The ID of the wallet to delete.
+        kind: NON_NULL
+        name: walletID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: deleteWallet
+    ofType: null
+    type: Wallet
+  - inputs:
+      description:
+        defaultValue: null
+        description: The new description of the user.
+        kind: SCALAR
+        name: description
+        ofType: null
+        type: String
+      firstName:
+        defaultValue: null
+        description: The new first name of the user.
+        kind: SCALAR
+        name: firstName
+        ofType: null
+        type: String
+      lastName:
+        defaultValue: null
+        description: The new last name of the user.
+        kind: SCALAR
+        name: lastName
+        ofType: null
+        type: String
+      userID:
+        defaultValue: null
+        description: The ID of the user to update.
+        kind: NON_NULL
+        name: userID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: updateUser
+    ofType: null
+    type: User
+  - inputs:
+      amount:
+        defaultValue: null
+        description: The new amount of the transaction.
+        kind: SCALAR
+        name: amount
+        ofType: null
+        type: Float
+      description:
+        defaultValue: null
+        description: The new description of the transaction.
+        kind: SCALAR
+        name: description
+        ofType: null
+        type: String
+      payer:
+        defaultValue: null
+        description: The new payer's ID.
+        kind: SCALAR
+        name: payer
+        ofType: null
+        type: ID
+      transactionID:
+        defaultValue: null
+        description: The ID of the transaction to update.
+        kind: NON_NULL
+        name: transactionID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: updateTransaction
+    ofType: null
+    type: Transaction
+  - inputs:
+      lat:
+        defaultValue: null
+        description: The new latitude of the location.
+        kind: SCALAR
+        name: lat
+        ofType: null
+        type: Float
+      lng:
+        defaultValue: null
+        description: The new longitude of the location.
+        kind: SCALAR
+        name: lng
+        ofType: null
+        type: Float
+      locationID:
+        defaultValue: null
+        description: The ID of the location to update.
+        kind: NON_NULL
+        name: locationID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+      name:
+        defaultValue: null
+        description: The new name of the location.
+        kind: SCALAR
+        name: name
+        ofType: null
+        type: String
+    kind: OBJECT
+    name: updateLocation
+    ofType: null
+    type: Location
+  - inputs:
+      abbreviation:
+        defaultValue: null
+        description: The new abbreviation of the currency.
+        kind: SCALAR
+        name: abbreviation
+        ofType: null
+        type: String
+      country:
+        defaultValue: null
+        description: The new country of the currency.
+        kind: SCALAR
+        name: country
+        ofType: null
+        type: String
+      currencyID:
+        defaultValue: null
+        description: The ID of the currency to update.
+        kind: NON_NULL
+        name: currencyID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+      symbol:
+        defaultValue: null
+        description: The new symbol of the currency.
+        kind: SCALAR
+        name: symbol
+        ofType: null
+        type: String
+    kind: OBJECT
+    name: updateCurrency
+    ofType: null
+    type: Currency
+  - inputs:
+      name:
+        defaultValue: null
+        description: The new name of the wallet.
+        kind: SCALAR
+        name: name
+        ofType: null
+        type: String
+      walletID:
+        defaultValue: null
+        description: The ID of the wallet to update.
+        kind: NON_NULL
+        name: walletID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: updateWallet
+    ofType: null
+    type: Wallet
+  kind: OBJECT
+  name: Mutation
+Query:
+  fields:
+  - inputs:
+      userID:
+        defaultValue: null
+        description: null
+        kind: NON_NULL
+        name: userID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: getUser
+    ofType: null
+    type: User
+  - inputs:
+      transactionID:
+        defaultValue: null
+        description: null
+        kind: NON_NULL
+        name: transactionID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: getTransaction
+    ofType: null
+    type: Transaction
+  - inputs:
+      locationID:
+        defaultValue: null
+        description: null
+        kind: NON_NULL
+        name: locationID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: getLocation
+    ofType: null
+    type: Location
+  - inputs:
+      currencyID:
+        defaultValue: null
+        description: null
+        kind: NON_NULL
+        name: currencyID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: getCurrency
+    ofType: null
+    type: Currency
+  - inputs:
+      walletID:
+        defaultValue: null
+        description: null
+        kind: NON_NULL
+        name: walletID
+        ofType:
+          kind: SCALAR
+          name: ID
+          ofType: null
+          type: ID
+        type: null
+    kind: OBJECT
+    name: getWallet
+    ofType: null
+    type: Wallet
   - inputs: {}
     kind: LIST
-    name: results
+    name: getUsers
+    ofType:
+      kind: OBJECT
+      name: User
+      ofType: null
+      type: User
+    type: null
+  - inputs: {}
+    kind: LIST
+    name: getWallets
+    ofType:
+      kind: OBJECT
+      name: Wallet
+      ofType: null
+      type: Wallet
+    type: null
+  - inputs: {}
+    kind: LIST
+    name: getTransactions
+    ofType:
+      kind: OBJECT
+      name: Transaction
+      ofType: null
+      type: Transaction
+    type: null
+  - inputs: {}
+    kind: LIST
+    name: getLocations
     ofType:
       kind: OBJECT
       name: Location
       ofType: null
       type: Location
     type: null
-  kind: OBJECT
-  name: Locations
-Query:
-  fields:
-  - inputs:
-      id:
-        defaultValue: null
-        description: ''
-        kind: NON_NULL
-        name: id
-        ofType:
-          kind: SCALAR
-          name: ID
-          ofType: null
-          type: ID
-        type: null
-    kind: OBJECT
-    name: character
-    ofType: null
-    type: Character
-  - inputs:
-      filter:
-        defaultValue: null
-        description: ''
-        kind: INPUT_OBJECT
-        name: filter
-        ofType: null
-        type: FilterCharacter
-      page:
-        defaultValue: null
-        description: ''
-        kind: SCALAR
-        name: page
-        ofType: null
-        type: Int
-    kind: OBJECT
-    name: characters
-    ofType: null
-    type: Characters
-  - inputs:
-      ids:
-        defaultValue: null
-        description: ''
-        kind: NON_NULL
-        name: ids
-        ofType:
-          kind: LIST
-          name: null
-          ofType:
-            kind: NON_NULL
-            name: null
-            ofType:
-              kind: SCALAR
-              name: ID
-              ofType: null
-              type: ID
-            type: null
-          type: null
-        type: null
+  - inputs: {}
     kind: LIST
-    name: charactersByIds
+    name: getCurrencies
     ofType:
       kind: OBJECT
-      name: Character
+      name: Currency
       ofType: null
-      type: Character
+      type: Currency
     type: null
   - inputs:
-      id:
+      foreignCurrencySymbol:
         defaultValue: null
-        description: ''
+        description: The foreign currency symbol. Defaults to 'USD' if not provided.
+        kind: SCALAR
+        name: foreignCurrencySymbol
+        ofType: null
+        type: String
+      mainCurrencySymbol:
+        defaultValue: null
+        description: The main currency symbol.
         kind: NON_NULL
-        name: id
+        name: mainCurrencySymbol
         ofType:
           kind: SCALAR
-          name: ID
+          name: String
           ofType: null
-          type: ID
+          type: String
         type: null
+    kind: SCALAR
+    name: getCurrentRate
+    ofType: null
+    type: Float
+  kind: OBJECT
+  name: Query
+Transaction:
+  fields:
+  - inputs: {}
+    kind: NON_NULL
+    name: id
+    ofType:
+      kind: SCALAR
+      name: ID
+      ofType: null
+      type: ID
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: amount
+    ofType:
+      kind: SCALAR
+      name: Float
+      ofType: null
+      type: Float
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: rate
+    ofType:
+      kind: SCALAR
+      name: Float
+      ofType: null
+      type: Float
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: payer
+    ofType:
+      kind: OBJECT
+      name: User
+      ofType: null
+      type: User
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: wallet
+    ofType:
+      kind: OBJECT
+      name: Wallet
+      ofType: null
+      type: Wallet
+    type: null
+  - inputs: {}
+    kind: SCALAR
+    name: description
+    ofType: null
+    type: String
+  - inputs: {}
     kind: OBJECT
     name: location
     ofType: null
     type: Location
-  - inputs:
-      filter:
-        defaultValue: null
-        description: ''
-        kind: INPUT_OBJECT
-        name: filter
-        ofType: null
-        type: FilterLocation
-      page:
-        defaultValue: null
-        description: ''
-        kind: SCALAR
-        name: page
-        ofType: null
-        type: Int
-    kind: OBJECT
-    name: locations
+  - inputs: {}
+    kind: SCALAR
+    name: timestamp
     ofType: null
-    type: Locations
-  - inputs:
-      ids:
-        defaultValue: null
-        description: ''
-        kind: NON_NULL
-        name: ids
-        ofType:
-          kind: LIST
-          name: null
-          ofType:
-            kind: NON_NULL
-            name: null
-            ofType:
-              kind: SCALAR
-              name: ID
-              ofType: null
-              type: ID
-            type: null
-          type: null
-        type: null
-    kind: LIST
-    name: locationsByIds
+    type: String
+  kind: OBJECT
+  name: Transaction
+User:
+  fields:
+  - inputs: {}
+    kind: NON_NULL
+    name: id
     ofType:
-      kind: OBJECT
-      name: Location
+      kind: SCALAR
+      name: ID
       ofType: null
-      type: Location
+      type: ID
     type: null
-  - inputs:
-      id:
-        defaultValue: null
-        description: ''
-        kind: NON_NULL
-        name: id
-        ofType:
-          kind: SCALAR
-          name: ID
-          ofType: null
-          type: ID
-        type: null
-    kind: OBJECT
-    name: episode
+  - inputs: {}
+    kind: NON_NULL
+    name: firstName
+    ofType:
+      kind: SCALAR
+      name: String
+      ofType: null
+      type: String
+    type: null
+  - inputs: {}
+    kind: SCALAR
+    name: lastName
     ofType: null
-    type: Episode
-  - inputs:
-      filter:
-        defaultValue: null
-        description: ''
-        kind: INPUT_OBJECT
-        name: filter
-        ofType: null
-        type: FilterEpisode
-      page:
-        defaultValue: null
-        description: ''
-        kind: SCALAR
-        name: page
-        ofType: null
-        type: Int
-    kind: OBJECT
-    name: episodes
+    type: String
+  - inputs: {}
+    kind: SCALAR
+    name: description
     ofType: null
-    type: Episodes
-  - inputs:
-      ids:
-        defaultValue: null
-        description: ''
-        kind: NON_NULL
-        name: ids
-        ofType:
-          kind: LIST
-          name: null
-          ofType:
-            kind: NON_NULL
-            name: null
-            ofType:
-              kind: SCALAR
-              name: ID
-              ofType: null
-              type: ID
-            type: null
-          type: null
-        type: null
+    type: String
+  - inputs: {}
     kind: LIST
-    name: episodesByIds
+    name: wallets
     ofType:
       kind: OBJECT
-      name: Episode
+      name: Wallet
       ofType: null
-      type: Episode
+      type: Wallet
+    type: null
+  - inputs: {}
+    kind: LIST
+    name: friends
+    ofType:
+      kind: OBJECT
+      name: User
+      ofType: null
+      type: User
     type: null
   kind: OBJECT
-  name: Query
+  name: User
+Wallet:
+  fields:
+  - inputs: {}
+    kind: NON_NULL
+    name: id
+    ofType:
+      kind: SCALAR
+      name: ID
+      ofType: null
+      type: ID
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: name
+    ofType:
+      kind: SCALAR
+      name: String
+      ofType: null
+      type: String
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: currency
+    ofType:
+      kind: OBJECT
+      name: Currency
+      ofType: null
+      type: Currency
+    type: null
+  - inputs: {}
+    kind: LIST
+    name: transactions
+    ofType:
+      kind: OBJECT
+      name: Transaction
+      ofType: null
+      type: Transaction
+    type: null
+  - inputs: {}
+    kind: NON_NULL
+    name: user
+    ofType:
+      kind: OBJECT
+      name: User
+      ofType: null
+      type: User
+    type: null
+  - inputs: {}
+    kind: SCALAR
+    name: balance
+    ofType: null
+    type: Float
+  kind: OBJECT
+  name: Wallet

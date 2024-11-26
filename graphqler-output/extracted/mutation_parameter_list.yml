@@ -1,1 +1,503 @@
-{}
+createCurrency:
+  description: Creates a new currency.
+  inputs:
+    abbreviation:
+      defaultValue: null
+      description: The abbreviation of the currency (e.g., 'USD').
+      kind: NON_NULL
+      name: abbreviation
+      ofType:
+        kind: SCALAR
+        name: String
+        ofType: null
+        type: String
+      type: null
+    country:
+      defaultValue: null
+      description: The country where the currency is used.
+      kind: SCALAR
+      name: country
+      ofType: null
+      type: String
+    symbol:
+      defaultValue: null
+      description: The symbol of the currency (e.g., '$').
+      kind: NON_NULL
+      name: symbol
+      ofType:
+        kind: SCALAR
+        name: String
+        ofType: null
+        type: String
+      type: null
+  isDepracated: false
+  name: createCurrency
+  output:
+    kind: OBJECT
+    name: Currency
+    ofType: null
+    type: Currency
+createLocation:
+  description: Creates a new location.
+  inputs:
+    lat:
+      defaultValue: null
+      description: The latitude of the location.
+      kind: SCALAR
+      name: lat
+      ofType: null
+      type: Float
+    lng:
+      defaultValue: null
+      description: The longitude of the location.
+      kind: SCALAR
+      name: lng
+      ofType: null
+      type: Float
+    name:
+      defaultValue: null
+      description: The name of the location.
+      kind: SCALAR
+      name: name
+      ofType: null
+      type: String
+  isDepracated: false
+  name: createLocation
+  output:
+    kind: OBJECT
+    name: Location
+    ofType: null
+    type: Location
+createTransaction:
+  description: Creates a new transaction.
+  inputs:
+    amount:
+      defaultValue: null
+      description: The amount of the transaction.
+      kind: NON_NULL
+      name: amount
+      ofType:
+        kind: SCALAR
+        name: Float
+        ofType: null
+        type: Float
+      type: null
+    currencyID:
+      defaultValue: null
+      description: The ID of the currency used in the transaction.
+      kind: NON_NULL
+      name: currencyID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+    payerID:
+      defaultValue: null
+      description: The ID of the payer.
+      kind: NON_NULL
+      name: payerID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+    walletID:
+      defaultValue: null
+      description: The ID of the wallet associated with the transaction.
+      kind: NON_NULL
+      name: walletID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: createTransaction
+  output:
+    kind: OBJECT
+    name: Transaction
+    ofType: null
+    type: Transaction
+createUser:
+  description: Creates a new user.
+  inputs:
+    description:
+      defaultValue: null
+      description: A description of the user.
+      kind: SCALAR
+      name: description
+      ofType: null
+      type: String
+    firstName:
+      defaultValue: null
+      description: The first name of the user.
+      kind: NON_NULL
+      name: firstName
+      ofType:
+        kind: SCALAR
+        name: String
+        ofType: null
+        type: String
+      type: null
+    lastName:
+      defaultValue: null
+      description: The last name of the user.
+      kind: SCALAR
+      name: lastName
+      ofType: null
+      type: String
+  isDepracated: false
+  name: createUser
+  output:
+    kind: OBJECT
+    name: User
+    ofType: null
+    type: User
+createWallet:
+  description: Creates a new wallet.
+  inputs:
+    currencyID:
+      defaultValue: null
+      description: The ID of the currency for the wallet.
+      kind: NON_NULL
+      name: currencyID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+    name:
+      defaultValue: null
+      description: The name of the wallet.
+      kind: NON_NULL
+      name: name
+      ofType:
+        kind: SCALAR
+        name: String
+        ofType: null
+        type: String
+      type: null
+    userID:
+      defaultValue: null
+      description: The ID of the user who owns the wallet.
+      kind: NON_NULL
+      name: userID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: createWallet
+  output:
+    kind: OBJECT
+    name: Wallet
+    ofType: null
+    type: Wallet
+deleteCurrency:
+  description: Deletes a currency by its ID.
+  inputs:
+    currencyID:
+      defaultValue: null
+      description: The ID of the currency to delete.
+      kind: NON_NULL
+      name: currencyID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: deleteCurrency
+  output:
+    kind: OBJECT
+    name: Currency
+    ofType: null
+    type: Currency
+deleteLocation:
+  description: Deletes a location by its ID.
+  inputs:
+    locationID:
+      defaultValue: null
+      description: The ID of the location to delete.
+      kind: NON_NULL
+      name: locationID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: deleteLocation
+  output:
+    kind: OBJECT
+    name: Location
+    ofType: null
+    type: Location
+deleteTransaction:
+  description: Deletes a transaction by its ID.
+  inputs:
+    transactionID:
+      defaultValue: null
+      description: The ID of the transaction to delete.
+      kind: NON_NULL
+      name: transactionID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: deleteTransaction
+  output:
+    kind: OBJECT
+    name: Transaction
+    ofType: null
+    type: Transaction
+deleteUser:
+  description: Deletes a user by their ID.
+  inputs:
+    userID:
+      defaultValue: null
+      description: The ID of the user to delete.
+      kind: NON_NULL
+      name: userID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: deleteUser
+  output:
+    kind: OBJECT
+    name: User
+    ofType: null
+    type: User
+deleteWallet:
+  description: Deletes a wallet by its ID.
+  inputs:
+    walletID:
+      defaultValue: null
+      description: The ID of the wallet to delete.
+      kind: NON_NULL
+      name: walletID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: deleteWallet
+  output:
+    kind: OBJECT
+    name: Wallet
+    ofType: null
+    type: Wallet
+updateCurrency:
+  description: Updates an existing currency.
+  inputs:
+    abbreviation:
+      defaultValue: null
+      description: The new abbreviation of the currency.
+      kind: SCALAR
+      name: abbreviation
+      ofType: null
+      type: String
+    country:
+      defaultValue: null
+      description: The new country of the currency.
+      kind: SCALAR
+      name: country
+      ofType: null
+      type: String
+    currencyID:
+      defaultValue: null
+      description: The ID of the currency to update.
+      kind: NON_NULL
+      name: currencyID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+    symbol:
+      defaultValue: null
+      description: The new symbol of the currency.
+      kind: SCALAR
+      name: symbol
+      ofType: null
+      type: String
+  isDepracated: false
+  name: updateCurrency
+  output:
+    kind: OBJECT
+    name: Currency
+    ofType: null
+    type: Currency
+updateLocation:
+  description: Updates an existing location.
+  inputs:
+    lat:
+      defaultValue: null
+      description: The new latitude of the location.
+      kind: SCALAR
+      name: lat
+      ofType: null
+      type: Float
+    lng:
+      defaultValue: null
+      description: The new longitude of the location.
+      kind: SCALAR
+      name: lng
+      ofType: null
+      type: Float
+    locationID:
+      defaultValue: null
+      description: The ID of the location to update.
+      kind: NON_NULL
+      name: locationID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+    name:
+      defaultValue: null
+      description: The new name of the location.
+      kind: SCALAR
+      name: name
+      ofType: null
+      type: String
+  isDepracated: false
+  name: updateLocation
+  output:
+    kind: OBJECT
+    name: Location
+    ofType: null
+    type: Location
+updateTransaction:
+  description: Updates an existing transaction.
+  inputs:
+    amount:
+      defaultValue: null
+      description: The new amount of the transaction.
+      kind: SCALAR
+      name: amount
+      ofType: null
+      type: Float
+    description:
+      defaultValue: null
+      description: The new description of the transaction.
+      kind: SCALAR
+      name: description
+      ofType: null
+      type: String
+    payer:
+      defaultValue: null
+      description: The new payer's ID.
+      kind: SCALAR
+      name: payer
+      ofType: null
+      type: ID
+    transactionID:
+      defaultValue: null
+      description: The ID of the transaction to update.
+      kind: NON_NULL
+      name: transactionID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: updateTransaction
+  output:
+    kind: OBJECT
+    name: Transaction
+    ofType: null
+    type: Transaction
+updateUser:
+  description: Updates an existing user.
+  inputs:
+    description:
+      defaultValue: null
+      description: The new description of the user.
+      kind: SCALAR
+      name: description
+      ofType: null
+      type: String
+    firstName:
+      defaultValue: null
+      description: The new first name of the user.
+      kind: SCALAR
+      name: firstName
+      ofType: null
+      type: String
+    lastName:
+      defaultValue: null
+      description: The new last name of the user.
+      kind: SCALAR
+      name: lastName
+      ofType: null
+      type: String
+    userID:
+      defaultValue: null
+      description: The ID of the user to update.
+      kind: NON_NULL
+      name: userID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: updateUser
+  output:
+    kind: OBJECT
+    name: User
+    ofType: null
+    type: User
+updateWallet:
+  description: Updates an existing wallet.
+  inputs:
+    name:
+      defaultValue: null
+      description: The new name of the wallet.
+      kind: SCALAR
+      name: name
+      ofType: null
+      type: String
+    walletID:
+      defaultValue: null
+      description: The ID of the wallet to update.
+      kind: NON_NULL
+      name: walletID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  isDepracated: false
+  name: updateWallet
+  output:
+    kind: OBJECT
+    name: Wallet
+    ofType: null
+    type: Wallet

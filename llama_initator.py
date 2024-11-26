@@ -31,7 +31,7 @@ def get_llm_model(prompt):
             url,
             headers={"Content-Type": "application/json"},
             json=data,
-            timeout=300
+            timeout=6000
         )
         response.raise_for_status()
         logger.info("Get response from LLama successfully.")
