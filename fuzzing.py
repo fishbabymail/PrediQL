@@ -128,7 +128,7 @@ def main():
         }
     )
     # Load and execute queries
-    queries = fuzzer.load_queries("llama_query/rick_query_ep.json")
+    queries = fuzzer.load_queries("llama_query/batch_queries.json")
     print(queries)
     results = fuzzer.run_testing(queries)
     fuzzer.save_results(
