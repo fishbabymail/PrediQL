@@ -11,7 +11,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-class SqliFuzzing():
+class DDOSFuzzing():
     def __init__(self, url, base_path=None):
         ## Path to save results
         self.ep = url
@@ -20,8 +20,8 @@ class SqliFuzzing():
         else:
             self.base_path = base_path
 
-    def read_sqli_query(self):
-        filepath = os.path.join(self.base_path, "llama_query", "sqli_queries.json")
+    def read_DDOS_query(self):
+        filepath = os.path.join(self.base_path, "llama_query", "ddos_queries.json")
         if not os.path.isfile(filepath):
             raise FileNotFoundError(filepath)
         with open(filepath, 'r') as f:
@@ -30,19 +30,17 @@ class SqliFuzzing():
         return query_list
 
     def fuzzing_endpoint(self):
-        query_list = self.read_sqli_query()
+        query_list = self.read_DDOS_query()
         results = {}
         for query in query_list:
             payload = {
                 "query": query,
                 "variables": {}
             }
-
             try:
                 response = requests.post(self.ep, json=payload)
-                # print(response.text)
                 results[query] = response.text
-                # print(response.text)
+                print(response.text)
             except:
                 logger.error("Exception request for query: {}".format(query))
         return results
@@ -50,16 +48,15 @@ class SqliFuzzing():
     def run(self):
         results = self.fuzzing_endpoint()
         logger.info("Begin to save fuzzing results.")
-        savepath = save_results(results, fuzztype="Sqli")
+        savepath = save_results(results, fuzztype="Ddos")
         logger.info("Results saved to path {}".format(savepath))
         return savepath
 
 
 if __name__ == '__main__':
-    url = "http://localhost:4000/graphql"
-    sqlifuzz = SqliFuzzing(url)
-    savepath = sqlifuzz.run()
-
+    url = "https://rickandmortyapi.com/graphql"
+    DDOSfuzz = DDOSFuzzing(url)
+    savepath = DDOSfuzz.run()
 
 
 

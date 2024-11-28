@@ -1,8 +1,10 @@
 import os
+import re
 import yaml
 import json
 import logging
 from parse_endpoint_results import ParseEndpointResults
+from get_results_from_graphqler import *
 
 from llama_initator import get_llm_model
 
@@ -25,13 +27,30 @@ class LlamaGetValidQuery:
         if not os.path.isdir(self.end_path):
             raise FileNotFoundError("Path {} does not exist. END".format(self.end_path))
 
-    def get_compiled_queries(self):
-        filepath = os.path.join(self.end_path, "compiled_queries.yml")
+    def get_compiled_queries(self, filename):
+        filepath = os.path.join(self.end_path, filename)
         compiled_queries = None
         if os.path.isfile(filepath):
             with open(filepath, "r") as f:
                 compiled_queries = yaml.safe_load(f)
         return compiled_queries
+
+    def get_object_buckets(self):
+        filepath = os.path.join(self.base_path, "graphqler-output", "objects_bucket.txt")
+        objects_marker = "------------------- OBJECTS BUCKET -------------------"
+        scalars_marker = "------------------- SCALARS BUCKET -------------------"
+
+        with open(filepath, "r", encoding="utf-8") as file:
+            content = file.read()
+
+        objects_start = content.find(objects_marker) + len(objects_marker)
+        scalars_start = content.find(scalars_marker) + len(scalars_marker)
+
+        objects_str = content[objects_start:content.find(scalars_marker)].strip()
+        scalars_str = content[scalars_start:].strip()
+
+        return objects_str, scalars_str
+
 
     def get_valid_queries(self):
         # Get failure payloads and responses pairs
@@ -40,7 +59,13 @@ class LlamaGetValidQuery:
         # print(payload_resp_pair)
 
         # Get compiled query schema
-        compiled_queries = self.get_compiled_queries()
+        compiled_queries = self.get_compiled_queries("compiled_queries.yml")
+        compiled_mutations = self.get_compiled_queries("compiled_mutations.yml")
+        compiled_objects = self.get_compiled_queries("compiled_objects.yml")
+
+        # Get objects_bucket
+        objects_str, scalars_str = self.get_object_buckets()
+
         query_json = {"query": []}
         tmp = """
             ```graphql
@@ -50,12 +75,14 @@ class LlamaGetValidQuery:
         """
         logger.info("Start to get valid queries from Llama.")
         for payload, response in payload_resp_pair.items():
+            # # Control running time
+            # if len(query_json["query"]) > 50:
+            #     break
             prompt = (f"Based on the following graphql query, the corresponding response, "
                       f"and graphql schema information, please try to fix this query and "
-                      f"return me different valid queries, please use exact values for "
-                      f"parameters instead of placeholders. Each of the returned query "
-                      f"should follow the format as: {tmp}. The query is :{payload}. "
-                      f"The error response for this query is :{response}. The graphql schema "
+                      f"return me different valid queries, and separate each of the returned query "
+                      f"as: {tmp}, please use real values for fields instead of placeholders. The query is :{payload}, "
+                      f"the error response for this query is :{response}, the graphql schema "
                       f"is: {compiled_queries}.")
             llama_res = get_llm_model(prompt)
             # print("=============\nLLAMA PROMPT: \n", prompt)
@@ -63,6 +90,9 @@ class LlamaGetValidQuery:
             flag = "```graphql"
             parse_time = 0
             while flag in llama_res and parse_time < 10:
+                # # Control running time
+                # if len(query_json["query"]) > 50:
+                #     break
                 parse_time += 1
                 try:
                     sidx = llama_res.find(flag)

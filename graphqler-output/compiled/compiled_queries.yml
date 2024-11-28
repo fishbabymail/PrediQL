@@ -1,209 +1,85 @@
-character:
-  hardDependsOn:
-    id: Character
-  inputs:
-    id:
-      kind: NON_NULL
-      name: id
-      ofType:
-        kind: SCALAR
-        name: ID
-        ofType: null
-        type: ID
-      type: null
-  name: character
-  output:
-    kind: OBJECT
-    name: Character
-    ofType: null
-    type: Character
-  softDependsOn: {}
-characters:
+getCurrencies:
   hardDependsOn: {}
-  inputs:
-    filter:
-      kind: INPUT_OBJECT
-      name: filter
-      ofType: null
-      type: FilterCharacter
-    page:
-      kind: SCALAR
-      name: page
-      ofType: null
-      type: Int
-  name: characters
-  output:
-    kind: OBJECT
-    name: Characters
-    ofType: null
-    type: Characters
-  softDependsOn: {}
-charactersByIds:
-  hardDependsOn:
-    ids: Characters
-  inputs:
-    ids:
-      kind: NON_NULL
-      name: ids
-      ofType:
-        kind: LIST
-        name: null
-        ofType:
-          kind: NON_NULL
-          name: null
-          ofType:
-            kind: SCALAR
-            name: ID
-            ofType: null
-            type: ID
-          type: null
-        type: null
-      type: null
-  name: charactersByIds
+  inputs: {}
+  name: getCurrencies
   output:
     kind: LIST
     name: null
     ofType:
       kind: OBJECT
-      name: Character
+      name: Currency
       ofType: null
-      type: Character
+      type: Currency
     type: null
   softDependsOn: {}
-episode:
+getCurrency:
   hardDependsOn:
-    id: Episode
+    currencyID: Currency
   inputs:
-    id:
+    currencyID:
       kind: NON_NULL
-      name: id
+      name: currencyID
       ofType:
         kind: SCALAR
         name: ID
         ofType: null
         type: ID
       type: null
-  name: episode
+  name: getCurrency
   output:
     kind: OBJECT
-    name: Episode
+    name: Currency
     ofType: null
-    type: Episode
+    type: Currency
   softDependsOn: {}
-episodes:
+getCurrentRate:
   hardDependsOn: {}
   inputs:
-    filter:
-      kind: INPUT_OBJECT
-      name: filter
-      ofType: null
-      type: FilterEpisode
-    page:
+    foreignCurrencySymbol:
       kind: SCALAR
-      name: page
+      name: foreignCurrencySymbol
       ofType: null
-      type: Int
-  name: episodes
-  output:
-    kind: OBJECT
-    name: Episodes
-    ofType: null
-    type: Episodes
-  softDependsOn: {}
-episodesByIds:
-  hardDependsOn:
-    ids: Episodes
-  inputs:
-    ids:
+      type: String
+    mainCurrencySymbol:
       kind: NON_NULL
-      name: ids
+      name: mainCurrencySymbol
       ofType:
-        kind: LIST
-        name: null
-        ofType:
-          kind: NON_NULL
-          name: null
-          ofType:
-            kind: SCALAR
-            name: ID
-            ofType: null
-            type: ID
-          type: null
-        type: null
+        kind: SCALAR
+        name: String
+        ofType: null
+        type: String
       type: null
-  name: episodesByIds
+  name: getCurrentRate
   output:
-    kind: LIST
-    name: null
-    ofType:
-      kind: OBJECT
-      name: Episode
-      ofType: null
-      type: Episode
-    type: null
+    kind: SCALAR
+    name: Float
+    ofType: null
+    type: Float
   softDependsOn: {}
-location:
+getLocation:
   hardDependsOn:
-    id: Location
+    locationID: Location
   inputs:
-    id:
+    locationID:
       kind: NON_NULL
-      name: id
+      name: locationID
       ofType:
         kind: SCALAR
         name: ID
         ofType: null
         type: ID
       type: null
-  name: location
+  name: getLocation
   output:
     kind: OBJECT
     name: Location
     ofType: null
     type: Location
   softDependsOn: {}
-locations:
+getLocations:
   hardDependsOn: {}
-  inputs:
-    filter:
-      kind: INPUT_OBJECT
-      name: filter
-      ofType: null
-      type: FilterLocation
-    page:
-      kind: SCALAR
-      name: page
-      ofType: null
-      type: Int
-  name: locations
-  output:
-    kind: OBJECT
-    name: Locations
-    ofType: null
-    type: Locations
-  softDependsOn: {}
-locationsByIds:
-  hardDependsOn:
-    ids: Locations
-  inputs:
-    ids:
-      kind: NON_NULL
-      name: ids
-      ofType:
-        kind: LIST
-        name: null
-        ofType:
-          kind: NON_NULL
-          name: null
-          ofType:
-            kind: SCALAR
-            name: ID
-            ofType: null
-            type: ID
-          type: null
-        type: null
-      type: null
-  name: locationsByIds
+  inputs: {}
+  name: getLocations
   output:
     kind: LIST
     name: null
@@ -212,5 +88,107 @@ locationsByIds:
       name: Location
       ofType: null
       type: Location
+    type: null
+  softDependsOn: {}
+getTransaction:
+  hardDependsOn:
+    transactionID: Transaction
+  inputs:
+    transactionID:
+      kind: NON_NULL
+      name: transactionID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: getTransaction
+  output:
+    kind: OBJECT
+    name: Transaction
+    ofType: null
+    type: Transaction
+  softDependsOn: {}
+getTransactions:
+  hardDependsOn: {}
+  inputs: {}
+  name: getTransactions
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: Transaction
+      ofType: null
+      type: Transaction
+    type: null
+  softDependsOn: {}
+getUser:
+  hardDependsOn:
+    userID: User
+  inputs:
+    userID:
+      kind: NON_NULL
+      name: userID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: getUser
+  output:
+    kind: OBJECT
+    name: User
+    ofType: null
+    type: User
+  softDependsOn: {}
+getUsers:
+  hardDependsOn: {}
+  inputs: {}
+  name: getUsers
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: User
+      ofType: null
+      type: User
+    type: null
+  softDependsOn: {}
+getWallet:
+  hardDependsOn:
+    walletID: Wallet
+  inputs:
+    walletID:
+      kind: NON_NULL
+      name: walletID
+      ofType:
+        kind: SCALAR
+        name: ID
+        ofType: null
+        type: ID
+      type: null
+  name: getWallet
+  output:
+    kind: OBJECT
+    name: Wallet
+    ofType: null
+    type: Wallet
+  softDependsOn: {}
+getWallets:
+  hardDependsOn: {}
+  inputs: {}
+  name: getWallets
+  output:
+    kind: LIST
+    name: null
+    ofType:
+      kind: OBJECT
+      name: Wallet
+      ofType: null
+      type: Wallet
     type: null
   softDependsOn: {}

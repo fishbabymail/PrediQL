@@ -2,6 +2,10 @@ import os
 
 
 def save_results(results, fuzztype, base_path = None):
+    if fuzztype == "valid_queries":
+        flag = "Valid Query"
+    else:
+        flag = "Payload"
     # Make results directory
     if not base_path:
         base_path = os.getcwd()
@@ -16,7 +20,7 @@ def save_results(results, fuzztype, base_path = None):
     for query, resp in results.items():
         # query = ast.literal_eval(query)
         with open(filepath, 'a') as f:
-            f.write("------------------Payload:-------------------\n")
+            f.write("------------------" + flag + ":-------------------\n")
             f.write(f"{query}\n")
             f.write("------------------Response:-------------------\n")
             f.write(f"{resp}\n")

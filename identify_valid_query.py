@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import logging
+import save_fuzz_results
 
 logging.basicConfig(
     level=logging.INFO,
@@ -29,7 +30,7 @@ def request_query(url, query):
 
     try:
         response = requests.post(url, json=payload)
-        print(response.text)
+        # print(response.text)
     except:
         logger.error("Exception request for query: {}".format(query))
         return
@@ -37,7 +38,7 @@ def request_query(url, query):
         response_text = response.text
         logger.info("Response:{}".format(response_text))
         logger.info("This query is valid.")
-        return query
+        return response_text
     else:
         logger.error("Failed to fetch data: {}".format(response.status_code))
         return
@@ -45,27 +46,33 @@ def request_query(url, query):
 
 def run(url):
     valid_queries = []
+    readable_results = {}
     filedir = os.path.join(os.getcwd(), "llama_query")
     filename = "llama_queries.json"
     query_list = get_queries(filedir, filename)
     for i, query in enumerate(query_list):
-        res = request_query(url, query)
-        if not res:
+        response_text = request_query(url, query)
+        if response_text:
             valid_queries.append(query)
+            readable_results[query] = response_text
 
-    res = {
+    valid_results = {
         "query": valid_queries
     }
 
     save_name = "valid_query.json"
     filename = os.path.join(filedir, save_name)
     with open(filename, 'w') as f:
-        json.dump(res, f)
+        json.dump(valid_results, f)
     logger.info("Saved valid query to {}".format(filename))
+
+    # Save readable results
+    save_fuzz_results.save_results(readable_results, "valid_query")
+
 
 
 if __name__ == '__main__':
-    url = "https://rickandmortyapi.com/graphql"
+    url = "http://localhost:4000/graphql"
     run(url)
 
 

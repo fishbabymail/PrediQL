@@ -2,225 +2,676 @@
 ===================HTTP Status Codes===================
 {
     "200": {
-        "locations": 8,
-        "episodes": 8,
-        "characters": 8,
-        "character": 6,
-        "episode": 6,
-        "location": 6,
-        "https://rickandmortyapi.com/graphql": 1
-    },
-    "413": {
-        "locations": 5,
-        "episodes": 5,
-        "characters": 5,
-        "character": 3,
-        "episode": 3,
-        "location": 3
+        "createUser": 11,
+        "getUser": 13,
+        "createWallet": 12,
+        "createLocation": 11,
+        "getLocation": 13,
+        "createCurrency": 11,
+        "getCurrency": 13,
+        "getWallet": 13,
+        "createTransaction": 11,
+        "getTransaction": 13,
+        "getWallets": 13,
+        "getUsers": 13,
+        "getTransactions": 13,
+        "getLocations": 13,
+        "getCurrentRate": 31,
+        "getCurrencies": 13,
+        "updateUser": 9,
+        "updateWallet": 9,
+        "updateTransaction": 9,
+        "updateLocation": 9,
+        "updateCurrency": 9,
+        "deleteUser": 7,
+        "deleteWallet": 7,
+        "deleteTransaction": 7,
+        "deleteLocation": 7,
+        "deleteCurrency": 7,
+        "http://localhost:4000/graphql": 1
     },
     "400": {
-        "https://rickandmortyapi.com/graphql": 1
+        "http://localhost:4000/graphql": 1
     }
 }
 ===================Successful Nodes===================
 {
-    "Query|locations": 3,
-    "Object|Locations": 3,
-    "Query|episodes": 3,
-    "Object|Episodes": 3,
-    "Query|characters": 3,
-    "Object|Characters": 3
+    "Mutation|createUser": 8,
+    "Object|User": 3,
+    "Query|getUser": 10,
+    "Mutation|createWallet": 8,
+    "Mutation|createLocation": 8,
+    "Object|Location": 3,
+    "Query|getLocation": 10,
+    "Mutation|createCurrency": 8,
+    "Object|Currency": 3,
+    "Query|getCurrency": 10,
+    "Object|Wallet": 3,
+    "Query|getWallet": 10,
+    "Mutation|createTransaction": 8,
+    "Object|Transaction": 3,
+    "Query|getTransaction": 10,
+    "Query|getWallets": 10,
+    "Query|getUsers": 10,
+    "Query|getTransactions": 10,
+    "Query|getLocations": 10,
+    "Query|getCurrentRate": 7,
+    "Query|getCurrencies": 10,
+    "Mutation|updateUser": 7,
+    "Mutation|updateWallet": 7,
+    "Mutation|updateTransaction": 7,
+    "Mutation|updateLocation": 7,
+    "Mutation|updateCurrency": 7,
+    "Mutation|deleteUser": 6,
+    "Mutation|deleteWallet": 6,
+    "Mutation|deleteTransaction": 6,
+    "Mutation|deleteLocation": 6,
+    "Mutation|deleteCurrency": 6,
+    "misc|http://localhost:4000/graphql": 2
 }
 ===================Failed Nodes===================
 {
     "Object|Query": 12,
-    "Object|Info": 12,
-    "Query|locationsByIds": 12,
-    "Query|episodesByIds": 12,
-    "Query|charactersByIds": 12,
-    "Query|character": 1,
-    "Query|episode": 1,
-    "Query|location": 1,
-    "Object|Character": 1,
-    "Object|Episode": 1,
-    "Object|Location": 1
+    "Object|Mutation": 12,
+    "Mutation|createWallet": 1,
+    "Query|getCurrentRate": 12
 }
 ===================General stats ===================
 
-Time taken: 19.84454917907715 seconds
-Number of unique query/mutation successes: 3/9
-Number of unique external query/mutation failures: 6/9
-Number of queries: 9
-Number of mutations: 0
-Number of objects: 8
-Number of successes: 18
-Number of failures: 66
+Time taken: 9.754443883895874 seconds
+Number of unique query/mutation successes: 26/26
+Number of unique external query/mutation failures: 2/26
+Number of queries: 11
+Number of mutations: 15
+Number of objects: 7
+Number of successes: 229
+Number of failures: 37
 ===================Detected Vulnerabilities===================
 {
     "OS Command Injection": {
-        "locations": {
+        "createUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episodes": {
+        "getUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "characters": {
+        "createWallet": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "character": {
+        "createLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episode": {
+        "getLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "location": {
+        "createCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "createTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getWallets": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getUsers": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransactions": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getLocations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrentRate": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrencies": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateLocation": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteLocation": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         }
     },
     "Cross-Site Scripting (XSS) Injection": {
-        "locations": {
+        "createUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episodes": {
+        "getUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "characters": {
+        "createWallet": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "character": {
+        "createLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episode": {
+        "getLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "location": {
+        "createCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "createTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getWallets": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getUsers": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransactions": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getLocations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrentRate": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrencies": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateLocation": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteLocation": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         }
     },
     "SSRF Injection": {
-        "locations": {
+        "createUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episodes": {
+        "getUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "characters": {
+        "createWallet": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "character": {
+        "createLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episode": {
+        "getLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "location": {
+        "createCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "createTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getWallets": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getUsers": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransactions": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getLocations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrentRate": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrencies": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateLocation": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteLocation": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         }
     },
     "SQL Injection (SQLi) Injection": {
-        "locations": {
+        "createUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episodes": {
+        "getUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "characters": {
+        "createWallet": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "createLocation": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "getLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "character": {
+        "createCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episode": {
+        "getCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "location": {
+        "getWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "createTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getWallets": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getUsers": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransactions": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getLocations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrentRate": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrencies": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateWallet": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "updateTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateLocation": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "updateCurrency": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteLocation": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         }
     },
     "Path Injection": {
-        "locations": {
+        "createUser": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "getUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episodes": {
+        "createWallet": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "characters": {
+        "createLocation": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "getLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "character": {
+        "createCurrency": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "getCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episode": {
+        "getWallet": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "location": {
+        "createTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getWallets": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getUsers": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "getTransactions": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getLocations": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "getCurrentRate": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrencies": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "updateUser": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "updateWallet": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "updateTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "updateLocation": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "updateCurrency": {
+            "potentially_vulnerable": true,
+            "is_vulnerable": false
+        },
+        "deleteUser": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteWallet": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteTransaction": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteLocation": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "deleteCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         }
     },
     "Query deny bypass": {
-        "locations": {
+        "getUser": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episodes": {
+        "getLocation": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "characters": {
+        "getCurrency": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "character": {
+        "getWallet": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "episode": {
+        "getTransaction": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         },
-        "location": {
+        "getWallets": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getUsers": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getTransactions": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getLocations": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrentRate": {
+            "potentially_vulnerable": false,
+            "is_vulnerable": false
+        },
+        "getCurrencies": {
             "potentially_vulnerable": false,
             "is_vulnerable": false
         }
     },
     "Introspection Enabled": {
-        "https://rickandmortyapi.com/graphql": {
+        "http://localhost:4000/graphql": {
             "potentially_vulnerable": true,
             "is_vulnerable": true
         }
     },
     "Field Suggestions Enabled": {
-        "https://rickandmortyapi.com/graphql": {
+        "http://localhost:4000/graphql": {
             "potentially_vulnerable": true,
             "is_vulnerable": true
         }
