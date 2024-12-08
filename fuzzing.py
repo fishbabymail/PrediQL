@@ -121,7 +121,7 @@ class GraphQLFuzzer:
 
 def main():
     fuzzer = GraphQLFuzzer(
-        endpoint_url="https://rickandmortyapi.com/graphql",
+        endpoint_url="http://localhost:4000/graphql",
         rate_limit=1.0,
         headers={
             'Content-Type': 'application/json',
