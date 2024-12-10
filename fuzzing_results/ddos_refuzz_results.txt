@@ -1,0 +1,151 @@
+------------------Payload:-------------------
+payload
+------------------Response:-------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token &#39;&quot;&#39;, &quot;&quot;payload&quot;&quot; is not valid JSON<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/types/json.js:169:10)<br> &nbsp; &nbsp;at parse (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/types/json.js:86:15)<br> &nbsp; &nbsp;at /Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:211:14)<br> &nbsp; &nbsp;at invokeCallback (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:238:16)<br> &nbsp; &nbsp;at done (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:227:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:287:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:513:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1696:12)</pre>
+</body>
+</html>
+
+------------------Payload:-------------------
+
+{
+  wallets(ids: ["01c90b3e-64a1-4290-9b50-0dcab004a095", "02c90b3e-64a1-4290-9b50-0dcab004a096"]) {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token &#39;&quot;&#39;, &quot;&quot;\n{\n &nbsp;wa&quot;... is not valid JSON<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/types/json.js:169:10)<br> &nbsp; &nbsp;at parse (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/types/json.js:86:15)<br> &nbsp; &nbsp;at /Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:211:14)<br> &nbsp; &nbsp;at invokeCallback (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:238:16)<br> &nbsp; &nbsp;at done (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:227:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:287:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:513:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1696:12)</pre>
+</body>
+</html>
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token &#39;&quot;&#39;, &quot;&quot;\n{\n &nbsp;ge&quot;... is not valid JSON<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/types/json.js:169:10)<br> &nbsp; &nbsp;at parse (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/types/json.js:86:15)<br> &nbsp; &nbsp;at /Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:211:14)<br> &nbsp; &nbsp;at invokeCallback (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:238:16)<br> &nbsp; &nbsp;at done (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:227:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:287:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:513:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1696:12)</pre>
+</body>
+</html>
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    transactions {
+      amount
+      description
+    }
+  }
+}
+
+------------------Response:-------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token &#39;&quot;&#39;, &quot;&quot;\n{\n &nbsp;ge&quot;... is not valid JSON<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/types/json.js:169:10)<br> &nbsp; &nbsp;at parse (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/types/json.js:86:15)<br> &nbsp; &nbsp;at /Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:211:14)<br> &nbsp; &nbsp;at invokeCallback (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:238:16)<br> &nbsp; &nbsp;at done (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:227:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/raw-body/index.js:287:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:513:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1696:12)</pre>
+</body>
+</html>
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "some-non-existant-id") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  wallets(ids: ["01c90b3e-64a1-4290-9b50-0dcab004a095"]) {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","locations":[{"line":3,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  wallets(ids: ["01c90b3e-64a1-4290-9b50-0dcab004a095", "02c90b3e-64a1-4290-9b50-0dcab004a096"]) {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","locations":[{"line":3,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    transactions {
+      amount
+      description
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
