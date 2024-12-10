@@ -1,0 +1,1546 @@
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "730c55b2-8e53-4bc8-81c0-dcadd1688842") {
+    id
+    name
+    currency {
+      id
+      abbreviation
+      symbol
+      rate
+      country
+    }
+    transactions {
+      id
+      amount
+      rate
+      timestamp
+    }
+    user {
+      id
+      firstName
+      lastName
+      description
+    }
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getTransaction(transactionID: "e350e4b4-b617-4301-a6bf-826d27093496") {
+    id
+    amount
+    rate
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getTransaction":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "72edd861-5961-430a-b13b-b9c5670840d9") {
+    id
+    firstName
+    lastName
+    description
+    wallets {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "730c55b2-8e53-4bc8-81c0-dcadd1688842") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "730c55b2-8e53-4bc8-81c0-dcadd1688842") {
+    id
+    name
+    balance
+    currency {
+      id
+      abbreviation
+      symbol
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getTransaction(transactionID: "e350e4b4-b617-4301-a6bf-826d27093496") {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getTransaction":null}}
+
+------------------Payload:-------------------
+
+{
+  getTransactions {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getTransactions":[{"id":"0a496cd8-fc77-4c84-8ca2-dce57f4e5d0d","amount":261.81146364115995,"rate":1,"description":null,"timestamp":"1733802376425"},{"id":"19034e2d-7811-4985-a5e5-c23d53d4980b","amount":261.81146364115995,"rate":1,"description":null,"timestamp":"1733802376438"},{"id":"66be9f28-6b97-4930-b97c-031bf28e8e5d","amount":643.6450716077188,"rate":1,"description":null,"timestamp":"1733802376495"},{"id":"5044cd9b-374c-4c56-bbb8-b170a06b20a2","amount":939.7259408224821,"rate":1,"description":null,"timestamp":"1733802376544"},{"id":"462de05a-c5e7-4e02-8dd7-47cafe41b0dd","amount":883.7345255294181,"rate":1,"description":null,"timestamp":"1733802376580"},{"id":"4ba6808b-fc7f-42b5-b4ce-618538d9ab0f","amount":975.497187598433,"rate":1,"description":null,"timestamp":"1733802376652"},{"id":"54ac3b0a-bd26-41e1-af95-bd14dad4bf88","amount":630.7695490832408,"rate":1,"description":null,"timestamp":"1733802376690"},{"id":"6b65b2f5-1970-4604-9306-b18842296824","amount":363.17515350222254,"rate":1,"description":"../../../../etc/passwd","timestamp":"1733802380816"},{"id":"53d0ffaa-12e1-40c4-a080-ad9179015c65","amount":915.2514683377821,"rate":1,"description":null,"timestamp":"1733802380859"},{"id":"b70664a4-209f-4077-a3da-67c0398caee4","amount":915.2514683377821,"rate":1,"description":null,"timestamp":"1733802380874"},{"id":"0287c555-e03e-4777-af64-1893413fe92e","amount":566.1037523990341,"rate":1,"description":null,"timestamp":"1733802384338"},{"id":"71df8b0e-ebfd-4be9-9d73-8d1eaf920ae0","amount":566.1037523990341,"rate":1,"description":null,"timestamp":"1733802384359"},{"id":"907bad94-d159-457d-a5f1-2b3fcc8797ca","amount":566.1037523990341,"rate":1,"description":null,"timestamp":"1733802384363"},{"id":"e9f83557-cf59-44dc-ab4f-492bdf289111","amount":828.8948591888767,"rate":1,"description":null,"timestamp":"1733802416754"},{"id":"11cb4b0a-4291-4034-a073-bab108cea3af","amount":828.8948591888767,"rate":1,"description":null,"timestamp":"1733802416765"},{"id":"5a6c4005-bac2-4841-9875-1d27d4e5f3a2","amount":149.80089073447132,"rate":1,"description":null,"timestamp":"1733802416819"},{"id":"1fdb1e79-0587-45d0-b180-f800f8333a52","amount":212.2222911218803,"rate":1,"description":null,"timestamp":"1733802416856"},{"id":"c5f0b0a5-402b-4c68-93cf-916692f7070f","amount":864.2649788449502,"rate":1,"description":null,"timestamp":"1733802416888"},{"id":"e1fe1868-5393-47c9-ad88-55cbf94fdc40","amount":919.3054986146766,"rate":1,"description":null,"timestamp":"1733802417021"},{"id":"0eaecd93-d4c0-4f90-bd86-ecd0e9beac77","amount":768.946065212408,"rate":1,"description":null,"timestamp":"1733802417053"},{"id":"4a4d404b-cb92-43ea-aad4-bd00fdabc9a5","amount":328.18457891443353,"rate":1,"description":null,"timestamp":"1733802422361"},{"id":"ee8af729-0a2f-4589-aea3-288e06eee1df","amount":328.18457891443353,"rate":1,"description":null,"timestamp":"1733802422379"},{"id":"c8505dda-0e96-48fc-9210-846094c55e70","amount":82.70565543266962,"rate":1,"description":null,"timestamp":"1733802426031"},{"id":"635ccd3f-c6b8-4a11-a15d-e5cb775e7283","amount":82.70565543266962,"rate":1,"description":null,"timestamp":"1733802426054"},{"id":"8e8684f1-ef3c-4a84-9110-8ccdffae7e5c","amount":82.70565543266962,"rate":1,"description":null,"timestamp":"1733802426059"},{"id":"0f19173d-1686-4ad8-915d-f50791accbe4","amount":679.004760730689,"rate":1,"description":null,"timestamp":"1733802520919"},{"id":"2596f7d8-a81a-4e68-803f-5a870851da6d","amount":679.004760730689,"rate":1,"description":null,"timestamp":"1733802520930"},{"id":"4d75a68a-c3c5-4ebf-b107-5987dcce5f5f","amount":988.0434923531418,"rate":1,"description":null,"timestamp":"1733802520984"},{"id":"2301b8b6-ff31-4823-ab2a-fc1e09fde182","amount":371.52126073241163,"rate":1,"description":null,"timestamp":"1733802521016"},{"id":"6ea81ec5-9274-4a9e-a971-9c8c7174d64e","amount":770.7755282162075,"rate":1,"description":null,"timestamp":"1733802521049"},{"id":"dee2f4bf-327b-4b35-bfd6-fea5c9fd731e","amount":491.9967688889232,"rate":1,"description":null,"timestamp":"1733802521117"},{"id":"9ba007ac-3b88-42ff-8a26-7b3051bd72b2","amount":671.3782426579445,"rate":1,"description":null,"timestamp":"1733802521149"},{"id":"324ed8e4-85f3-46ae-9401-d5bdfbbccff5","amount":757.6251681851234,"rate":1,"description":null,"timestamp":"1733802528195"},{"id":"eaccbc2f-d591-4e1f-bfe7-e8549e6f2468","amount":757.6251681851234,"rate":1,"description":null,"timestamp":"1733802528214"},{"id":"8eca9829-3f83-433e-8f0b-5e0789320cd3","amount":859.6421273811852,"rate":1,"description":null,"timestamp":"1733802532228"},{"id":"678cd48b-2f70-4ef2-b52a-88082011d22c","amount":859.6421273811852,"rate":1,"description":null,"timestamp":"1733802532267"},{"id":"9dbf141f-ebf3-4810-8ba9-9e4c89f73ffb","amount":859.6421273811852,"rate":1,"description":null,"timestamp":"1733802532275"},{"id":"a17b9377-7787-4eee-806f-3967ba36c993","amount":117.3521506390135,"rate":1,"description":null,"timestamp":"1733802606669"},{"id":"ca687e53-2ed5-4eef-9301-1195d5080829","amount":117.3521506390135,"rate":1,"description":null,"timestamp":"1733802606681"},{"id":"8486a617-b0c5-41f4-b3aa-b3b1f5879402","amount":567.2392261873772,"rate":1,"description":null,"timestamp":"1733802606743"},{"id":"1a962357-d771-48c1-8818-b4bac0122c31","amount":190.21947338543475,"rate":1,"description":null,"timestamp":"1733802606774"},{"id":"d0262056-a723-4b9b-b497-f10281d12e40","amount":813.1016381376421,"rate":1,"description":null,"timestamp":"1733802606808"},{"id":"b1b8a66c-4d34-499b-b003-078b9de599b2","amount":87.09614850310533,"rate":1,"description":null,"timestamp":"1733802606884"},{"id":"a2d301a4-d1d9-4d0c-b4c5-6c1e8e3e47e3","amount":316.2517172750824,"rate":1,"description":null,"timestamp":"1733802606919"},{"id":"59092e7c-3a98-4f2e-81d1-c800c9a0d2ee","amount":285.27940343848456,"rate":1,"description":null,"timestamp":"1733802615141"},{"id":"8b71c21a-26cb-4237-8096-804206000eed","amount":285.27940343848456,"rate":1,"description":null,"timestamp":"1733802615166"},{"id":"edbf757c-0aaa-459b-9f91-bcd0141cfad5","amount":453.6187381810842,"rate":1,"description":null,"timestamp":"1733802619700"},{"id":"a4d319d8-ce99-4509-a9e9-f19dce77f53b","amount":453.6187381810842,"rate":1,"description":null,"timestamp":"1733802619725"},{"id":"a4e7fbd6-acd7-43c5-88c3-d76f3f455390","amount":453.6187381810842,"rate":1,"description":null,"timestamp":"1733802619730"},{"id":"a32849da-a809-4c68-b0e7-7ceea5e416a7","amount":710.2943077527517,"rate":1,"description":null,"timestamp":"1733805278588"},{"id":"edd5ec23-abcb-4be6-b6e7-b6cb9bdc1de6","amount":405.1564126975703,"rate":1,"description":null,"timestamp":"1733805278596"},{"id":"79fd869a-ad4c-4ef9-ba51-719bd3729a23","amount":1000,"rate":1,"description":null,"timestamp":"1733805278610"},{"id":"d2b38a8e-c2fe-4947-8f4e-31970e9f3d1e","amount":2000,"rate":1,"description":null,"timestamp":"1733805278612"},{"id":"f176a19c-94a8-47df-97e6-d4d020288065","amount":3000,"rate":1,"description":null,"timestamp":"1733805278615"},{"id":"15f24ad7-b185-48ae-b121-b59ca3765586","amount":500.1234567890123,"rate":1,"description":null,"timestamp":"1733805278617"},{"id":"43437b92-0106-40c7-8531-caa3afda4a08","amount":200.9876543210987,"rate":1,"description":null,"timestamp":"1733805278619"},{"id":"e16ac2b9-402d-4f3b-b0ce-262e62e4c4bf","amount":100.1234567890123,"rate":1,"description":null,"timestamp":"1733805278622"}]}}
+
+------------------Payload:-------------------
+
+{
+  s: getWallet(walletID: "c6870fab-307c-4c69-ae72-7f7e3dfed885") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  s: getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    id
+    firstName
+    lastName
+    description
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  s: getTransaction(transactionID: "e350e4b4-b617-4301-a6bf-826d27093496") {
+    id
+    amount
+    rate
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  s: getWallet(walletID: "c6870fab-307c-4c69-ae72-7f7e3dfed885") {
+    transactions {
+      id
+      amount
+      rate
+      timestamp
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  s: getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    wallets {
+      id
+      name
+      balance
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "c6870fab-307c-4c69-ae72-7f7e3dfed885") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    wallets {
+      id
+      name
+      balance
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    wallets {
+      transactions {
+        id
+        amount
+        rate
+        timestamp
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    friends {
+      id
+      wallets {
+        id
+        name
+        balance
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    friends {
+      id
+      wallets {
+        transactions {
+          id
+          amount
+          rate
+          timestamp
+        }
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    wallets {
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    friends {
+      id
+      wallets {
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "72edd861-5961-430a-b13b-b9c5670840d9") {
+    id
+    firstName
+    lastName
+    description
+    wallets {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+      transactions {
+        id
+        amount
+        rate
+        payer {
+          id
+          firstName
+          lastName
+          description
+        }
+        wallet {
+          id
+          name
+          balance
+        }
+        timestamp
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "72edd861-5961-430a-b13b-b9c5670840d9") {
+    id
+    firstName
+    lastName
+    description
+    friends {
+      id
+      firstName
+      lastName
+      description
+      wallets {
+        id
+        name
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+        balance
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "72edd861-5961-430a-b13b-b9c5670840d9") {
+    id
+    firstName
+    lastName
+    description
+    wallets {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+      transactions {
+        id
+        amount
+        rate
+        payer {
+          id
+          firstName
+          lastName
+          description
+        }
+        timestamp
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "2ec76c76-2b6e-44cc-9bbc-f5686d2cbc61") {
+    id
+    firstName
+    lastName
+    description
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  s: getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    id
+    firstName
+    lastName
+    description
+    wallets {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+      transactions {
+        id
+        amount
+        rate
+        payer {
+          id
+          firstName
+          lastName
+          description
+        }
+        wallet {
+          id
+          name
+          balance
+        }
+        description
+        location {
+          id
+          lat
+          lng
+          name
+        }
+        timestamp
+      }
+      user {
+        id
+        firstName
+        lastName
+        description
+        wallets {
+          id
+          name
+          balance
+        }
+        friends {
+          id
+          firstName
+          lastName
+          description
+        }
+      }
+      balance
+    }
+    friends {
+      id
+      firstName
+      lastName
+      description
+      wallets {
+        id
+        name
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+        transactions {
+          id
+          amount
+          rate
+          description
+          timestamp
+        }
+        balance
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  s: getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    wallets {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  s: getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    friends {
+      id
+      firstName
+      lastName
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  s: getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    wallets {
+      transactions {
+        id
+        amount
+        rate
+        payer {
+          id
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallets {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallets":[{"id":"0dfc54a6-f92e-4d81-a310-577f031a66cc","name":"5XXAGUTPSW","balance":0},{"id":"6beb893e-e969-424b-9b14-11f137336e55","name":"5XXAGUTPSW","balance":0},{"id":"d975706a-ca35-4280-8ec3-cbe184e66365","name":"D8N1T3K665","balance":0},{"id":"1f55c8d6-8069-4e19-8168-a9ecdabf43e3","name":"<script>alert(1)</script>","balance":0},{"id":"ad5778fa-3f16-4551-9261-ebb803adb491","name":"HL0QYW4L69","balance":0},{"id":"f9d2c62f-2e12-4e57-8c55-9b9e31c8880d","name":"aaa ' OR 1=1--","balance":0},{"id":"8a51bec2-c196-47de-9e82-2061d6cd18f7","name":"../../../../etc/passwd","balance":0},{"id":"0923a2f5-1a6f-45dc-bf10-cdc5fdb04155","name":"aaa ' OR 1=1--","balance":0},{"id":"75bc271c-a70e-4037-9fec-1b0c5c2ccbbe","name":"YGGJXBCBNG","balance":0},{"id":"5b71228c-a4a9-497d-add8-083192f919c5","name":"OWUM186WBA","balance":0},{"id":"7f4bf2a8-9ac1-4811-995e-e713694ab5d1","name":"OWUM186WBA","balance":0},{"id":"1ec7e647-a504-4891-8494-a518ac0a622a","name":"RCO667I6EW","balance":0},{"id":"8ce31719-0016-4248-8300-38d105be90fa","name":"<script>alert(1)</script>","balance":0},{"id":"d1356043-a780-40f6-856a-1140f8d74255","name":"1X4JXYAWFG","balance":0},{"id":"211f24f3-c14d-4612-a864-95856e3f4f4a","name":"aaa ' OR 1=1--","balance":0},{"id":"2aeb7898-045d-4bb0-8836-9bfb9db20103","name":"../../../../etc/passwd","balance":0},{"id":"d6ece70c-b1ac-4e53-99d1-33bd79563f93","name":"../../../../etc/passwd","balance":0},{"id":"17990080-25d0-4520-9a6f-e1de56726dbd","name":"0U0VGNN0DJ","balance":0},{"id":"94a2e551-8390-47cb-8942-0b3ec0770b52","name":"ACVYG87I2D","balance":0},{"id":"ee5838ff-c18d-43f6-bcbd-eba74b11daf0","name":"YMR4LVLU2Z","balance":0},{"id":"3b48bd36-36a3-457d-80ad-ecb83d0529f4","name":"YMR4LVLU2Z","balance":0},{"id":"751d502f-220e-488f-ad5c-eccc817bc599","name":"OAICH3OCMN","balance":0},{"id":"02d520e3-899c-4776-930e-4e78301a93c0","name":"<script>alert(1)</script>","balance":0},{"id":"0d08308c-6140-47c1-8076-c55dcdcfa628","name":"06JJR6IW58","balance":0},{"id":"6fc44c6d-e11f-4e2c-af31-2bed618f3d17","name":"aaa ' OR 1=1--","balance":0},{"id":"c7a49210-cd44-42d3-bb53-e08d3c473f54","name":"../../../../etc/passwd","balance":0},{"id":"ba5390f1-221c-4874-baa0-da205aa0f840","name":"aaa ' OR 1=1--","balance":0},{"id":"b431fcd6-d455-4e8f-89bc-9369b8b6796f","name":"E64I5UXIUL","balance":0},{"id":"63b2ee05-4682-4a46-a3a8-ade5f59cb75e","name":"BQN7R0YZJ0","balance":0},{"id":"21615912-019c-44e3-a9b2-fcf2b912a2e0","name":"ET2AIB9BQA","balance":0},{"id":"adb1fee0-bac3-4b2b-8ace-fc89ac4d65ad","name":"ET2AIB9BQA","balance":0},{"id":"9012b565-8470-40bb-b2ae-75568ba2335f","name":"TGK20CEBIF","balance":0},{"id":"47e1319b-2618-4ffc-bcb0-2d24795b3a95","name":"<script>alert(1)</script>","balance":0},{"id":"62aa6c89-1444-4775-84d6-d76f9c441e05","name":"T042W8IE4Y","balance":0},{"id":"c1cdc76c-eec3-4c07-bae2-7e7a21e12063","name":"aaa ' OR 1=1--","balance":0},{"id":"a2eeb9a9-02f6-40de-9751-c70a30f6d12d","name":"../../../../etc/passwd","balance":0}]}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "9a531665-c637-4d22-ba67-db0fd4a69a2f") {
+    id
+    firstName
+    lastName
+    description
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  createTransaction(
+    amount: 710.2943077527517
+    currencyID: "761ed7f7-ee00-40d0-8018-78e4690c74b7"
+    payerID: "GYDR65BZ49"
+    walletID: "c6870fab-307c-4c69-ae72-7f7e3dfed885"
+  ) {
+    id
+    amount
+    rate
+    payer {
+      id
+      firstName
+      lastName
+      description
+      wallets {
+        id
+        name
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+        transactions {
+          id
+          amount
+          rate
+          description
+          timestamp
+        }
+        user {
+          id
+          firstName
+          lastName
+          description
+        }
+        balance
+      }
+    }
+    wallet {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+      transactions {
+        id
+        amount
+        rate
+        payer {
+          id
+          firstName
+          lastName
+          description
+        }
+        wallet {
+          id
+          name
+          balance
+        }
+        description
+        location {
+          id
+          lat
+          lng
+          name
+        }
+        timestamp
+      }
+      balance
+    }
+    description
+    location {
+      id
+      lat
+      lng
+      name
+    }
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot return null for non-nullable field Transaction.payer.","locations":[{"line":12,"column":5}],"path":["createTransaction","payer"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Transaction.payer.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:377:22","    at promiseReduce (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/jsutils/promiseReduce.js:23:9)","    at executeFieldsSerially (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:373:43)","    at executeOperation (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:347:14)"]}}],"data":{"createTransaction":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  createTransaction(
+    amount: 405.1564126975703
+    currencyID: "81d99e4c-0c29-464a-841a-3732c058959e"
+    payerID: "PW50E7M568"
+    walletID: "c6870fab-307c-4c69-ae72-7f7e3dfed885"
+  ) {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createTransaction":{"id":"76e64308-3858-4d42-8f2c-92f1a92cf09e","amount":405.1564126975703,"rate":1,"description":null,"timestamp":"1733805396284"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createTransaction(
+    amount: 1000.0
+    currencyID: "81d99e4c-0c29-464a-841a-3732c058959e"
+    payerID: "D9A27D27-0B15-43A3-8A6C-8D7679450B4D"
+    walletID: "730C55B2-8E53-4BC8-81C0-DCADD1688842"
+  ) {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createTransaction":{"id":"2c5cc634-5732-4b11-a61e-8d4b2079faa4","amount":1000,"rate":1,"description":null,"timestamp":"1733805396307"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createTransaction(
+    amount: 2000.0
+    currencyID: "<script>alert(1)</script>"
+    payerID: "D9A27D27-0B15-43A3-8A6C-8D7679450B4D"
+    walletID: "730C55B2-8E53-4BC8-81C0-DCADD1688842"
+  ) {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createTransaction":{"id":"ab9c9bdf-3067-4d4d-9ab9-e8069e052adc","amount":2000,"rate":1,"description":null,"timestamp":"1733805396309"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createTransaction(
+    amount: 3000.0
+    currencyID: "81d99e4c-0c29-464a-841a-3732c058959e"
+    payerID: "<script>alert(1)</script>"
+    walletID: "730C55B2-8E53-4BC8-81C0-DCADD1688842"
+  ) {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createTransaction":{"id":"48e565cb-6a34-4996-a6ac-8976aac9afc5","amount":3000,"rate":1,"description":null,"timestamp":"1733805396312"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createTransaction(
+    amount: 500.1234567890123
+    currencyID: "81d99e4c-0c29-464a-841a-3732c058959e"
+    payerID: "ZGSHB6G7J6"
+    walletID: "d9a27d27-0b15-43a3-8a6c-8d7679450b4d"
+  ) {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createTransaction":{"id":"a78a1751-1602-4895-80c9-69e8eab6d174","amount":500.1234567890123,"rate":1,"description":null,"timestamp":"1733805396315"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createTransaction(
+    amount: 200.9876543210987
+    currencyID: "79786714-2b59-4e6e-878c-6276a1930728"
+    payerID: "Z65MH6MK3N"
+    walletID: "d9a27d27-0b15-43a3-8a6c-8d7679450b4d"
+  ) {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createTransaction":{"id":"22bb0116-bfd9-4900-93ca-5625f15491b4","amount":200.9876543210987,"rate":1,"description":null,"timestamp":"1733805396318"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createTransaction(
+    amount: 100.1234567890123
+    currencyID: "74aadeb7-689e-4fa4-86f6-c90e94fc5c10c"
+    payerID: "Z65MH6MK3N"
+    walletID: "53168690-345d-44e9-b0bd-a9ab1f7c6e32"
+  ) {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createTransaction":{"id":"aa7d8290-0f89-47c4-b320-60a6e74ce775","amount":100.1234567890123,"rate":1,"description":null,"timestamp":"1733805396320"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  deleteTransaction(transactionID: "e350e4b4-b617-4301-a6bf-826d27093496") {
+    id
+    amount
+    rate
+    payer {
+      id
+      firstName
+      lastName
+      description
+      wallets {
+        id
+        name
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"deleteTransaction":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  deleteTransaction(transactionID: "62ebdb42-a054-4994-839c-894b1039208a") {
+    id
+    amount
+    rate
+    payer {
+      id
+      firstName
+      lastName
+      description
+      wallets {
+        id
+        name
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"deleteTransaction":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  deleteTransaction(transactionID: "fc30d389-a127-457f-9298-9cf9b8697caf") {
+    id
+    amount
+    rate
+    description
+    location {
+      id
+      lat
+      lng
+      name
+    }
+    payer {
+      id
+      firstName
+      lastName
+      description
+      wallets {
+        id
+        name
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"deleteTransaction":null}}
+
+------------------Payload:-------------------
+
+query {
+  getTransaction(transactionID: "e350e4b-d7fa-4124-95b3-3e0778c1436f") {
+    id
+    amount
+    rate
+    payer {
+      id
+      firstName
+      lastName
+      description
+    }
+    wallet {
+      id
+      name
+      balance
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getTransaction":null}}
+
+------------------Payload:-------------------
+
+query {
+  getWallet(walletID: "9876543210") {
+    id
+    name
+    balance
+    currency {
+      id
+      abbreviation
+      symbol
+      rate
+      country
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  deleteTransaction(transactionID: "e350e4b4-b617-4301-a6bf-826d27093496") {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"deleteTransaction":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  deleteWallet(walletID: "d9a27d27-0b15-43a3-8a6c-8d7679450b4d") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"deleteWallet":null}}
+
+------------------Payload:-------------------
+
+query {
+  getTransaction(transactionID: "fc30d389-a127-457f-9298-9cf9b8697caf") {
+    id
+    amount
+    rate
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getTransaction":null}}
+
+------------------Payload:-------------------
+
+query {
+  getCurrencies {
+    id
+    abbreviation
+    symbol
+    rate
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getCurrencies":[{"id":"02087a30-8b86-4493-8ce4-ca2749275bc9","abbreviation":"4MDZNMEALL","symbol":"19O71TRP5S","rate":1},{"id":"198194e1-dcd8-459c-ba09-bdfe10050353","abbreviation":"JK5NOQ2GU9","symbol":"YM1O2C6IFQ","rate":1},{"id":"f52e3d1a-14cf-442e-b82e-43d5b2adea93","abbreviation":"<script>alert(1)</script>","symbol":"<script>alert(1)</script>","rate":1},{"id":"b533242a-4b3b-486d-bef3-75af27c47ab9","abbreviation":"P124PTR5YH","symbol":"2M7MGK4J6O","rate":1},{"id":"ca2d28f4-d59f-4b5e-8ed3-4395bf100a34","abbreviation":"M1AFERFN29","symbol":"0O7N3U4BBN","rate":1},{"id":"5cefdf7e-2eeb-424b-9bfd-79921aa145a2","abbreviation":"../../../../etc/passwd","symbol":"../../../../etc/passwd","rate":1},{"id":"31859bfa-e6f7-4a38-95d2-45797481a641","abbreviation":"6G9YN35TVC","symbol":"6FF7854LSL","rate":1},{"id":"b8a1a145-2b44-42ef-9bce-1ff5152c1ff9","abbreviation":"TV5L5JLYM9","symbol":"RXAN02IQGT","rate":1},{"id":"c60ad8ad-4ea9-4732-8c23-4fbc8cc4e9b8","abbreviation":"<script>alert(1)</script>","symbol":"<script>alert(1)</script>","rate":1},{"id":"a8659426-a6a0-46ec-82d1-37360987166e","abbreviation":"SLOLAPTA8D","symbol":"POAYVN33V4","rate":1},{"id":"b9c893c9-edd9-42c5-9317-5fd30101fb3a","abbreviation":"RWD2DDN8B2","symbol":"IKGY0JN2DA","rate":1},{"id":"c23d0460-69bb-42b6-b5dd-3e807b9df16d","abbreviation":"../../../../etc/passwd","symbol":"../../../../etc/passwd","rate":1},{"id":"8b539b4b-f5ba-475a-b050-95503d1b6697","abbreviation":"ULJVVA7PQ3","symbol":"K7OVKDH3W2","rate":1},{"id":"70120737-bf9c-4910-b430-2a2bcb57ca2c","abbreviation":"HKICFYM96Z","symbol":"1SKYUKNYFU","rate":1},{"id":"21fc3b36-d0a6-462d-911a-a270f1fe9d66","abbreviation":"7DDL8R9TD5","symbol":"LA42PSHQ6A","rate":1},{"id":"ad2c5004-edc9-4578-a99f-1a80e34c504e","abbreviation":"<script>alert(1)</script>","symbol":"<script>alert(1)</script>","rate":1},{"id":"95b1e0f2-5bb3-4fc7-8155-fa7ce9f39eab","abbreviation":"Y71YWGFKB4","symbol":"8JN4BE7L6U","rate":1},{"id":"621daa69-9031-426c-ada9-def12815c90c","abbreviation":"YLGESIAM5I","symbol":"QB4T8XA6PU","rate":1},{"id":"e0b996dd-3a49-425a-b22a-95de99490873","abbreviation":"../../../../etc/passwd","symbol":"../../../../etc/passwd","rate":1},{"id":"6f2db75e-fd0b-48b8-93f5-3a6cf4f8fb92","abbreviation":"ROP3W84JDA","symbol":"1HFXT3URSH","rate":1},{"id":"5684bf9c-812f-4af8-8269-c9b5b856fefa","abbreviation":"9EOEOLPY42","symbol":"VKGGIJYJ4L","rate":1},{"id":"efe5e64c-6756-4485-9196-0b9bc39b21fd","abbreviation":"UIS838STMX","symbol":"VW0BP3QNRC","rate":1},{"id":"af8cea14-45b1-4502-8c21-3b2d3261d803","abbreviation":"<script>alert(1)</script>","symbol":"<script>alert(1)</script>","rate":1},{"id":"37bebd7c-0845-48b9-9a51-e96989160197","abbreviation":"0GHICSZLL8","symbol":"WH4RG6HJ3A","rate":1},{"id":"2be7995e-d242-40ab-9aed-cd5ea88ca29a","abbreviation":"OZCG9437WH","symbol":"BNQQF5EIOU","rate":1},{"id":"a7f8dc9a-0a77-432c-bc2e-bed6b1a0bf1a","abbreviation":"../../../../etc/passwd","symbol":"../../../../etc/passwd","rate":1},{"id":"968a74ac-dcce-40c1-8879-904743794684","abbreviation":"../../../../etc/passwd","symbol":"../../../../etc/passwd","rate":1},{"id":"28034e2d-c4dd-40b5-a51f-2690cfd1cdbb","abbreviation":"9W3V1J4D3L","symbol":"RZG9U4E5N","rate":1},{"id":"217596ee-2e91-4606-8019-4b39b873b27c","abbreviation":"USD","symbol":"$","rate":1},{"id":"31f33a35-efff-4b0f-9b3f-f4e3ed054573","abbreviation":"<script>alert(1)</script>","symbol":"<script>alert(1)</script>","rate":1},{"id":"781c674a-b940-44d4-9a92-874abc821d55","abbreviation":"YVYQXDGSVA","symbol":"D9LHN3R4SR","rate":1},{"id":"bdce49cb-edfb-47fb-8786-837164877085","abbreviation":"7B50C2RT6F","symbol":"0XHRZRCPVE","rate":1},{"id":"4125c2e4-de9a-4531-90ff-bf8f59304d1a","abbreviation":"BXR89AYWZM","symbol":"IWNLNLQR4T","rate":1},{"id":"f350f27e-0ed2-429f-8ad1-c0248984d87d","abbreviation":"2ZL8S2SVS0","symbol":"1PD1G9E122","rate":1}]}}
+
+------------------Payload:-------------------
+
+mutation {
+  createCurrency(
+    abbreviation: "9W3V1J4D3L"
+    country: "7T6M8F2P5C"
+    symbol: "RZG9U4E5N"
+  ) {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createCurrency":{"id":"d8db9080-e59b-4ada-9b5e-5e0912407e2e","abbreviation":"9W3V1J4D3L","symbol":"RZG9U4E5N","rate":1,"country":"7T6M8F2P5C"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createCurrency(
+    abbreviation: "USD"
+    country: "United States"
+    symbol: "$"
+  ) {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createCurrency":{"id":"9664770e-46cd-4cf4-96aa-0d9b6a876c3a","abbreviation":"USD","symbol":"$","rate":1,"country":"United States"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createCurrency(
+    abbreviation: "<script>alert(1)</script>"
+    country: "<script>alert(1)</script>"
+    symbol: "<script>alert(1)</script>"
+  ) {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createCurrency":{"id":"f284fcf7-cdf4-467d-91f6-82659eba84ab","abbreviation":"<script>alert(1)</script>","symbol":"<script>alert(1)</script>","rate":1,"country":"<script>alert(1)</script>"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createCurrency(
+    abbreviation: "YVYQXDGSVA"
+    country: "QW0J62V9O2"
+    symbol: "D9LHN3R4SR"
+  ) {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createCurrency":{"id":"6c89acd2-3c55-4dcf-a236-f4fbe3cf532f","abbreviation":"YVYQXDGSVA","symbol":"D9LHN3R4SR","rate":1,"country":"QW0J62V9O2"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createCurrency(
+    abbreviation: "7B50C2RT6F"
+    country: "1ZNWL2XTBS"
+    symbol: "0XHRZRCPVE"
+  ) {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createCurrency":{"id":"a4f40a68-7427-4ac1-8c56-4f28388074c9","abbreviation":"7B50C2RT6F","symbol":"0XHRZRCPVE","rate":1,"country":"1ZNWL2XTBS"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createCurrency(
+    abbreviation: "BXR89AYWZM"
+    country: "46658T995P"
+    symbol: "IWNLNLQR4T"
+  ) {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createCurrency":{"id":"956612b2-3b38-47f2-8c7c-2bb6cff0d43c","abbreviation":"BXR89AYWZM","symbol":"IWNLNLQR4T","rate":1,"country":"46658T995P"}}}
+
+------------------Payload:-------------------
+
+mutation {
+  createCurrency(
+    abbreviation: "2ZL8S2SVS0"
+    country: "CTSB21VOF5"
+    symbol: "1PD1G9E122"
+  ) {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"createCurrency":{"id":"0dc46f18-cca1-45b4-a6c2-70a5afc9b69e","abbreviation":"2ZL8S2SVS0","symbol":"1PD1G9E122","rate":1,"country":"CTSB21VOF5"}}}
+
+------------------Payload:-------------------
+
+{
+  getWallets {
+    id
+    balance
+    currency {
+      id
+      abbreviation
+      symbol
+      rate
+      country
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",0,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",1,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",2,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",3,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",4,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",5,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",6,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",7,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",8,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",9,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",10,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",11,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",12,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",13,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",14,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",15,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",16,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",17,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",18,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",19,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",20,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",21,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",22,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",23,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",24,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",25,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",26,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",27,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",28,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",29,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",30,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",31,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",32,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",33,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",34,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}},{"message":"Cannot return null for non-nullable field Wallet.currency.","locations":[{"line":6,"column":5}],"path":["getWallets",35,"currency"],"extensions":{"code":"INTERNAL_SERVER_ERROR","stacktrace":["Error: Cannot return null for non-nullable field Wallet.currency.","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:605:13)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)","    at executeFields (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:414:22)","    at completeObjectValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:925:10)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:646:12)","    at /Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:707:25","    at Function.from (<anonymous>)","    at completeListValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:687:34)","    at completeValue (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:618:12)","    at executeField (/Users/fishbaby/Documents/SFU/CyberLab1/RnD/GraphQLer/tests/test-apis/user-wallet-api/node_modules/graphql/execution/execute.js:500:19)"]}}],"data":{"getWallets":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]}}
+
+------------------Payload:-------------------
+
+{
+  getTransactions {
+    id
+    amount
+    rate
+    timestamp
+    description
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getTransactions":[{"id":"0a496cd8-fc77-4c84-8ca2-dce57f4e5d0d","amount":261.81146364115995,"rate":1,"timestamp":"1733802376425","description":null},{"id":"19034e2d-7811-4985-a5e5-c23d53d4980b","amount":261.81146364115995,"rate":1,"timestamp":"1733802376438","description":null},{"id":"66be9f28-6b97-4930-b97c-031bf28e8e5d","amount":643.6450716077188,"rate":1,"timestamp":"1733802376495","description":null},{"id":"5044cd9b-374c-4c56-bbb8-b170a06b20a2","amount":939.7259408224821,"rate":1,"timestamp":"1733802376544","description":null},{"id":"462de05a-c5e7-4e02-8dd7-47cafe41b0dd","amount":883.7345255294181,"rate":1,"timestamp":"1733802376580","description":null},{"id":"4ba6808b-fc7f-42b5-b4ce-618538d9ab0f","amount":975.497187598433,"rate":1,"timestamp":"1733802376652","description":null},{"id":"54ac3b0a-bd26-41e1-af95-bd14dad4bf88","amount":630.7695490832408,"rate":1,"timestamp":"1733802376690","description":null},{"id":"6b65b2f5-1970-4604-9306-b18842296824","amount":363.17515350222254,"rate":1,"timestamp":"1733802380816","description":"../../../../etc/passwd"},{"id":"53d0ffaa-12e1-40c4-a080-ad9179015c65","amount":915.2514683377821,"rate":1,"timestamp":"1733802380859","description":null},{"id":"b70664a4-209f-4077-a3da-67c0398caee4","amount":915.2514683377821,"rate":1,"timestamp":"1733802380874","description":null},{"id":"0287c555-e03e-4777-af64-1893413fe92e","amount":566.1037523990341,"rate":1,"timestamp":"1733802384338","description":null},{"id":"71df8b0e-ebfd-4be9-9d73-8d1eaf920ae0","amount":566.1037523990341,"rate":1,"timestamp":"1733802384359","description":null},{"id":"907bad94-d159-457d-a5f1-2b3fcc8797ca","amount":566.1037523990341,"rate":1,"timestamp":"1733802384363","description":null},{"id":"e9f83557-cf59-44dc-ab4f-492bdf289111","amount":828.8948591888767,"rate":1,"timestamp":"1733802416754","description":null},{"id":"11cb4b0a-4291-4034-a073-bab108cea3af","amount":828.8948591888767,"rate":1,"timestamp":"1733802416765","description":null},{"id":"5a6c4005-bac2-4841-9875-1d27d4e5f3a2","amount":149.80089073447132,"rate":1,"timestamp":"1733802416819","description":null},{"id":"1fdb1e79-0587-45d0-b180-f800f8333a52","amount":212.2222911218803,"rate":1,"timestamp":"1733802416856","description":null},{"id":"c5f0b0a5-402b-4c68-93cf-916692f7070f","amount":864.2649788449502,"rate":1,"timestamp":"1733802416888","description":null},{"id":"e1fe1868-5393-47c9-ad88-55cbf94fdc40","amount":919.3054986146766,"rate":1,"timestamp":"1733802417021","description":null},{"id":"0eaecd93-d4c0-4f90-bd86-ecd0e9beac77","amount":768.946065212408,"rate":1,"timestamp":"1733802417053","description":null},{"id":"4a4d404b-cb92-43ea-aad4-bd00fdabc9a5","amount":328.18457891443353,"rate":1,"timestamp":"1733802422361","description":null},{"id":"ee8af729-0a2f-4589-aea3-288e06eee1df","amount":328.18457891443353,"rate":1,"timestamp":"1733802422379","description":null},{"id":"c8505dda-0e96-48fc-9210-846094c55e70","amount":82.70565543266962,"rate":1,"timestamp":"1733802426031","description":null},{"id":"635ccd3f-c6b8-4a11-a15d-e5cb775e7283","amount":82.70565543266962,"rate":1,"timestamp":"1733802426054","description":null},{"id":"8e8684f1-ef3c-4a84-9110-8ccdffae7e5c","amount":82.70565543266962,"rate":1,"timestamp":"1733802426059","description":null},{"id":"0f19173d-1686-4ad8-915d-f50791accbe4","amount":679.004760730689,"rate":1,"timestamp":"1733802520919","description":null},{"id":"2596f7d8-a81a-4e68-803f-5a870851da6d","amount":679.004760730689,"rate":1,"timestamp":"1733802520930","description":null},{"id":"4d75a68a-c3c5-4ebf-b107-5987dcce5f5f","amount":988.0434923531418,"rate":1,"timestamp":"1733802520984","description":null},{"id":"2301b8b6-ff31-4823-ab2a-fc1e09fde182","amount":371.52126073241163,"rate":1,"timestamp":"1733802521016","description":null},{"id":"6ea81ec5-9274-4a9e-a971-9c8c7174d64e","amount":770.7755282162075,"rate":1,"timestamp":"1733802521049","description":null},{"id":"dee2f4bf-327b-4b35-bfd6-fea5c9fd731e","amount":491.9967688889232,"rate":1,"timestamp":"1733802521117","description":null},{"id":"9ba007ac-3b88-42ff-8a26-7b3051bd72b2","amount":671.3782426579445,"rate":1,"timestamp":"1733802521149","description":null},{"id":"324ed8e4-85f3-46ae-9401-d5bdfbbccff5","amount":757.6251681851234,"rate":1,"timestamp":"1733802528195","description":null},{"id":"eaccbc2f-d591-4e1f-bfe7-e8549e6f2468","amount":757.6251681851234,"rate":1,"timestamp":"1733802528214","description":null},{"id":"8eca9829-3f83-433e-8f0b-5e0789320cd3","amount":859.6421273811852,"rate":1,"timestamp":"1733802532228","description":null},{"id":"678cd48b-2f70-4ef2-b52a-88082011d22c","amount":859.6421273811852,"rate":1,"timestamp":"1733802532267","description":null},{"id":"9dbf141f-ebf3-4810-8ba9-9e4c89f73ffb","amount":859.6421273811852,"rate":1,"timestamp":"1733802532275","description":null},{"id":"a17b9377-7787-4eee-806f-3967ba36c993","amount":117.3521506390135,"rate":1,"timestamp":"1733802606669","description":null},{"id":"ca687e53-2ed5-4eef-9301-1195d5080829","amount":117.3521506390135,"rate":1,"timestamp":"1733802606681","description":null},{"id":"8486a617-b0c5-41f4-b3aa-b3b1f5879402","amount":567.2392261873772,"rate":1,"timestamp":"1733802606743","description":null},{"id":"1a962357-d771-48c1-8818-b4bac0122c31","amount":190.21947338543475,"rate":1,"timestamp":"1733802606774","description":null},{"id":"d0262056-a723-4b9b-b497-f10281d12e40","amount":813.1016381376421,"rate":1,"timestamp":"1733802606808","description":null},{"id":"b1b8a66c-4d34-499b-b003-078b9de599b2","amount":87.09614850310533,"rate":1,"timestamp":"1733802606884","description":null},{"id":"a2d301a4-d1d9-4d0c-b4c5-6c1e8e3e47e3","amount":316.2517172750824,"rate":1,"timestamp":"1733802606919","description":null},{"id":"59092e7c-3a98-4f2e-81d1-c800c9a0d2ee","amount":285.27940343848456,"rate":1,"timestamp":"1733802615141","description":null},{"id":"8b71c21a-26cb-4237-8096-804206000eed","amount":285.27940343848456,"rate":1,"timestamp":"1733802615166","description":null},{"id":"edbf757c-0aaa-459b-9f91-bcd0141cfad5","amount":453.6187381810842,"rate":1,"timestamp":"1733802619700","description":null},{"id":"a4d319d8-ce99-4509-a9e9-f19dce77f53b","amount":453.6187381810842,"rate":1,"timestamp":"1733802619725","description":null},{"id":"a4e7fbd6-acd7-43c5-88c3-d76f3f455390","amount":453.6187381810842,"rate":1,"timestamp":"1733802619730","description":null},{"id":"a32849da-a809-4c68-b0e7-7ceea5e416a7","amount":710.2943077527517,"rate":1,"timestamp":"1733805278588","description":null},{"id":"edd5ec23-abcb-4be6-b6e7-b6cb9bdc1de6","amount":405.1564126975703,"rate":1,"timestamp":"1733805278596","description":null},{"id":"79fd869a-ad4c-4ef9-ba51-719bd3729a23","amount":1000,"rate":1,"timestamp":"1733805278610","description":null},{"id":"d2b38a8e-c2fe-4947-8f4e-31970e9f3d1e","amount":2000,"rate":1,"timestamp":"1733805278612","description":null},{"id":"f176a19c-94a8-47df-97e6-d4d020288065","amount":3000,"rate":1,"timestamp":"1733805278615","description":null},{"id":"15f24ad7-b185-48ae-b121-b59ca3765586","amount":500.1234567890123,"rate":1,"timestamp":"1733805278617","description":null},{"id":"43437b92-0106-40c7-8531-caa3afda4a08","amount":200.9876543210987,"rate":1,"timestamp":"1733805278619","description":null},{"id":"e16ac2b9-402d-4f3b-b0ce-262e62e4c4bf","amount":100.1234567890123,"rate":1,"timestamp":"1733805278622","description":null},{"id":"ebf56368-e798-4188-9ce0-fb0cfb695862","amount":710.2943077527517,"rate":1,"timestamp":"1733805396271","description":null},{"id":"76e64308-3858-4d42-8f2c-92f1a92cf09e","amount":405.1564126975703,"rate":1,"timestamp":"1733805396284","description":null},{"id":"2c5cc634-5732-4b11-a61e-8d4b2079faa4","amount":1000,"rate":1,"timestamp":"1733805396307","description":null},{"id":"ab9c9bdf-3067-4d4d-9ab9-e8069e052adc","amount":2000,"rate":1,"timestamp":"1733805396309","description":null},{"id":"48e565cb-6a34-4996-a6ac-8976aac9afc5","amount":3000,"rate":1,"timestamp":"1733805396312","description":null},{"id":"a78a1751-1602-4895-80c9-69e8eab6d174","amount":500.1234567890123,"rate":1,"timestamp":"1733805396315","description":null},{"id":"22bb0116-bfd9-4900-93ca-5625f15491b4","amount":200.9876543210987,"rate":1,"timestamp":"1733805396318","description":null},{"id":"aa7d8290-0f89-47c4-b320-60a6e74ce775","amount":100.1234567890123,"rate":1,"timestamp":"1733805396320","description":null}]}}
+
+------------------Payload:-------------------
+
+mutation {
+  updateUser(
+    description: "Valid user description"
+    firstName: "John"
+    lastName: "Doe"
+    userID: "f7e6b3a4-e56c-456d-8fgh-12345abdefg"
+  ) {
+    id
+    firstName
+    lastName
+    description
+    wallets {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+      transactions {
+        id
+        amount
+        rate
+        payer {
+          id
+          firstName
+          lastName
+          description
+        }
+        wallet {
+          id
+          name
+          balance
+        }
+        location {
+          id
+          lat
+          lng
+          name
+        }
+        timestamp
+      }
+      user {
+        id
+        firstName
+        lastName
+        description
+        wallets {
+          id
+          name
+          balance
+        }
+        friends {
+          id
+          firstName
+          lastName
+          description
+        }
+      }
+      balance
+    }
+    friends {
+      id
+      firstName
+      lastName
+      description
+      wallets {
+        id
+        name
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+        transactions {
+          id
+          amount
+          rate
+          description
+          timestamp
+        }
+        balance
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"updateUser":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  updateUser(
+    description: "Valid user description"
+    firstName: "Jane"
+    lastName: "Doe"
+    userID: "cdefghij-e56c-456d-8fgh-12345abdefg"
+  ) {
+    id
+    firstName
+    lastName
+    description
+    friends {
+      id
+      firstName
+      lastName
+      description
+      wallets {
+        id
+        name
+        currency {
+          id
+          abbreviation
+          symbol
+          rate
+          country
+        }
+        transactions {
+          id
+          amount
+          rate
+          description
+          timestamp
+        }
+        balance
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"updateUser":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  updateUser(
+    description: "Valid user description"
+    firstName: "Bob"
+    lastName: "Smith"
+    userID: "gfe54321-dcba-4567-e8f9-12345abdefg"
+  ) {
+    id
+    firstName
+    lastName
+    description
+    wallets {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+      transactions {
+        id
+        amount
+        rate
+        payer {
+          id
+          firstName
+          lastName
+          description
+        }
+        wallet {
+          id
+          name
+          balance
+        }
+        location {
+          id
+          lat
+          lng
+          name
+        }
+        timestamp
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"updateUser":null}}
+
+------------------Payload:-------------------
+
+mutation {
+  updateUser(
+    description: "<script>alert(1)</script>"
+    firstName: ""
+    lastName: "Smith"
+    userID: "12345abdefg-e56c-456d-8fgh-12345abdefg"
+  ) {
+    id
+    firstName
+    lastName
+    description
+    wallets {
+      id
+      name
+      currency {
+        id
+        abbreviation
+        symbol
+        rate
+        country
+      }
+      transactions {
+        id
+        amount
+        rate
+        payer {
+          id
+          firstName
+          lastName
+          description
+        }
+        wallet {
+          id
+          name
+          balance
+        }
+        location {
+          id
+          lat
+          lng
+          name
+        }
+        timestamp
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"updateUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getUser(userID: "824363e1-ff1b-4887-924f-9c3c1768c258") {
+    id
+    firstName
+    lastName
+    description
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getUser":null}}
+
+------------------Payload:-------------------
+
+{
+  getTransaction(transactionID: "e350e4b4-b617-4301-a6bf-826d27093496") {
+    id
+    amount
+    timestamp
+    description
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getTransaction":null}}
+
+------------------Payload:-------------------
+
+{
+  getLocation(locationID: "222171ec-c95e-441a-8593-848d3b762e3f") {
+    id
+    lat
+    lng
+    name
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getLocation":null}}
+
+------------------Payload:-------------------
+
+{
+  getTransactions {
+    id
+    amount
+    rate
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getTransactions":[{"id":"0a496cd8-fc77-4c84-8ca2-dce57f4e5d0d","amount":261.81146364115995,"rate":1,"timestamp":"1733802376425"},{"id":"19034e2d-7811-4985-a5e5-c23d53d4980b","amount":261.81146364115995,"rate":1,"timestamp":"1733802376438"},{"id":"66be9f28-6b97-4930-b97c-031bf28e8e5d","amount":643.6450716077188,"rate":1,"timestamp":"1733802376495"},{"id":"5044cd9b-374c-4c56-bbb8-b170a06b20a2","amount":939.7259408224821,"rate":1,"timestamp":"1733802376544"},{"id":"462de05a-c5e7-4e02-8dd7-47cafe41b0dd","amount":883.7345255294181,"rate":1,"timestamp":"1733802376580"},{"id":"4ba6808b-fc7f-42b5-b4ce-618538d9ab0f","amount":975.497187598433,"rate":1,"timestamp":"1733802376652"},{"id":"54ac3b0a-bd26-41e1-af95-bd14dad4bf88","amount":630.7695490832408,"rate":1,"timestamp":"1733802376690"},{"id":"6b65b2f5-1970-4604-9306-b18842296824","amount":363.17515350222254,"rate":1,"timestamp":"1733802380816"},{"id":"53d0ffaa-12e1-40c4-a080-ad9179015c65","amount":915.2514683377821,"rate":1,"timestamp":"1733802380859"},{"id":"b70664a4-209f-4077-a3da-67c0398caee4","amount":915.2514683377821,"rate":1,"timestamp":"1733802380874"},{"id":"0287c555-e03e-4777-af64-1893413fe92e","amount":566.1037523990341,"rate":1,"timestamp":"1733802384338"},{"id":"71df8b0e-ebfd-4be9-9d73-8d1eaf920ae0","amount":566.1037523990341,"rate":1,"timestamp":"1733802384359"},{"id":"907bad94-d159-457d-a5f1-2b3fcc8797ca","amount":566.1037523990341,"rate":1,"timestamp":"1733802384363"},{"id":"e9f83557-cf59-44dc-ab4f-492bdf289111","amount":828.8948591888767,"rate":1,"timestamp":"1733802416754"},{"id":"11cb4b0a-4291-4034-a073-bab108cea3af","amount":828.8948591888767,"rate":1,"timestamp":"1733802416765"},{"id":"5a6c4005-bac2-4841-9875-1d27d4e5f3a2","amount":149.80089073447132,"rate":1,"timestamp":"1733802416819"},{"id":"1fdb1e79-0587-45d0-b180-f800f8333a52","amount":212.2222911218803,"rate":1,"timestamp":"1733802416856"},{"id":"c5f0b0a5-402b-4c68-93cf-916692f7070f","amount":864.2649788449502,"rate":1,"timestamp":"1733802416888"},{"id":"e1fe1868-5393-47c9-ad88-55cbf94fdc40","amount":919.3054986146766,"rate":1,"timestamp":"1733802417021"},{"id":"0eaecd93-d4c0-4f90-bd86-ecd0e9beac77","amount":768.946065212408,"rate":1,"timestamp":"1733802417053"},{"id":"4a4d404b-cb92-43ea-aad4-bd00fdabc9a5","amount":328.18457891443353,"rate":1,"timestamp":"1733802422361"},{"id":"ee8af729-0a2f-4589-aea3-288e06eee1df","amount":328.18457891443353,"rate":1,"timestamp":"1733802422379"},{"id":"c8505dda-0e96-48fc-9210-846094c55e70","amount":82.70565543266962,"rate":1,"timestamp":"1733802426031"},{"id":"635ccd3f-c6b8-4a11-a15d-e5cb775e7283","amount":82.70565543266962,"rate":1,"timestamp":"1733802426054"},{"id":"8e8684f1-ef3c-4a84-9110-8ccdffae7e5c","amount":82.70565543266962,"rate":1,"timestamp":"1733802426059"},{"id":"0f19173d-1686-4ad8-915d-f50791accbe4","amount":679.004760730689,"rate":1,"timestamp":"1733802520919"},{"id":"2596f7d8-a81a-4e68-803f-5a870851da6d","amount":679.004760730689,"rate":1,"timestamp":"1733802520930"},{"id":"4d75a68a-c3c5-4ebf-b107-5987dcce5f5f","amount":988.0434923531418,"rate":1,"timestamp":"1733802520984"},{"id":"2301b8b6-ff31-4823-ab2a-fc1e09fde182","amount":371.52126073241163,"rate":1,"timestamp":"1733802521016"},{"id":"6ea81ec5-9274-4a9e-a971-9c8c7174d64e","amount":770.7755282162075,"rate":1,"timestamp":"1733802521049"},{"id":"dee2f4bf-327b-4b35-bfd6-fea5c9fd731e","amount":491.9967688889232,"rate":1,"timestamp":"1733802521117"},{"id":"9ba007ac-3b88-42ff-8a26-7b3051bd72b2","amount":671.3782426579445,"rate":1,"timestamp":"1733802521149"},{"id":"324ed8e4-85f3-46ae-9401-d5bdfbbccff5","amount":757.6251681851234,"rate":1,"timestamp":"1733802528195"},{"id":"eaccbc2f-d591-4e1f-bfe7-e8549e6f2468","amount":757.6251681851234,"rate":1,"timestamp":"1733802528214"},{"id":"8eca9829-3f83-433e-8f0b-5e0789320cd3","amount":859.6421273811852,"rate":1,"timestamp":"1733802532228"},{"id":"678cd48b-2f70-4ef2-b52a-88082011d22c","amount":859.6421273811852,"rate":1,"timestamp":"1733802532267"},{"id":"9dbf141f-ebf3-4810-8ba9-9e4c89f73ffb","amount":859.6421273811852,"rate":1,"timestamp":"1733802532275"},{"id":"a17b9377-7787-4eee-806f-3967ba36c993","amount":117.3521506390135,"rate":1,"timestamp":"1733802606669"},{"id":"ca687e53-2ed5-4eef-9301-1195d5080829","amount":117.3521506390135,"rate":1,"timestamp":"1733802606681"},{"id":"8486a617-b0c5-41f4-b3aa-b3b1f5879402","amount":567.2392261873772,"rate":1,"timestamp":"1733802606743"},{"id":"1a962357-d771-48c1-8818-b4bac0122c31","amount":190.21947338543475,"rate":1,"timestamp":"1733802606774"},{"id":"d0262056-a723-4b9b-b497-f10281d12e40","amount":813.1016381376421,"rate":1,"timestamp":"1733802606808"},{"id":"b1b8a66c-4d34-499b-b003-078b9de599b2","amount":87.09614850310533,"rate":1,"timestamp":"1733802606884"},{"id":"a2d301a4-d1d9-4d0c-b4c5-6c1e8e3e47e3","amount":316.2517172750824,"rate":1,"timestamp":"1733802606919"},{"id":"59092e7c-3a98-4f2e-81d1-c800c9a0d2ee","amount":285.27940343848456,"rate":1,"timestamp":"1733802615141"},{"id":"8b71c21a-26cb-4237-8096-804206000eed","amount":285.27940343848456,"rate":1,"timestamp":"1733802615166"},{"id":"edbf757c-0aaa-459b-9f91-bcd0141cfad5","amount":453.6187381810842,"rate":1,"timestamp":"1733802619700"},{"id":"a4d319d8-ce99-4509-a9e9-f19dce77f53b","amount":453.6187381810842,"rate":1,"timestamp":"1733802619725"},{"id":"a4e7fbd6-acd7-43c5-88c3-d76f3f455390","amount":453.6187381810842,"rate":1,"timestamp":"1733802619730"},{"id":"a32849da-a809-4c68-b0e7-7ceea5e416a7","amount":710.2943077527517,"rate":1,"timestamp":"1733805278588"},{"id":"edd5ec23-abcb-4be6-b6e7-b6cb9bdc1de6","amount":405.1564126975703,"rate":1,"timestamp":"1733805278596"},{"id":"79fd869a-ad4c-4ef9-ba51-719bd3729a23","amount":1000,"rate":1,"timestamp":"1733805278610"},{"id":"d2b38a8e-c2fe-4947-8f4e-31970e9f3d1e","amount":2000,"rate":1,"timestamp":"1733805278612"},{"id":"f176a19c-94a8-47df-97e6-d4d020288065","amount":3000,"rate":1,"timestamp":"1733805278615"},{"id":"15f24ad7-b185-48ae-b121-b59ca3765586","amount":500.1234567890123,"rate":1,"timestamp":"1733805278617"},{"id":"43437b92-0106-40c7-8531-caa3afda4a08","amount":200.9876543210987,"rate":1,"timestamp":"1733805278619"},{"id":"e16ac2b9-402d-4f3b-b0ce-262e62e4c4bf","amount":100.1234567890123,"rate":1,"timestamp":"1733805278622"},{"id":"ebf56368-e798-4188-9ce0-fb0cfb695862","amount":710.2943077527517,"rate":1,"timestamp":"1733805396271"},{"id":"76e64308-3858-4d42-8f2c-92f1a92cf09e","amount":405.1564126975703,"rate":1,"timestamp":"1733805396284"},{"id":"2c5cc634-5732-4b11-a61e-8d4b2079faa4","amount":1000,"rate":1,"timestamp":"1733805396307"},{"id":"ab9c9bdf-3067-4d4d-9ab9-e8069e052adc","amount":2000,"rate":1,"timestamp":"1733805396309"},{"id":"48e565cb-6a34-4996-a6ac-8976aac9afc5","amount":3000,"rate":1,"timestamp":"1733805396312"},{"id":"a78a1751-1602-4895-80c9-69e8eab6d174","amount":500.1234567890123,"rate":1,"timestamp":"1733805396315"},{"id":"22bb0116-bfd9-4900-93ca-5625f15491b4","amount":200.9876543210987,"rate":1,"timestamp":"1733805396318"},{"id":"aa7d8290-0f89-47c4-b320-60a6e74ce775","amount":100.1234567890123,"rate":1,"timestamp":"1733805396320"}]}}
+
+------------------Payload:-------------------
+
+{
+  s: getTransaction(transactionID: "e350e4b4-b617-4301-a6bf-826d27093496") {
+    id
+    amount
+    description
+    timestamp
+  }
+}
+
+------------------Response:-------------------
+{"data":{"s":null}}
+
