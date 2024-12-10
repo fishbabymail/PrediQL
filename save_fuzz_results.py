@@ -14,9 +14,8 @@ def save_results(results, fuzztype, base_path = None):
         os.makedirs(filedir)
     filename = fuzztype + "_" + "results" + ".txt"
     filepath = os.path.join(filedir, filename)
-    if not os.path.isfile(filepath):
-        with open(filepath, 'w') as f:
-            pass
+    with open(filepath, 'w') as f:
+        f.write("-------------Results-------------\n")
     for query, resp in results.items():
         # query = ast.literal_eval(query)
         with open(filepath, 'a') as f:
