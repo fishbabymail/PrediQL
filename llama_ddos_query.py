@@ -13,7 +13,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-class LlamaGetSQLIQuery:
+class LlamaGetDDOSQuery:
     def __init__(self, base_path=None):
         if not base_path:
             self.base_path = os.getcwd()
@@ -46,8 +46,8 @@ class LlamaGetSQLIQuery:
                       f"The query is like: {query}."
             )
             llama_res = get_llm_model(prompt)
-            print("=============\nLLAMA PROMPT: \n", prompt)
-            print("=============\nLLAMA RESPONSE: \n", llama_res)
+            # print("=============\nLLAMA PROMPT: \n", prompt)
+            # print("=============\nLLAMA RESPONSE: \n", llama_res)
             flag = "```graphql"
             parse_time = 0
             while flag in llama_res and parse_time < 10:
@@ -85,5 +85,5 @@ class LlamaGetSQLIQuery:
 
 
 if __name__ == '__main__':
-    llama_query = LlamaGetSQLIQuery()
+    llama_query = LlamaGetDDOSQuery()
     llama_query.run()

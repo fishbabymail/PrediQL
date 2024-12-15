@@ -1,0 +1,494 @@
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance @skip(if: true)
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  wallets(ids: ["01c90b3e-64a1-4290-9b50-0dcab004a095", "02c90b3e-64a1-4290-9b50-0dcab004a096"]) {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","locations":[{"line":3,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    transactions {
+      amount
+      rate
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance
+    transactions {
+      date
+      amount
+      description
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"date\" on type \"Transaction\". Did you mean \"rate\"?","locations":[{"line":8,"column":7}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"date\" on type \"Transaction\". Did you mean \"rate\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getWallets(first: 100, sortBy: ["balance", "name"]) {
+    id
+    name
+    balance
+    transactions(first: 10, sortBy: ["date", "amount"]) {
+      date
+      amount
+      description
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"Query.getWallets\".","locations":[{"line":3,"column":14}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"first\" on field \"Query.getWallets\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Unknown argument \"sortBy\" on field \"Query.getWallets\".","locations":[{"line":3,"column":26}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"sortBy\" on field \"Query.getWallets\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Unknown argument \"first\" on field \"Wallet.transactions\".","locations":[{"line":7,"column":18}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"first\" on field \"Wallet.transactions\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Unknown argument \"sortBy\" on field \"Wallet.transactions\".","locations":[{"line":7,"column":29}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"sortBy\" on field \"Wallet.transactions\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Cannot query field \"date\" on type \"Transaction\". Did you mean \"rate\"?","locations":[{"line":8,"column":7}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"date\" on type \"Transaction\". Did you mean \"rate\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrencies(ids: ["35d8246b-f081-4fd5-ac64-760a9d3eae56", "7f1c98db-b77f-4468-a0cd-2c14b2dcdfda"]) {
+    id
+    abbreviation
+    symbol
+    rate
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"ids\" on field \"Query.getCurrencies\".","locations":[{"line":3,"column":17}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"ids\" on field \"Query.getCurrencies\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrencies(includeLargeData: true) {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"includeLargeData\" on field \"Query.getCurrencies\".","locations":[{"line":3,"column":17}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"includeLargeData\" on field \"Query.getCurrencies\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrency(currencyID: "35d8246b-f081-4fd5-ac64-760a9d3eae56") {
+    id
+    abbreviation
+    symbol
+    rate
+    country {
+      name
+      capital
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"country\" must not have a selection since type \"String!\" has no subfields.","locations":[{"line":8,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Field \"country\" must not have a selection since type \"String!\" has no subfields.","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/ScalarLeafsRule.js:32:15)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "00c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  wallets(ids: ["01c90b3e-64a1-4290-9b50-0dcab004a095", "02c90b3e-64a1-4290-9b50-0dcab004a096"]) {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","locations":[{"line":3,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  wallets(ids: ["01c90b3e-64a1-4290-9b50-0dcab004a095", "02c90b3e-64a1-4290-9b50-0dcab004a096", "03c90b3e-64a1-4290-9b50-0dcab004a097"]) {
+    id
+    name
+    balance
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","locations":[{"line":3,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"wallets\" on type \"Query\". Did you mean \"getWallets\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance(value: 10000000)
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"value\" on field \"Wallet.balance\".","locations":[{"line":6,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"value\" on field \"Wallet.balance\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    transactions {
+      amount
+    }
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getWallet":null}}
+
+------------------Payload:-------------------
+
+{
+  getWallet(walletID: "01c90b3e-64a1-4290-9b50-0dcab004a095") {
+    id
+    name
+    balance
+    transactions {
+      date
+      amount
+      description
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"date\" on type \"Transaction\". Did you mean \"rate\"?","locations":[{"line":8,"column":7}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"date\" on type \"Transaction\". Did you mean \"rate\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getWallets(first: 100, sortBy: ["balance", "name"]) {
+    id
+    name
+    balance
+    transactions(first: 10, sortBy: ["date", "amount"]) {
+      date
+      amount
+      description
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"Query.getWallets\".","locations":[{"line":3,"column":14}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"first\" on field \"Query.getWallets\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Unknown argument \"sortBy\" on field \"Query.getWallets\".","locations":[{"line":3,"column":26}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"sortBy\" on field \"Query.getWallets\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Unknown argument \"first\" on field \"Wallet.transactions\".","locations":[{"line":7,"column":18}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"first\" on field \"Wallet.transactions\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Unknown argument \"sortBy\" on field \"Wallet.transactions\".","locations":[{"line":7,"column":29}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"sortBy\" on field \"Wallet.transactions\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Cannot query field \"date\" on type \"Transaction\". Did you mean \"rate\"?","locations":[{"line":8,"column":7}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"date\" on type \"Transaction\". Did you mean \"rate\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrencies(ids: ["35d8246b-f081-4fd5-ac64-760a9d3eae56", "7f1c98db-b77f-4468-a0cd-2c14b2dcdfda"]) {
+    id
+    abbreviation
+    symbol
+    rate
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"ids\" on field \"Query.getCurrencies\".","locations":[{"line":3,"column":17}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"ids\" on field \"Query.getCurrencies\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrencies {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getCurrencies":[{"id":"a84b9b8e-d932-400f-9872-5937476c7ee0","abbreviation":"EUR","symbol":"€","rate":1,"country":"European Union"},{"id":"e9be92b3-6471-4344-a874-0ea28c3c7b76","abbreviation":"USD","symbol":"$U","rate":1,"country":"United States"},{"id":"d975f141-d0f2-4fff-bbf8-fcb4a5a9f3c4","abbreviation":"EUR","symbol":"€E","rate":1,"country":"European Union"},{"id":"f526e1fb-6518-4b6b-99c2-e3c3335ecf24","abbreviation":"GBP","symbol":"£G","rate":1,"country":"United Kingdom"},{"id":"372bc0e6-e051-4b5a-88b6-5bce5b6d4578","abbreviation":"ABC","symbol":"$A-1000","rate":1,"country":"Country A"},{"id":"682ff642-beb5-4486-8bae-ff94225405f4","abbreviation":"EUR","symbol":"€","rate":1,"country":"Germany"},{"id":"e61682e2-c65e-4a9a-8516-2181bd404c50","abbreviation":"JPY","symbol":"¥","rate":1,"country":"Japan"}]}}
+
+------------------Payload:-------------------
+
+{
+  getCurrency(currencyID: "35d8246b-f081-4fd5-ac64-760a9d3eae56") {
+    id
+    abbreviation
+    symbol
+    rate
+    country {
+      name
+      capital
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"country\" must not have a selection since type \"String!\" has no subfields.","locations":[{"line":8,"column":13}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Field \"country\" must not have a selection since type \"String!\" has no subfields.","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/ScalarLeafsRule.js:32:15)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrencies {
+    edges {
+      node {
+        id
+        abbreviation
+        symbol
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"edges\" on type \"Currency\".","locations":[{"line":4,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"edges\" on type \"Currency\".","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrencies {
+    id
+    abbreviation
+    symbol
+    rate
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getCurrencies":[{"id":"a84b9b8e-d932-400f-9872-5937476c7ee0","abbreviation":"EUR","symbol":"€","rate":1},{"id":"e9be92b3-6471-4344-a874-0ea28c3c7b76","abbreviation":"USD","symbol":"$U","rate":1},{"id":"d975f141-d0f2-4fff-bbf8-fcb4a5a9f3c4","abbreviation":"EUR","symbol":"€E","rate":1},{"id":"f526e1fb-6518-4b6b-99c2-e3c3335ecf24","abbreviation":"GBP","symbol":"£G","rate":1},{"id":"372bc0e6-e051-4b5a-88b6-5bce5b6d4578","abbreviation":"ABC","symbol":"$A-1000","rate":1},{"id":"682ff642-beb5-4486-8bae-ff94225405f4","abbreviation":"EUR","symbol":"€","rate":1},{"id":"e61682e2-c65e-4a9a-8516-2181bd404c50","abbreviation":"JPY","symbol":"¥","rate":1}]}}
+
+------------------Payload:-------------------
+
+{
+  getCurrentRate {
+    id
+    abbreviation
+    symbol
+    rate
+    averageRate
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Field \"getCurrentRate\" must not have a selection since type \"Float\" has no subfields.","locations":[{"line":3,"column":18}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Field \"getCurrentRate\" must not have a selection since type \"Float\" has no subfields.","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/ScalarLeafsRule.js:32:15)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Field \"getCurrentRate\" argument \"mainCurrencySymbol\" of type \"String!\" is required, but it was not provided.","locations":[{"line":3,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Field \"getCurrentRate\" argument \"mainCurrencySymbol\" of type \"String!\" is required, but it was not provided.","    at Object.leave (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/ProvidedRequiredArgumentsRule.js:60:15)","    at Object.leave (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:324:32)","    at Object.leave (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:411:21)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrencies {
+    id
+    abbreviation
+    symbol
+    rate
+    averageRate
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"averageRate\" on type \"Currency\".","locations":[{"line":8,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"averageRate\" on type \"Currency\".","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrency {
+    symbol
+    name
+    plural
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"name\" on type \"Currency\". Did you mean \"rate\"?","locations":[{"line":5,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"name\" on type \"Currency\". Did you mean \"rate\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Cannot query field \"plural\" on type \"Currency\".","locations":[{"line":6,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"plural\" on type \"Currency\".","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Field \"getCurrency\" argument \"currencyID\" of type \"ID!\" is required, but it was not provided.","locations":[{"line":3,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Field \"getCurrency\" argument \"currencyID\" of type \"ID!\" is required, but it was not provided.","    at Object.leave (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/ProvidedRequiredArgumentsRule.js:60:15)","    at Object.leave (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:324:32)","    at Object.leave (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:411:21)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrency(currencyID: "35d8246b-f081-4fd5-ac64-760a9d3eae56") {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getCurrency":null}}
+
+------------------Payload:-------------------
+
+{
+  getCurrency(currencyID: "35d8246b-f081-4fd5-ac64-760a9d3eae56") {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+  getCurrency2(currencyID: "12345678-abcd-efgh-ijkl-mnopqrstuvwx") {
+    id
+    abbreviation
+    symbol
+    rate
+    country
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"getCurrency2\" on type \"Query\". Did you mean \"getCurrency\", \"getCurrencies\", or \"getCurrentRate\"?","locations":[{"line":10,"column":3}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"getCurrency2\" on type \"Query\". Did you mean \"getCurrency\", \"getCurrencies\", or \"getCurrentRate\"?","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrency(currencyID: "35d8246b-f081-4fd5-ac64-760a9d3eae56") {
+    id
+    abbreviation
+    symbol
+    rate
+  }
+}
+
+------------------Response:-------------------
+{"data":{"getCurrency":null}}
+
+------------------Payload:-------------------
+
+{
+  getCurrency(currencyID: "35d8246b-f081-4fd5-ac64-760a9d3eae56") {
+    id
+    abbreviation
+    symbol
+    rate
+    exchangeRates(limit: 100) {
+      value
+      currency {
+        id
+        abbreviation
+        symbol
+      }
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Cannot query field \"exchangeRates\" on type \"Currency\".","locations":[{"line":8,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"exchangeRates\" on type \"Currency\".","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
+------------------Payload:-------------------
+
+{
+  getCurrencies(first: 100, skip: 0) {
+    edges {
+      node {
+        id
+        abbreviation
+        symbol
+        rate
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}
+
+------------------Response:-------------------
+{"errors":[{"message":"Unknown argument \"first\" on field \"Query.getCurrencies\".","locations":[{"line":3,"column":17}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"first\" on field \"Query.getCurrencies\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Unknown argument \"skip\" on field \"Query.getCurrencies\".","locations":[{"line":3,"column":29}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Unknown argument \"skip\" on field \"Query.getCurrencies\".","    at Object.Argument (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/KnownArgumentNamesRule.js:46:11)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Cannot query field \"edges\" on type \"Currency\".","locations":[{"line":4,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"edges\" on type \"Currency\".","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}},{"message":"Cannot query field \"pageInfo\" on type \"Currency\".","locations":[{"line":12,"column":5}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED","stacktrace":["GraphQLError: Cannot query field \"pageInfo\" on type \"Currency\".","    at Object.Field (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js:51:13)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:301:32)","    at Object.enter (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/utilities/TypeInfo.js:391:27)","    at visit (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/language/visitor.js:197:21)","    at validate (/Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/graphql/validation/validate.js:91:24)","    at processGraphQLRequest (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/requestPipeline.js:98:38)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async internalExecuteOperation (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/ApolloServer.js:614:16)","    at async runHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/runHttpQuery.js:129:29)","    at async runPotentiallyBatchedHttpQuery (file:///Users/jiawang/Documents/cmpt782_FP/GraphQLer-main-2/tests/test-apis/user-wallet-api/node_modules/@apollo/server/dist/esm/httpBatching.js:34:16)"]}}]}
+
