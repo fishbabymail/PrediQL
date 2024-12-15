@@ -37,7 +37,7 @@ class LlamaGetSQLIQuery:
         self.valid_queries.extend(valid_queries["query"])
 
         # Read valid queries with buckets
-        filepath = os.path.join(llama_path, "valid_query_with_buckets.json")
+        filepath = os.path.join(llama_path, "valid_query.json")
         with open(filepath, 'r') as f:
             valid_query_with_buckets = json.load(f)
 
