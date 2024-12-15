@@ -20,6 +20,9 @@ class SqliFuzzing():
             filename = fuzz_type + "_improved_queries.json"
         else:
             filename = fuzz_type + "_queries.json"
+        if not os.path.exists(filename):
+            logger.info("There is no file {}".format(filename))
+            return []
         filepath = os.path.join(os.getcwd(), "llama_query", filename)
         if not os.path.isfile(filepath):
             raise FileNotFoundError(filepath)
