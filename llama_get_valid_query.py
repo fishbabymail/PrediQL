@@ -1,10 +1,10 @@
 import os
-import re
-import yaml
 import json
 import logging
+
+
 from parse_endpoint_results import ParseEndpointResults
-from get_results_from_graphqler import *
+from get_results_from_graphqler import GetGraphqlerResults
 
 from llama_initator import get_llm_model
 
@@ -17,39 +17,35 @@ logger = logging.getLogger(__name__)
 
 
 class LlamaGetValidQuery:
-    def __init__(self, base_path=None):
-        if not base_path:
-            self.base_path = os.getcwd()
-        else:
-            self.base_path = base_path
-        self.end_path = os.path.join(self.base_path, "graphqler-output", "compiled")
+    def __init__(self, url):
+        self.qler_handler = GetGraphqlerResults(url)
 
-        if not os.path.isdir(self.end_path):
-            raise FileNotFoundError("Path {} does not exist. END".format(self.end_path))
+    def get_compiled_queries(self):
+        compiled_results = self.qler_handler.get_compiled_results()
+        compiled_queries = compiled_results["queries"]
+        compiled_mutations = compiled_results["mutations"]
+        return compiled_queries, compiled_mutations
 
-    def get_compiled_queries(self, filename):
-        filepath = os.path.join(self.end_path, filename)
-        compiled_queries = None
-        if os.path.isfile(filepath):
-            with open(filepath, "r") as f:
-                compiled_queries = yaml.safe_load(f)
-        return compiled_queries
 
     def get_object_buckets(self):
-        filepath = os.path.join(self.base_path, "graphqler-output", "objects_bucket.txt")
-        objects_marker = "------------------- OBJECTS BUCKET -------------------"
-        scalars_marker = "------------------- SCALARS BUCKET -------------------"
+        object_results = self.qler_handler.get_object_buckets()
+        objects_dict = object_results["objects"]
+        scalars_dict = object_results["scalars"]
+        return objects_dict, scalars_dict
 
-        with open(filepath, "r", encoding="utf-8") as file:
-            content = file.read()
 
-        objects_start = content.find(objects_marker) + len(objects_marker)
-        scalars_start = content.find(scalars_marker) + len(scalars_marker)
+    def get_parameters(self):
+        parameters_results = self.qler_handler.get_extracted_results()
+        query_parameters = parameters_results["query"]
+        mutation_parameters = parameters_results["mutation"]
+        return query_parameters, mutation_parameters
 
-        objects_str = content[objects_start:content.find(scalars_marker)].strip()
-        scalars_str = content[scalars_start:].strip()
-
-        return objects_str, scalars_str
+    def form_object_promp(self):
+        object_dict, scalars_dict = self.get_object_buckets()
+        object_promp_text = ""
+        for object_name, object_values in object_dict.items():
+            object_promp_text += f"The object '{object_name}' has valid values: {object_values}. "
+        return object_promp_text
 
 
     def get_valid_queries(self):
@@ -59,12 +55,9 @@ class LlamaGetValidQuery:
         # print(payload_resp_pair)
 
         # Get compiled query schema
-        compiled_queries = self.get_compiled_queries("compiled_queries.yml")
-        compiled_mutations = self.get_compiled_queries("compiled_mutations.yml")
-        compiled_objects = self.get_compiled_queries("compiled_objects.yml")
-
-        # Get objects_bucket
-        objects_str, scalars_str = self.get_object_buckets()
+        compiled_queries, compiled_mutations = self.get_compiled_queries()
+        object_promp_text = self.form_object_promp()
+        query_parameters, mutation_parameters = self.get_parameters()
 
         query_json = {"query": []}
         tmp = """
@@ -78,15 +71,24 @@ class LlamaGetValidQuery:
             # # Control running time
             # if len(query_json["query"]) > 50:
             #     break
-            prompt = (f"Based on the following graphql query, the corresponding response, "
-                      f"and graphql schema information, please try to fix this query and "
-                      f"return me different valid queries, and separate each of the returned query "
-                      f"as: {tmp}, please use real values for fields instead of placeholders. The query is :{payload}, "
-                      f"the error response for this query is :{response}, the graphql schema "
-                      f"is: {compiled_queries}.")
+            # prompt = (f"Based on the following graphql query, the corresponding response, "
+            #           f"and graphql schema information, please try to fix this query and "
+            #           f"return me different valid queries, and separate each of the returned query "
+            #           f"as: {tmp}, please use real values for fields instead of placeholders. The query is :{payload}, "
+            #           f"the error response for this query is :{response}, the graphql schema "
+            #           f"is: {compiled_queries}.")
+            prompt = (f"There is a Graphql Endpoint, the schema for query is: {compiled_queries}, "
+                      f"the schema for mutation is: {compiled_mutations}. In addition, ")
+            prompt += object_promp_text
+
+            prompt += (f"Based on the above information and the following query and response, please generate "
+                       f"some valid queries, and separate each of the returned query as: {tmp}, please use "
+                       f"real values for fields instead of placeholders. The query is: {payload}, the response "
+                       f"for this query is: {response}.")
+
             llama_res = get_llm_model(prompt)
             # print("=============\nLLAMA PROMPT: \n", prompt)
-            # print("=============\nLLAMA RESPONSE: \n", llama_res)
+            print("=============\nLLAMA RESPONSE: \n", llama_res)
             flag = "```graphql"
             parse_time = 0
             while flag in llama_res and parse_time < 10:
@@ -113,7 +115,8 @@ class LlamaGetValidQuery:
 
     # Save queries into file
     def save_json_to_file(self, query_json):
-        filedir = os.path.join(self.base_path, "llama_query", "")
+        base_path = os.getcwd()
+        filedir = os.path.join(base_path, "llama_query")
         if not os.path.exists(filedir):
             os.makedirs(filedir)
         filepath = os.path.join(filedir, "llama_queries.json")
@@ -130,5 +133,6 @@ class LlamaGetValidQuery:
 
 
 if __name__ == '__main__':
-    llama_query = LlamaGetValidQuery()
+    url = "http://localhost:4000/graphql"
+    llama_query = LlamaGetValidQuery(url)
     llama_query.run()

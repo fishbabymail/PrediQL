@@ -8,6 +8,14 @@
 We thank the developers of this tool for their contributions to the open-source community.
 
 --------------------------
+### Usage
+
+* prerequisite1: LLaMa 3 is running;
+* prerequisite2: run GraphQLer and save the results under the path `PrediQL/`
+* Usage:  `python main.py --url http://localhost:4000/graphql --sqli True --dos True --batching True --refine True`
+* Get help info: `python main.py -h`
+
+--------------------------
 ### Functions Explanation
 
 
