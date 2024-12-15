@@ -1,7 +1,7 @@
 import argparse
 
 import identify_valid_query
-import queryImprover
+import refiner
 from fuzzing_sqli import SqliFuzzing
 from llama_get_valid_query import LlamaGetValidQuery
 from llama_sqli_query import LlamaGetSQLIQuery
@@ -41,7 +41,7 @@ def main():
 
     # Refine
     if refine:
-        queryImprover.refine_engine()
+        refiner.refine_engine()
         sqlifuzz.run(sqli=sqli, dos=dos, batching=batching, refine=True)
 
 
