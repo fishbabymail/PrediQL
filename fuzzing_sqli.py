@@ -12,16 +12,15 @@ logger = logging.getLogger(__name__)
 
 
 class SqliFuzzing():
-    def __init__(self, url, base_path=None):
-        ## Path to save results
+    def __init__(self, url):
         self.ep = url
-        if not base_path:
-            self.base_path = os.getcwd()
-        else:
-            self.base_path = base_path
 
-    def read_sqli_query(self):
-        filepath = os.path.join(self.base_path, "llama_query", "sqli_queries.json")
+    def read_payload_query(self, fuzz_type, refine):
+        if refine:
+            filename = fuzz_type + "_improved_queries.json"
+        else:
+            filename = fuzz_type + "_queries.json"
+        filepath = os.path.join(os.getcwd(), "llama_query", filename)
         if not os.path.isfile(filepath):
             raise FileNotFoundError(filepath)
         with open(filepath, 'r') as f:
@@ -29,8 +28,8 @@ class SqliFuzzing():
         query_list = queries["query"]
         return query_list
 
-    def fuzzing_endpoint(self):
-        query_list = self.read_sqli_query()
+
+    def fuzzing_endpoint(self, query_list):
         results = {}
         for query in query_list:
             payload = {
@@ -47,18 +46,32 @@ class SqliFuzzing():
                 logger.error("Exception request for query: {}".format(query))
         return results
 
-    def run(self):
-        results = self.fuzzing_endpoint()
-        logger.info("Begin to save fuzzing results.")
-        savepath = save_results(results, fuzztype="Sqli")
-        logger.info("Results saved to path {}".format(savepath))
-        return savepath
+    def run(self, sqli = False, dos = False, batching = False, refine=False):
+        if sqli:
+            query_list = self.read_payload_query("sqli", refine)
+            results = self.fuzzing_endpoint(query_list)
+            logger.info("Begin to save sql injection fuzzing results.")
+            savepath = save_results(results, fuzztype="sqli", refine=refine)
+            logger.info("Results saved to path {}".format(savepath))
+        if dos:
+            query_list = self.read_payload_query("dos", refine)
+            results = self.fuzzing_endpoint(query_list)
+            logger.info("Begin to save DOS fuzzing results.")
+            savepath = save_results(results, fuzztype="dos_improved", refine=refine)
+            logger.info("Results saved to path {}".format(savepath))
+
+        if batching:
+            query_list = self.read_payload_query("batching", refine)
+            results = self.fuzzing_endpoint(query_list)
+            logger.info("Begin to save Batching fuzzing results.")
+            savepath = save_results(results, fuzztype="batching_improved", refine=refine)
+            logger.info("Results saved to path {}".format(savepath))
 
 
 if __name__ == '__main__':
     url = "http://localhost:4000/graphql"
     sqlifuzz = SqliFuzzing(url)
-    savepath = sqlifuzz.run()
+    sqlifuzz.run(dos=True)
 
 
 
