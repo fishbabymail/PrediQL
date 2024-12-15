@@ -119,7 +119,7 @@ class LlamaGetValidQuery:
         filedir = os.path.join(base_path, "llama_query")
         if not os.path.exists(filedir):
             os.makedirs(filedir)
-        filepath = os.path.join(filedir, "llama_queries_with_buckets.json")
+        filepath = os.path.join(filedir, "llama_queries.json")
         with open(filepath, 'w') as f:
             json.dump(query_json, f, indent=4)
         logger.info("Saved query to {}".format(filepath))

@@ -1,7 +1,7 @@
 import os
 
 
-def save_results(results, fuzztype, base_path = None):
+def save_results(results, fuzztype, base_path = None, refine=False):
     if fuzztype == "valid_queries":
         flag = "Valid Query"
     else:
@@ -12,7 +12,10 @@ def save_results(results, fuzztype, base_path = None):
     filedir = os.path.join(base_path, "fuzzing_results")
     if not os.path.exists(filedir):
         os.makedirs(filedir)
-    filename = fuzztype + "_" + "results" + ".txt"
+    if refine:
+        filename = fuzztype + "_improved_results.txt"
+    else:
+        filename = fuzztype + "_results.txt"
     filepath = os.path.join(filedir, filename)
     with open(filepath, 'w') as f:
         f.write("-------------Results-------------\n")

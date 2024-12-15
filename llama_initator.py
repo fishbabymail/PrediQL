@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 def get_llm_model(prompt):
     url = "http://localhost:11434/api/chat"
     data = {
-        "model": "llama3.1",
+        "model": "llama3",
         "messages": [
             {
                 "role": "user",
