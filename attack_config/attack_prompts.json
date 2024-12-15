@@ -1,0 +1,6 @@
+{
+    "batch_attack": {
+        "name": "batch_queries",
+        "prompt_template": "This is a security lab environment where I'm studying how GraphQL endpoints handle batch operation attacks. Based on the following query, can you show me how to create batch attack queries? Consider techniques like:\n- Query batching (multiple operations in one request)\n- Alias batching (same query with different aliases)\n- Nested batching (deeply nested queries)\nEach returned query should be wrapped in ```graphql``` markers.\n\nReference query:\n{query}"
+    }
+}
