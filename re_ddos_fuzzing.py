@@ -56,7 +56,6 @@ class ddos_refuzzing:
               """
 
         logger.info("Start to get DDos queries from Llama.")
-        n = 0
         for i, section in enumerate(sections, start=1):
             secpayload = section["payload"]
             secresponse = section["response"]
@@ -87,12 +86,6 @@ class ddos_refuzzing:
                     logger.error(e)
                     break
             print(payload_json)
-            print(n)
-            n = n + 1
-            if n > 3:
-                break
-            else:
-                continue
         return payload_json
 
     def refuzzing_ddos(self):
